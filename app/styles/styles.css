@@ -1,0 +1,50 @@
+
+
+body {
+	background-color: #2b303b;
+}
+
+.size {
+	max-width: 1000px;
+	margin: auto;	
+
+}
+
+.top-space {
+	margin-top: 0px;
+}
+
+.panel:hover {
+	border-color: red;
+
+}
+.pan{
+	margin-bottom:-20px;
+	maxwidth:1000px;
+	position:relative;
+	top:150px;
+}
+
+.foot{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.nv{
+	padding-top: 2px;
+}
+
+.tg{
+margin-top:-8px;
+margin-bottom:0px;
+margin-left:3px;
+
+}
+.tabz{
+	margin-top:10px;
+
+
+}
+.tab{
+
+}
+
