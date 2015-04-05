@@ -15,9 +15,12 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngSails'
+
   ])
   .config(function ($routeProvider) {
+ 
     $routeProvider
       .when('/', {
         templateUrl: 'views/home.html',
@@ -31,6 +34,7 @@ angular
       })
       .when('/addlink', {
         templateUrl: 'views/addlink.html',
+        controller: 'AddlinkCtrl'
       })
       .otherwise({
         redirectTo: '/home'

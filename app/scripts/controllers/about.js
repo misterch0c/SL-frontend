@@ -14,4 +14,5 @@ angular.module('yoslApp')
       'AngularJS',
       'Karma'
     ];
+    console.log("test");
   });

@@ -9,6 +9,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/videojs/dist/video-js/video-js.css" />
     <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css" />
     <!-- endbower -->
     <!-- endbuild -->
@@ -45,8 +46,7 @@
         <a data-toggle="tab">Tools</a>
       </li>
       <li class="tabz">
-      <a href="#/addlink">add link</a>
-
+      <a href="/#/addlink" data-toggle="tab">add link</a>
       </li>
       <li class="tabz">
         <a data-toggle="tab">Contact/About</a>
@@ -56,11 +56,7 @@
           <input name="tagsinput" class="tagsinput tg" data-role="tagsinput" value="tag,other" />
       </li>
 
-
-
     </ul>
-
-
 
   </nav>
 
@@ -100,7 +96,10 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/videojs/dist/video-js/video.js"></script>
     <script src="bower_components/flat-ui/dist/js/flat-ui.js"></script>
+    <script src="bower_components/sails.io.js/dist/sails.io.js"></script>
+    <script src="bower_components/angular-sails/dist/angular-sails.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -108,6 +107,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/addlink.js"></script>
         <!-- endbuild -->
 </body>
 </html>
