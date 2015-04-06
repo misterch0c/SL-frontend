@@ -23,7 +23,7 @@ angular
  
     $routeProvider
       .when('/', {
-        templateUrl: 'views/home.html',
+        redirectTo:'/home',
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -31,6 +31,7 @@ angular
       })     
       .when('/home', {
         templateUrl: 'views/home.html',
+         controller: 'HomeCtrl'
       })
       .when('/addlink', {
         templateUrl: 'views/addlink.html',
