@@ -35,6 +35,9 @@ angular
       .when('/addlink', {
         templateUrl: 'views/addlink.html',
         controller: 'AddlinkCtrl'
+      })      
+      .when('/test', {
+        templateUrl: 'views/test.html',
       })
       .otherwise({
         redirectTo: '/home'

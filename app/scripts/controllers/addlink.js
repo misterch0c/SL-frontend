@@ -7,8 +7,8 @@ angular.module('yoslApp')
 
 
       	$scope.test = function ($scope) {
-    $http.get('http://localhost:1337/link').
-        then(function(data) {
+   			 $http.get('http://localhost:1337/link').
+       		 success(function(data) {
             console.log(data);
         });
 	};
