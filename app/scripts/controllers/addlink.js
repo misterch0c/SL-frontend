@@ -2,14 +2,15 @@
 
 
 angular.module('yoslApp')
-  .controller('AddlinkCtrl', function ($scope) {
+  .controller('AddlinkCtrl', function ($scope,$http) {
     console.log("addlink controler");
 
 
-      	$scope.test = function () {
-		console.log($scope.title);
-		console.log($scope.link);
-		console.log($scope.descr);
+      	$scope.test = function ($scope) {
+    $http.get('http://localhost:1337/link').
+        then(function(data) {
+            console.log(data);
+        });
 	};
 
   });
