@@ -2,7 +2,7 @@
 
 
 angular.module('yoslApp')
-    .controller('AddlinkCtrl', function($scope, $resource) {
+    .controller('AddlinkCtrl', function($scope, $resource, $http) {
         console.log("addlink controler");
         console.log($scope.title);
 
@@ -33,6 +33,20 @@ angular.module('yoslApp')
 
                 });
         };
+		 
+		$scope.getDescription = function(link) {
+			console.log(link);
+		 $http.post('http://localhost:1337/link/getDesc/', {link:link})
+			.success(function(data){
+				console.log(data);
+				$scope.description = data;
+			});
+			
+		};
+		
+
+ 
+
 
 
 
