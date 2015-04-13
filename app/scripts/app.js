@@ -39,6 +39,7 @@ angular
       })      
       .when('/test', {
         templateUrl: 'views/test.html',
+        controller: 'HomeCtrl'
       })
       .otherwise({
         redirectTo: '/home'

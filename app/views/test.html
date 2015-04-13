@@ -1,3 +1,4 @@
+
 <div>
 <td valign="top">
     <p></p>
@@ -10,33 +11,23 @@
     
 
     <p></p>
-    <a href="http://zenk-security.com/" title="Zenk-Security" data-toggle="popover" data-content=
+
+
+<div ng-repeat="n in links track by $index" bs-popover >
+{{n.title}}
+    <a href="{{n.link}}" title="{{n.title}}" rel="popover" data-content=
 
 
 
-"&lt;img src=&quot;http://i.imgur.com/tQAkEcc.png&quot; height=&quot;150&quot; width=&quot;350&quot;&gt;
-&lt;br&gt;
-La communauté zenk-security a pour objet principal la sécurité informatique, nous sommes des touches à tout, des fouineurs, nous expérimentons à tout va et nous partageons sans autre restriction que le respect.
-"
+"{{n.description}}"
 
 
-    target="_blank">ZenkSecurity</a>
+    target="_blank">{{n.title}}</a>
     <br>
 
-</div>
+</div></div>
 </td>
 
 
 
 <br><br><br><br><br><br><br><br><br><br>
-<script>
-$(function () {
-  $('[data-toggle="popover"]').popover({
-  	html:true,
-  	trigger:'hover focus',
-  	placement:'right',
-
-
-  })
-});
-</script>

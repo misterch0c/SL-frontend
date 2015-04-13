@@ -47,6 +47,7 @@ margin-left:3px;
 
 }
 .tab{
+	margin-top: 100px;
 
 }
 .panbod{
@@ -62,6 +63,16 @@ margin-left:3px;
     height: 650px;
 }
 .popover{
-		max-width: 400px;
+	max-width: 400px;
 	max-height: 900px;
 }
+.rawTab{
+	border: 1px solid black;
+
+}
+.container {
+  width: 970px !important;
+  }
+.bootstrap-switch-square{
+  	size:2050px;
+  }

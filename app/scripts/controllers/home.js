@@ -12,11 +12,29 @@ return $resource('http://localhost:1337/link', null,
     });
 });
 
+
+
+app.directive('bsPopover', function() {
+    return function(scope, element, attrs) {
+        element.find("a[rel=popover]").popover({ placement: 'auto', html: 'true', trigger: 'focus hover'});
+    };
+});
+
+
+
 app.controller('HomeCtrl', function ($scope, Links) {
     console.log("home controler");
 	
 	//Get links by lang (us)
-	$scope.links = Links.whereLang({lang:'us'});
+	$scope.links = Links.query();
+	console.log($scope.links);
+
+
+	//Switch button
+	 if ($('[data-toggle="switch"]').length) {
+      $('[data-toggle="switch"]').bootstrapSwitch();
+      console.log('testtt');
+    }
 		
 	//Get links by type (board)
 	//$scope.links = Links.whereType({type:'board'});
