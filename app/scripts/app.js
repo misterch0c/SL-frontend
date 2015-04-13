@@ -32,5 +32,10 @@ angular
           url:"/test",
           templateUrl:'views/test.html',
           controller:'HomeCtrl'
+        })        
+        .state('addlink',{
+          url:"/addlink",
+          templateUrl:'views/addlink.html',
+          controller:'AddlinkCtrl'
         })
   });

@@ -25,6 +25,9 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+
+                                                        
+
 <nav class="navbar navbar-inverse navbar-fixed-top size">
 
 	  
@@ -38,7 +41,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav">
 		  <li class="active tabz" style="">
-			<a href="#" data-toggle="tab">Boards</a>
+			<a ui-sref="home" data-toggle="tab">Boards</a>
 		  </li>
 		  <li>
 			<a data-toggle="tab">Challenges</a>
@@ -56,7 +59,7 @@
 			<a data-toggle="tab">Tools</a>
 		  </li>
 		  <li>
-		  <a href="/#addlink" data-toggle="tab">add link</a>
+		  <a ui-sref="addlink" data-toggle="tab">add link</a>
 		  </li>   
 		  <li>
 			<a data-toggle="tab">Contact/About</a>
@@ -77,7 +80,7 @@
     <div ng-click="switchz()"class="bootstrap-switch-square">
         <input type="checkbox" ng-model="show" ng-change="test" data-toggle="switch" data-on-text="Panel" data-off-text="Raw" data-off-color="primary" id="switch" />
     </div>
-{{show}}
+
 <div ui-view class="index size">
 </div>
 

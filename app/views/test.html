@@ -1,33 +1,14 @@
 
-<div>
-<td valign="top">
-    <p></p>
-    <br>
-    <div>
-        <ul id="aanav">English&nbsp;&nbsp;
 
-        </ul>
-    </div>
-    
+<table class="raw">
 
-    <p></p>
+<tr ng-repeat="n in links track by $index" bs-popover >
+<td>
+    <a href="{{n.link}}" data-original-title="{{n.title}}" rel="popover" data-content="{{n.description}}"
+    target="_blank">{{n.title}}</a></td>
+</tr>
+</div>
 
-
-<div ng-repeat="n in links track by $index" bs-popover >
-{{n.title}}
-    <a href="{{n.link}}" data-original-title="{{n.title}}" rel="popover" data-content=
+</table>
 
 
-
-"{{n.description}}"
-
-
-    target="_blank">{{n.title}}</a>
-    <br>
-
-</div></div>
-</td>
-
-
-
-<br><br><br><br><br><br><br><br><br><br>
