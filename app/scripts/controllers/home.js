@@ -1,6 +1,5 @@
 'use strict';
 
-
 var app = angular.module('yoslApp');
 
 app.factory('Links' , function($resource) {
@@ -28,11 +27,13 @@ app.controller('HomeCtrl', function ($scope, Links) {
 	//Get links by lang (us)
 	$scope.links = Links.query();
 	console.log($scope.links);
+	
+	$scope.show = true;
 
 
 	//Switch button
-	 if ($('[data-toggle="switch"]').length) {
-      $('[data-toggle="switch"]').bootstrapSwitch();
+	if ($('[data-toggle="switch"]').length) {
+		$('[data-toggle="switch"]').bootstrapSwitch();
     }
 		
 	//Get links by type (board)
@@ -47,6 +48,8 @@ app.controller('HomeCtrl', function ($scope, Links) {
 		console.log($scope.links);   			  
 	 });      
 	*/
-  });
-
-
+	
+	$scope.test = function(){
+		console.log("khfuyf,");
+	}
+});

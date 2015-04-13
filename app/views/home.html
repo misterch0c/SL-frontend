@@ -1,17 +1,12 @@
 
-<br>
-<br>
+	<div class="bootstrap-switch-square">
+		<input type="checkbox" ng-model="show" ng-change="test" data-toggle="switch" data-on-text="Panel" data-off-text="Raw" data-off-color="primary" id="switch" />
+	</div>
+	
+	<br/>
 
-        <div class="col-md-2">
-          <div class="bootstrap-switch-square">
-            <input type="checkbox"  data-toggle="switch" data-on-text="<i class='fui-check'></i>" data-off-text="raw"  id="custom-switch-03" />
-          </div></div>
-
-
-<div ng-repeat="n in links track by $index">
-		<div>&nbsp;</div>
-
-		<div class="panel pan panpanel-default size ">
+	<div ng-repeat="n in links track by $index">
+		<div class="panel panpanel-default">
 		  <div class="panel-heading">
 			<h3 class="panel-title pantitle">
 
@@ -22,7 +17,7 @@
 
 
 		  </div>
-		  <div class="panel-body panbod">
+		  <div class="panel-body">
 		  {{n.description}}
 
 		  </div>

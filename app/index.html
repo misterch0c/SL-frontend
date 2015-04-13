@@ -25,45 +25,57 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-<nav class="navbar nv navbar-inverse navbar-default navbar-fixed-top size top-space">
-  <div class="container-fluid">
-    <ul class=" navbar-nav">
-      <li class="active tabz" style="">
-        <a href="#" data-toggle="tab">Boards</a>
-      </li>
-      <li class="tabz">
-        <a data-toggle="tab">Challenges</a>
-      </li>
-      <li class="tabz">
-        <a data-toggle="tab">IRCs</a>
-      </li>
-      <li class="tabz">
-        <a data-toggle="tab">VPNs</a>
-      </li>
-      <li class="tabz">
-        <a data-toggle="tab">Blogs</a>
-      </li>
-      <li class="tabz">
-        <a data-toggle="tab">Tools</a>
-      </li>
-      <li class="tabz">
-      <a href="/#addlink" data-toggle="tab">add link</a>
-      </li>
-      <li class="tabz">
-        <a data-toggle="tab">Contact/About</a>
-      </li>
-      <li class="tabz">
-		  <div class="tagsinput-primary tg">
-			  <input name="tagsinput" class="tagsinput tg" data-role="tagsinput" value="tag,other" />
-		  </div>
-      </li>
+<nav class="navbar navbar-inverse navbar-fixed-top size">
 
-    </ul>
+	  
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+		</button>
+      <a class="navbar-brand visible-xs" href="#">Security Links</a>
+    </div>
+	
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav">
+		  <li class="active tabz" style="">
+			<a href="#" data-toggle="tab">Boards</a>
+		  </li>
+		  <li>
+			<a data-toggle="tab">Challenges</a>
+		  </li>
+		  <li>
+			<a data-toggle="tab">IRCs</a>
+		  </li>
+		  <li>
+			<a data-toggle="tab">VPNs</a>
+		  </li>
+		  <li>
+			<a data-toggle="tab">Blogs</a>
+		  </li>
+		  <li>
+			<a data-toggle="tab">Tools</a>
+		  </li>
+		  <li>
+		  <a href="/#addlink" data-toggle="tab">add link</a>
+		  </li>   
+		  <li>
+			<a data-toggle="tab">Contact/About</a>
+		  </li>
+		</ul>
+		
+		<form class="navbar-form navbar-right" role="search">
+			<div class="form-group">
+				<label for="search" class="sr-only">Search</label>
+				<input type="text" id="search" class="form-control" placeholder="Search">
+			</div>
+			<button type="submit" class="btn btn-default">Search</button>
+		</form>
+	</div>
+</nav>
 
-  </nav>
 
-
-      <div ng-view=""></div>
+<div ng-view="" class="index size">
+</div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
