@@ -1,0 +1,373 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@2.7.5
+3 info using node@v0.12.2
+4 warn package.json yosl@0.0.0 No description
+5 warn package.json yosl@0.0.0 No repository field.
+6 verbose install where, deps [ '/home/unkn0wn/angular/yop/SL-frontend',
+6 verbose install   [ 'grunt',
+6 verbose install     'grunt-autoprefixer',
+6 verbose install     'grunt-concurrent',
+6 verbose install     'grunt-contrib-clean',
+6 verbose install     'grunt-contrib-concat',
+6 verbose install     'grunt-contrib-connect',
+6 verbose install     'grunt-contrib-copy',
+6 verbose install     'grunt-contrib-cssmin',
+6 verbose install     'grunt-contrib-htmlmin',
+6 verbose install     'grunt-contrib-imagemin',
+6 verbose install     'grunt-contrib-jshint',
+6 verbose install     'grunt-contrib-uglify',
+6 verbose install     'grunt-contrib-watch',
+6 verbose install     'grunt-filerev',
+6 verbose install     'grunt-google-cdn',
+6 verbose install     'grunt-karma',
+6 verbose install     'grunt-newer',
+6 verbose install     'grunt-ngmin',
+6 verbose install     'grunt-svgmin',
+6 verbose install     'grunt-usemin',
+6 verbose install     'grunt-wiredep',
+6 verbose install     'jasmine-core',
+6 verbose install     'jshint-stylish',
+6 verbose install     'karma',
+6 verbose install     'karma-jasmine',
+6 verbose install     'karma-phantomjs-launcher',
+6 verbose install     'load-grunt-tasks',
+6 verbose install     'time-grunt',
+6 verbose install     'angular-ui-router' ] ]
+7 verbose install where, peers [ '/home/unkn0wn/angular/yop/SL-frontend', [] ]
+8 info preinstall yosl@0.0.0
+9 verbose already installed skipping grunt-contrib-cssmin@^0.9.0 /home/unkn0wn/angular/yop/SL-frontend
+10 verbose already installed skipping grunt-contrib-htmlmin@^0.3.0 /home/unkn0wn/angular/yop/SL-frontend
+11 verbose already installed skipping grunt-contrib-imagemin@^0.7.0 /home/unkn0wn/angular/yop/SL-frontend
+12 verbose already installed skipping grunt-contrib-jshint@^0.10.0 /home/unkn0wn/angular/yop/SL-frontend
+13 verbose already installed skipping grunt-contrib-uglify@^0.4.0 /home/unkn0wn/angular/yop/SL-frontend
+14 verbose already installed skipping grunt-contrib-watch@^0.6.1 /home/unkn0wn/angular/yop/SL-frontend
+15 verbose already installed skipping grunt-filerev@^0.2.1 /home/unkn0wn/angular/yop/SL-frontend
+16 verbose already installed skipping grunt-google-cdn@^0.4.0 /home/unkn0wn/angular/yop/SL-frontend
+17 verbose already installed skipping grunt-karma@^0.10.1 /home/unkn0wn/angular/yop/SL-frontend
+18 verbose already installed skipping grunt-newer@^0.7.0 /home/unkn0wn/angular/yop/SL-frontend
+19 verbose already installed skipping grunt-ngmin@^0.0.3 /home/unkn0wn/angular/yop/SL-frontend
+20 verbose already installed skipping grunt-svgmin@^0.4.0 /home/unkn0wn/angular/yop/SL-frontend
+21 verbose already installed skipping grunt-usemin@^2.1.1 /home/unkn0wn/angular/yop/SL-frontend
+22 verbose already installed skipping grunt-wiredep@^1.7.0 /home/unkn0wn/angular/yop/SL-frontend
+23 verbose already installed skipping jasmine-core@^2.2.0 /home/unkn0wn/angular/yop/SL-frontend
+24 verbose already installed skipping jshint-stylish@^0.2.0 /home/unkn0wn/angular/yop/SL-frontend
+25 verbose already installed skipping karma@^0.12.31 /home/unkn0wn/angular/yop/SL-frontend
+26 verbose already installed skipping karma-jasmine@^0.3.5 /home/unkn0wn/angular/yop/SL-frontend
+27 verbose already installed skipping karma-phantomjs-launcher@^0.1.4 /home/unkn0wn/angular/yop/SL-frontend
+28 verbose already installed skipping load-grunt-tasks@^0.4.0 /home/unkn0wn/angular/yop/SL-frontend
+29 verbose already installed skipping time-grunt@^0.3.1 /home/unkn0wn/angular/yop/SL-frontend
+30 silly cache add args [ 'angular-ui-router@0.2.13', null ]
+31 verbose cache add spec angular-ui-router@0.2.13
+32 silly cache add parsed spec { raw: 'angular-ui-router@0.2.13',
+32 silly cache add   scope: null,
+32 silly cache add   name: 'angular-ui-router',
+32 silly cache add   rawSpec: '0.2.13',
+32 silly cache add   spec: '0.2.13',
+32 silly cache add   type: 'version' }
+33 verbose addNamed angular-ui-router@0.2.13
+34 silly addNamed semver.valid 0.2.13
+35 silly addNamed semver.validRange 0.2.13
+36 silly mapToRegistry name angular-ui-router
+37 silly mapToRegistry using default registry
+38 silly mapToRegistry registry https://registry.npmjs.org/
+39 silly mapToRegistry uri https://registry.npmjs.org/angular-ui-router
+40 verbose addNameVersion registry:https://registry.npmjs.org/angular-ui-router not in flight; fetching
+41 verbose already installed skipping grunt@^0.4.1 /home/unkn0wn/angular/yop/SL-frontend
+42 verbose already installed skipping grunt-autoprefixer@^0.7.3 /home/unkn0wn/angular/yop/SL-frontend
+43 verbose request uri https://registry.npmjs.org/angular-ui-router
+44 verbose request no auth needed
+45 info attempt registry request try #1 at 19:20:29
+46 verbose request id ad1e7aaee492e71b
+47 http request GET https://registry.npmjs.org/angular-ui-router
+48 verbose already installed skipping grunt-concurrent@^0.5.0 /home/unkn0wn/angular/yop/SL-frontend
+49 verbose already installed skipping grunt-contrib-clean@^0.5.0 /home/unkn0wn/angular/yop/SL-frontend
+50 verbose already installed skipping grunt-contrib-concat@^0.4.0 /home/unkn0wn/angular/yop/SL-frontend
+51 verbose already installed skipping grunt-contrib-connect@^0.7.1 /home/unkn0wn/angular/yop/SL-frontend
+52 verbose already installed skipping grunt-contrib-copy@^0.5.0 /home/unkn0wn/angular/yop/SL-frontend
+53 http 200 https://registry.npmjs.org/angular-ui-router
+54 silly get cb [ 200,
+54 silly get   { date: 'Mon, 13 Apr 2015 17:20:44 GMT',
+54 silly get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+54 silly get     etag: '"ANMR5UAOIE9FSRX8IPHN8V06O"',
+54 silly get     'content-type': 'application/json',
+54 silly get     'cache-control': 'max-age=60',
+54 silly get     'content-length': '20157',
+54 silly get     'accept-ranges': 'bytes',
+54 silly get     via: '1.1 varnish',
+54 silly get     age: '0',
+54 silly get     'x-served-by': 'cache-lcy1122-LCY',
+54 silly get     'x-cache': 'MISS',
+54 silly get     'x-cache-hits': '0',
+54 silly get     'x-timer': 'S1428945644.049737,VS0,VE164',
+54 silly get     vary: 'Accept',
+54 silly get     'keep-alive': 'timeout=10, max=50',
+54 silly get     connection: 'Keep-Alive' } ]
+55 verbose get saving angular-ui-router to /home/unkn0wn/.npm/registry.npmjs.org/angular-ui-router/.cache.json
+56 silly mapToRegistry name angular-ui-router
+57 silly mapToRegistry using default registry
+58 silly mapToRegistry registry https://registry.npmjs.org/
+59 silly mapToRegistry uri https://registry.npmjs.org/angular-ui-router
+60 verbose addRemoteTarball https://registry.npmjs.org/angular-ui-router/-/angular-ui-router-0.2.13.tgz not in flight; adding
+61 verbose addRemoteTarball [ 'https://registry.npmjs.org/angular-ui-router/-/angular-ui-router-0.2.13.tgz',
+61 verbose addRemoteTarball   'ab40c2f9fef9b8626ffdb29a793426c1fedd2f29' ]
+62 info retry fetch attempt 1 at 19:20:30
+63 info attempt registry request try #1 at 19:20:30
+64 http fetch GET https://registry.npmjs.org/angular-ui-router/-/angular-ui-router-0.2.13.tgz
+65 http fetch 200 https://registry.npmjs.org/angular-ui-router/-/angular-ui-router-0.2.13.tgz
+66 silly fetchAndShaCheck shasum ab40c2f9fef9b8626ffdb29a793426c1fedd2f29
+67 verbose addTmpTarball /tmp/npm-16091-934046b0/registry.npmjs.org/angular-ui-router/-/angular-ui-router-0.2.13.tgz not in flight; adding
+68 verbose addTmpTarball already have metadata; skipping unpack for angular-ui-router@0.2.13
+69 silly cache afterAdd angular-ui-router@0.2.13
+70 verbose afterAdd /home/unkn0wn/.npm/angular-ui-router/0.2.13/package/package.json not in flight; writing
+71 verbose afterAdd /home/unkn0wn/.npm/angular-ui-router/0.2.13/package/package.json written
+72 silly install resolved [ { name: 'angular-ui-router',
+72 silly install resolved     description: 'State-based routing for AngularJS',
+72 silly install resolved     version: '0.2.13',
+72 silly install resolved     homepage: 'http://angular-ui.github.com/',
+72 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+72 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+72 silly install resolved     repository:
+72 silly install resolved      { type: 'git',
+72 silly install resolved        url: 'https://github.com/angular-ui/ui-router.git' },
+72 silly install resolved     bugs: { url: 'https://github.com/angular-ui/ui-router/issues' },
+72 silly install resolved     licenses: [ [Object] ],
+72 silly install resolved     dependencies: {},
+72 silly install resolved     devDependencies:
+72 silly install resolved      { grunt: '~0.4.1',
+72 silly install resolved        'grunt-contrib-concat': '~0.3.0',
+72 silly install resolved        'grunt-contrib-uglify': '~0.4.0',
+72 silly install resolved        'grunt-contrib-jshint': '~0.8.0',
+72 silly install resolved        'grunt-contrib-watch': '~0.5.3',
+72 silly install resolved        'grunt-contrib-connect': '~0.7.1',
+72 silly install resolved        'grunt-contrib-clean': '~0.5.0',
+72 silly install resolved        'grunt-karma': '~0.6.2',
+72 silly install resolved        jsdoc: 'git://github.com/jsdoc3/jsdoc.git#v3.2.2',
+72 silly install resolved        shelljs: '~0.2.6',
+72 silly install resolved        'faithful-exec': '~0.1.0',
+72 silly install resolved        'karma-firefox-launcher': '~0.1.0',
+72 silly install resolved        'karma-chrome-launcher': '~0.1.0',
+72 silly install resolved        'karma-html2js-preprocessor': '~0.1.0',
+72 silly install resolved        'karma-jasmine': '~0.1.3',
+72 silly install resolved        'karma-requirejs': '~0.2.0',
+72 silly install resolved        'karma-script-launcher': '~0.1.0',
+72 silly install resolved        'karma-coffee-preprocessor': '~0.1.0',
+72 silly install resolved        karma: '~0.10.4',
+72 silly install resolved        'karma-phantomjs-launcher': '~0.1.0',
+72 silly install resolved        'load-grunt-tasks': '~0.4.0',
+72 silly install resolved        'grunt-conventional-changelog': '~1.1.0',
+72 silly install resolved        'grunt-ngdocs': 'git://github.com/christopherthielen/grunt-ngdocs#issue-86' },
+72 silly install resolved     main: 'release/angular-ui-router.js',
+72 silly install resolved     gitHead: 'c3d543aae43d4600512520a0d70723ac31f2cb62',
+72 silly install resolved     _id: 'angular-ui-router@0.2.13',
+72 silly install resolved     scripts: {},
+72 silly install resolved     _shasum: 'ab40c2f9fef9b8626ffdb29a793426c1fedd2f29',
+72 silly install resolved     _from: 'angular-ui-router@0.2.13',
+72 silly install resolved     _npmVersion: '2.1.9',
+72 silly install resolved     _nodeVersion: '0.10.30',
+72 silly install resolved     _npmUser: { name: 'nateabele', email: 'nate.abele@gmail.com' },
+72 silly install resolved     dist:
+72 silly install resolved      { shasum: 'ab40c2f9fef9b8626ffdb29a793426c1fedd2f29',
+72 silly install resolved        tarball: 'http://registry.npmjs.org/angular-ui-router/-/angular-ui-router-0.2.13.tgz' },
+72 silly install resolved     directories: {},
+72 silly install resolved     _resolved: 'https://registry.npmjs.org/angular-ui-router/-/angular-ui-router-0.2.13.tgz' } ]
+73 info install angular-ui-router@0.2.13 into /home/unkn0wn/angular/yop/SL-frontend
+74 info installOne angular-ui-router@0.2.13
+75 verbose installOne of angular-ui-router to /home/unkn0wn/angular/yop/SL-frontend not in flight; installing
+76 verbose lock using /home/unkn0wn/.npm/_locks/angular-ui-router-0ac04454e5cf35ef.lock for /home/unkn0wn/angular/yop/SL-frontend/node_modules/angular-ui-router
+77 silly install write writing angular-ui-router 0.2.13 to /home/unkn0wn/angular/yop/SL-frontend/node_modules/angular-ui-router
+78 silly cache addNamed cb angular-ui-router@0.2.13
+79 verbose unbuild node_modules/angular-ui-router
+80 silly gentlyRm /home/unkn0wn/angular/yop/SL-frontend/node_modules/angular-ui-router is being purged from base /home/unkn0wn/angular/yop/SL-frontend
+81 verbose gentlyRm don't care about contents; nuking /home/unkn0wn/angular/yop/SL-frontend/node_modules/angular-ui-router
+82 verbose tar unpack /home/unkn0wn/.npm/angular-ui-router/0.2.13/package.tgz
+83 verbose tar unpacking to /home/unkn0wn/angular/yop/SL-frontend/node_modules/angular-ui-router
+84 silly gentlyRm /home/unkn0wn/angular/yop/SL-frontend/node_modules/angular-ui-router is being purged
+85 verbose gentlyRm don't care about contents; nuking /home/unkn0wn/angular/yop/SL-frontend/node_modules/angular-ui-router
+86 silly gunzTarPerm modes [ '755', '644' ]
+87 silly gunzTarPerm extractEntry package.json
+88 silly gunzTarPerm extractEntry .npmignore
+89 silly gunzTarPerm extractEntry README.md
+90 silly gunzTarPerm extractEntry LICENSE
+91 silly gunzTarPerm extractEntry files.js
+92 silly gunzTarPerm extractEntry Gruntfile.js
+93 silly gunzTarPerm extractEntry tsort.js
+94 silly gunzTarPerm extractEntry .travis.yml
+95 silly gunzTarPerm extractEntry CHANGELOG.md
+96 silly gunzTarPerm extractEntry api/angular-ui-router.d.ts
+97 silly gunzTarPerm extractEntry bower.json
+98 silly gunzTarPerm extractEntry component.json
+99 silly gunzTarPerm extractEntry config/jsdoc.js
+100 silly gunzTarPerm extractEntry config/karma-1.0.8.js
+101 silly gunzTarPerm extractEntry config/karma-1.1.5.js
+102 silly gunzTarPerm extractEntry config/karma-1.3.0.js
+103 silly gunzTarPerm extractEntry config/karma.js
+104 silly gunzTarPerm extractEntry lib/angular-1.0.8/angular-loader.js
+105 silly gunzTarPerm extractEntry lib/angular-1.0.8/angular-mocks.js
+106 silly gunzTarPerm extractEntry lib/angular-1.0.8/angular-sanitize.js
+107 silly gunzTarPerm extractEntry lib/angular-1.0.8/angular-scenario.js
+108 silly gunzTarPerm extractEntry lib/angular-1.0.8/angular.js
+109 silly gunzTarPerm extractEntry lib/angular-1.1.5/angular-loader.js
+110 silly gunzTarPerm extractEntry lib/angular-1.1.5/angular-mobile.js
+111 silly gunzTarPerm extractEntry lib/angular-1.1.5/angular-mocks.js
+112 silly gunzTarPerm extractEntry lib/angular-1.1.5/angular-sanitize.js
+113 silly gunzTarPerm extractEntry lib/angular-1.1.5/angular-scenario.js
+114 silly gunzTarPerm extractEntry lib/angular-1.1.5/angular.js
+115 silly gunzTarPerm extractEntry lib/angular-1.2.14/angular-animate.js
+116 silly gunzTarPerm extractEntry lib/angular-1.2.14/angular-loader.js
+117 silly gunzTarPerm extractEntry lib/angular-1.2.14/angular-mocks.js
+118 silly gunzTarPerm extractEntry lib/angular-1.2.14/angular-sanitize.js
+119 silly gunzTarPerm extractEntry lib/angular-1.2.14/angular-scenario.js
+120 silly gunzTarPerm extractEntry lib/angular-1.2.14/angular-touch.js
+121 silly gunzTarPerm extractEntry lib/angular-1.2.14/angular.js
+122 silly gunzTarPerm extractEntry lib/angular-1.3.0/angular-animate.js
+123 silly gunzTarPerm extractEntry lib/angular-1.3.0/angular-mocks.js
+124 silly gunzTarPerm extractEntry lib/angular-1.3.0/angular.js
+125 silly gunzTarPerm extractEntry migration.md
+126 silly gunzTarPerm modified mode [ 'migration.md', 436, 420 ]
+127 silly gunzTarPerm extractEntry ngdoc_assets/StateGoExamples.png
+128 silly gunzTarPerm extractEntry ngdoc_assets/docnav.html
+129 silly gunzTarPerm extractEntry ngdoc_assets/uirouter-docs.css
+130 silly gunzTarPerm extractEntry CONTRIBUTING.md
+131 silly gunzTarPerm extractEntry object graph.png
+132 silly gunzTarPerm extractEntry release/angular-ui-router.js
+133 silly gunzTarPerm extractEntry release/angular-ui-router.min.js
+134 silly gunzTarPerm extractEntry sample/app/app.js
+135 silly gunzTarPerm extractEntry sample/app/contacts/contacts-service.js
+136 silly gunzTarPerm extractEntry sample/app/contacts/contacts.js
+137 silly gunzTarPerm extractEntry sample/app/contacts/contacts.detail.html
+138 silly gunzTarPerm extractEntry sample/app/contacts/contacts.detail.item.edit.html
+139 silly gunzTarPerm extractEntry sample/app/contacts/contacts.detail.item.html
+140 silly gunzTarPerm extractEntry sample/app/contacts/contacts.html
+141 silly gunzTarPerm extractEntry sample/app/contacts/contacts.list.html
+142 silly gunzTarPerm extractEntry sample/assets/contacts.json
+143 silly gunzTarPerm extractEntry sample/common/utils/utils-service.js
+144 silly gunzTarPerm extractEntry sample/css/styles.css
+145 silly gunzTarPerm extractEntry sample/index.html
+146 silly gunzTarPerm extractEntry sample/vendor/bootstrap.min.css
+147 silly gunzTarPerm extractEntry src/common.js
+148 silly gunzTarPerm extractEntry src/state.js
+149 silly gunzTarPerm extractEntry src/stateDirectives.js
+150 silly gunzTarPerm extractEntry src/stateFilters.js
+151 silly gunzTarPerm extractEntry src/resolve.js
+152 silly gunzTarPerm extractEntry src/urlMatcherFactory.js
+153 silly gunzTarPerm extractEntry src/urlRouter.js
+154 silly gunzTarPerm extractEntry src/view.js
+155 silly gunzTarPerm extractEntry src/viewDirective.js
+156 silly gunzTarPerm extractEntry src/viewScroll.js
+157 silly gunzTarPerm extractEntry src/templateFactory.js
+158 silly gunzTarPerm extractEntry test/commonSpec.js
+159 silly gunzTarPerm extractEntry test/debug.js
+160 silly gunzTarPerm extractEntry test/resolveSpec.js
+161 silly gunzTarPerm extractEntry test/stateDirectivesSpec.js
+162 silly gunzTarPerm extractEntry test/stateFiltersSpec.js
+163 silly gunzTarPerm extractEntry test/viewDirectiveSpec.js
+164 silly gunzTarPerm extractEntry test/templateFactorySpec.js
+165 silly gunzTarPerm extractEntry test/testUtils.js
+166 silly gunzTarPerm extractEntry test/urlMatcherFactorySpec.js
+167 silly gunzTarPerm extractEntry test/urlRouterSpec.js
+168 silly gunzTarPerm extractEntry test/viewScrollSpec.js
+169 silly gunzTarPerm extractEntry test/stateSpec.js
+170 silly gunzTarPerm extractEntry test/compat/matchers.js
+171 silly gunzTarPerm extractEntry viewpath.diff
+172 info preinstall angular-ui-router@0.2.13
+173 silly install resolved []
+174 verbose about to build /home/unkn0wn/angular/yop/SL-frontend/node_modules/angular-ui-router
+175 info build /home/unkn0wn/angular/yop/SL-frontend/node_modules/angular-ui-router
+176 verbose linkStuff [ false,
+176 verbose linkStuff   false,
+176 verbose linkStuff   false,
+176 verbose linkStuff   '/home/unkn0wn/angular/yop/SL-frontend/node_modules' ]
+177 info linkStuff angular-ui-router@0.2.13
+178 verbose linkBins angular-ui-router@0.2.13
+179 verbose linkMans angular-ui-router@0.2.13
+180 verbose rebuildBundles angular-ui-router@0.2.13
+181 info install angular-ui-router@0.2.13
+182 info postinstall angular-ui-router@0.2.13
+183 verbose unlock done using /home/unkn0wn/.npm/_locks/angular-ui-router-0ac04454e5cf35ef.lock for /home/unkn0wn/angular/yop/SL-frontend/node_modules/angular-ui-router
+184 info build /home/unkn0wn/angular/yop/SL-frontend
+185 verbose linkStuff [ false, false, false, '/home/unkn0wn/angular/yop' ]
+186 info linkStuff yosl@0.0.0
+187 verbose linkBins yosl@0.0.0
+188 verbose linkMans yosl@0.0.0
+189 verbose rebuildBundles yosl@0.0.0
+190 verbose rebuildBundles [ '.bin',
+190 verbose rebuildBundles   'angular-ui-router',
+190 verbose rebuildBundles   'grunt',
+190 verbose rebuildBundles   'grunt-autoprefixer',
+190 verbose rebuildBundles   'grunt-concurrent',
+190 verbose rebuildBundles   'grunt-contrib-clean',
+190 verbose rebuildBundles   'grunt-contrib-concat',
+190 verbose rebuildBundles   'grunt-contrib-connect',
+190 verbose rebuildBundles   'grunt-contrib-copy',
+190 verbose rebuildBundles   'grunt-contrib-cssmin',
+190 verbose rebuildBundles   'grunt-contrib-htmlmin',
+190 verbose rebuildBundles   'grunt-contrib-imagemin',
+190 verbose rebuildBundles   'grunt-contrib-jshint',
+190 verbose rebuildBundles   'grunt-contrib-uglify',
+190 verbose rebuildBundles   'grunt-contrib-watch',
+190 verbose rebuildBundles   'grunt-filerev',
+190 verbose rebuildBundles   'grunt-google-cdn',
+190 verbose rebuildBundles   'grunt-karma',
+190 verbose rebuildBundles   'grunt-newer',
+190 verbose rebuildBundles   'grunt-ngmin',
+190 verbose rebuildBundles   'grunt-svgmin',
+190 verbose rebuildBundles   'grunt-usemin',
+190 verbose rebuildBundles   'grunt-wiredep',
+190 verbose rebuildBundles   'gulp',
+190 verbose rebuildBundles   'jasmine-core',
+190 verbose rebuildBundles   'jshint-stylish',
+190 verbose rebuildBundles   'karma',
+190 verbose rebuildBundles   'karma-jasmine',
+190 verbose rebuildBundles   'karma-phantomjs-launcher',
+190 verbose rebuildBundles   'load-grunt-tasks',
+190 verbose rebuildBundles   'time-grunt' ]
+191 verbose rebuild bundle /home/unkn0wn/angular/yop/SL-frontend/node_modules/gulp
+192 info build /home/unkn0wn/angular/yop/SL-frontend/node_modules/gulp
+193 info preinstall gulp@3.8.11
+194 verbose linkStuff [ false,
+194 verbose linkStuff   false,
+194 verbose linkStuff   false,
+194 verbose linkStuff   '/home/unkn0wn/angular/yop/SL-frontend/node_modules' ]
+195 info linkStuff gulp@3.8.11
+196 verbose linkBins gulp@3.8.11
+197 verbose link bins [ { gulp: './bin/gulp.js' },
+197 verbose link bins   '/home/unkn0wn/angular/yop/SL-frontend/node_modules/.bin',
+197 verbose link bins   false ]
+198 verbose linkMans gulp@3.8.11
+199 verbose rebuildBundles gulp@3.8.11
+200 verbose rebuildBundles [ '.bin',
+200 verbose rebuildBundles   'archy',
+200 verbose rebuildBundles   'chalk',
+200 verbose rebuildBundles   'deprecated',
+200 verbose rebuildBundles   'gulp-util',
+200 verbose rebuildBundles   'interpret',
+200 verbose rebuildBundles   'liftoff',
+200 verbose rebuildBundles   'minimist',
+200 verbose rebuildBundles   'orchestrator',
+200 verbose rebuildBundles   'pretty-hrtime',
+200 verbose rebuildBundles   'semver',
+200 verbose rebuildBundles   'tildify',
+200 verbose rebuildBundles   'v8flags',
+200 verbose rebuildBundles   'vinyl-fs' ]
+201 silly gentlyRm /home/unkn0wn/angular/yop/SL-frontend/node_modules/.bin/gulp is being purged
+202 verbose gentlyRm don't care about contents; nuking /home/unkn0wn/angular/yop/SL-frontend/node_modules/.bin/gulp
+203 silly vacuum-fs purging /home/unkn0wn/angular/yop/SL-frontend/node_modules/.bin/gulp
+204 verbose stack Error: EACCES, unlink '/home/unkn0wn/angular/yop/SL-frontend/node_modules/.bin/gulp'
+204 verbose stack     at Error (native)
+205 verbose cwd /home/unkn0wn/angular/yop/SL-frontend
+206 error Linux 3.19.3-3-ARCH
+207 error argv "/usr/bin/node" "/usr/bin/npm" "install"
+208 error node v0.12.2
+209 error npm  v2.7.5
+210 error path /home/unkn0wn/angular/yop/SL-frontend/node_modules/.bin/gulp
+211 error code EACCES
+212 error errno -13
+213 error Error: EACCES, unlink '/home/unkn0wn/angular/yop/SL-frontend/node_modules/.bin/gulp'
+213 error     at Error (native)
+213 error  { [Error: EACCES, unlink '/home/unkn0wn/angular/yop/SL-frontend/node_modules/.bin/gulp']
+213 error   errno: -13,
+213 error   code: 'EACCES',
+213 error   path: '/home/unkn0wn/angular/yop/SL-frontend/node_modules/.bin/gulp' }
+214 error Please try running this command again as root/Administrator.
+215 verbose exit [ -13, true ]

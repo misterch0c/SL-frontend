@@ -74,9 +74,14 @@
 </nav>
 
 
-<div ng-view="" class="index size">
+    <div ng-click="switchz()"class="bootstrap-switch-square">
+        <input type="checkbox" ng-model="show" ng-change="test" data-toggle="switch" data-on-text="Panel" data-off-text="Raw" data-off-color="primary" id="switch" />
+    </div>
+{{show}}
+<div ui-view class="index size">
 </div>
 
+<a ui-sref="home">State 1</a>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -108,8 +113,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/videojs/dist/video-js/video.js"></script>
     <script src="bower_components/flat-ui/dist/js/flat-ui.js"></script>
-    <script src="bower_components/sails.io.js/dist/sails.io.js"></script>
-    <script src="bower_components/angular-sails/dist/angular-sails.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

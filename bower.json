@@ -13,8 +13,9 @@
     "angular-touch": "1.2.16",
     "angular-route": "1.2.16",
     "flat-ui": "2.2.2",
-    "angular-sails": "1.1.2",
-    "semantic-ui-flag": "1.11.6"
+    "semantic-ui-flag": "1.11.6",
+    "angular-ui-router": "0.2.13"
+
 
   },
   "devDependencies": {

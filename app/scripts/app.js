@@ -16,32 +16,21 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngResource'
+    'ngResource',
+    'ui.router'
 
   ])
-  .config(function ($routeProvider) {
- 
-    $routeProvider
-      .when('/', {
-        redirectTo:'/home',
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })     
-      .when('/home', {
-        templateUrl: 'views/home.html',
-         controller: 'HomeCtrl'
-      })
-      .when('/addlink', {
-        templateUrl: 'views/addlink.html',
-        controller: 'AddlinkCtrl'
-      })      
-      .when('/test', {
-        templateUrl: 'views/test.html',
-        controller: 'HomeCtrl'
-      })
-      .otherwise({
-        redirectTo: '/home'
-      });
+  .config(function ($locationProvider,$stateProvider) {
+    $locationProvider.html5Mode(true);
+    $stateProvider
+        .state('home',{
+          url:"/",
+          templateUrl:'views/home.html',
+          controller:'HomeCtrl'
+        })        
+        .state('test',{
+          url:"/test",
+          templateUrl:'views/test.html',
+          controller:'HomeCtrl'
+        })
   });
