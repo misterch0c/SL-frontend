@@ -33,7 +33,6 @@ app.controller('HomeCtrl', function ($scope, Links) {
 	//Switch button
 	 if ($('[data-toggle="switch"]').length) {
       $('[data-toggle="switch"]').bootstrapSwitch();
-      console.log('testtt');
     }
 		
 	//Get links by type (board)
