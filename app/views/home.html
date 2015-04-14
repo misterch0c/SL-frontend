@@ -1,40 +1,50 @@
 
 
-	<br/>
+<br/>
 
-	<div ng-repeat="n in links track by $index">
-		<div class="panel panpanel-default">
-		  <div class="panel-heading">
+<div class="size" ui-view="filters"></div>
+
+<br/>
+<br/>
+
+<div ng-if="show" ng-repeat="n in links track by $index">
+	<div class="panel panpanel-default">
+		<div class="panel-heading">
+
 			<h3 class="panel-title pantitle txt">
+				<a href="{{n.link}}"><i class=" {{n.lang}} flag"></i>
+					{{n.title}}
+					<div style="float: right; width: 50px;">
+						<a href="http://yahoo.be" ><span class="glyphicon glyphicon-send txt">Rank </span></a>
+					</div>
+					<div>
+					</div>
+				</a>
+			</h3>
+		</div>
 
+		<div class="panel-body">
+			{{n.description}}
+		</div>
 
-
-			<a href="{{n.link}}"><i class=" {{n.lang}} flag"></i></span>
-			{{n.title}}
- 		<div style="float: right; width: 50px;">
- 		<a href="http://yahoo.be" ><span class="glyphicon glyphicon-send txt">Rank </span></a>
- 		</div>
-		<div>
-
-
-
-
-			</div>
-</a></h3>
-
-
-
-
-		  </div>
-		  <div class="panel-body">
-		  {{n.description}}
-
-		  </div>
-		  <div class="foot panel-footer"><span class="tag label label-default">
-		  #Default</span></div>
+		<div class="foot panel-footer">
+			<span class="tag label label-default">
+				#Default
+			</span>
 		</div>
 	</div>
+</div >
 
+<table class="raw" ng-if="!show">
+
+	<tr ng-repeat="n in links track by $index" bs-popover >
+		<td>
+			<a href="{{n.link}}" data-original-title="{{n.title}}" rel="popover" data-content="{{n.description}}"
+			target="_blank">{{n.title}}</a></td>
+		</tr>
+	</div>
+
+</table>
 
 
 
