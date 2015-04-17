@@ -51,7 +51,49 @@ app.controller('HomeCtrl', function($scope, Links) {
 
 
     //Get links by lang (us)
-    $scope.links = Links.query();
+    // $scope.links = Links.query();
+    $scope.links = [
+        {
+            link:"google.com",
+            title:"Google",
+            description:"Search Engine"
+        },
+        {
+            link:"google.com",
+            title:"Google",
+            description:"Search Engine"
+        },
+        {
+            link:"google.com",
+            title:"Google",
+            description:"Search Engine"
+        },
+        {
+            link:"google.com",
+            title:"Google",
+            description:"Search Engine"
+        },
+        {
+            link:"google.com",
+            title:"Google",
+            description:"Search Engine"
+        },
+        {
+            link:"google.com",
+            title:"Google",
+            description:"Search Engine"
+        },
+        {
+            link:"google.com",
+            title:"Google",
+            description:"Search Engine"
+        },
+        {
+            link:"google.com",
+            title:"Google",
+            description:"Search Engine"
+        }
+    ];
     
     //Get links by type (board)
     //$scope.links = Links.whereType({type:'board'});

@@ -1,40 +1,45 @@
-
-
 body {
 	background-color: #2b303b;
 }
-
 .size {
 	max-width: 1200px;
 	margin: auto;	
 	z-index: 1;
 }
-
-
 .panel:hover {
 	border-color: red;
 
 }
-
 .tooltip-inner {
     max-width: 350px;
     /* If max-width does not work, try using width instead */
     width: 350px; 
     height: 650px;
 }
-
 .popover{
 	max-width: 400px;
 	max-height: 900px;
 }
-
 .raw{
 	border: 5px solid black;
 }
-
 .index {
 	margin-top: 80px;
 }
 .txt{
 	text-align: justify;
+}
+.navbar-collapse{
+	max-height: 100% !important;
+	font-size: 12px !important;
+}
+.navbar-default{
+	background-color: #1E222B !important;
+}
+#eeh-navigation-page-wrapper {
+  background-color: transparent !important;
+  border: none !important;
+}
+.sidebar ul li{
+	border-bottom: 1px solid #1F242D !important;
 }
