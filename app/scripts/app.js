@@ -18,7 +18,9 @@ angular
         'ngTouch',
         'ngResource',
         'ui.router',
-        'eehNavigation'
+        'eehNavigation',
+        'ui.bootstrap'
+
     ])
     .config(function($locationProvider, $stateProvider, $urlRouterProvider) {
 
@@ -94,7 +96,6 @@ angular
                 // POUR IMBRIQUER DES ELEMENTS
                 .sidebarMenuItem('blogs', {
                     text: 'Blogs',
-                    iconClass: 'fa-comments',
                     isCollapsed: true
                 })
                 // sous elements
