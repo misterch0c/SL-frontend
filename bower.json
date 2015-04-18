@@ -14,8 +14,7 @@
     "flat-ui": "2.2.2",
     "semantic-ui-flag": "1.11.6",
     "angular-ui-router": "0.2.13",
-    "eeh-navigation": "*",
-    "startbootstrap-simple-sidebar":"1.0.4"
+    "eeh-navigation": "*"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",

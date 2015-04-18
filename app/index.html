@@ -21,7 +21,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="bower_components/startbootstrap-simple-sidebar/css/simple-sidebar.css" />
+    <link rel="stylesheet" href="styles/simple-sidebar.css" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- endbuild -->
 </head>
@@ -93,7 +93,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">Boards</a>
+                    <a ui-sref="home"><i class="fa fa-plus fa-lg"></i> Boards</a>
                 </li>
                 <li>
                     <a href="#">Blogs</a>
@@ -104,10 +104,13 @@
                 <li>
                     <a href="#">Events</a>
                 </li>
+                <li>
+                    <a ui-sref="addlink"> <i class="fa fa-plus fa-lg"></i> Add Links</a>
+                </li>
                 <li data-toggle="collapse" data-target="#service" class="collapsed">
                   <a href="#"><i class="fa fa-globe fa-lg"></i> Languages <span class="arrow"></span></a>
                 </li>  
-                                <ul class="sub-menu collapse" id="service">
+                <ul class="sub-menu collapse" id="service">
                   <li>New Service 1</li>
                   <li>New Service 2</li>
                   <li>New Service 3</li>
@@ -131,20 +134,7 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Simple Sidebar</h1>
-                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="ui-view"></div>
         <!-- /#page-content-wrapper -->
 
     </div>
