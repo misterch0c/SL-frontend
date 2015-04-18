@@ -35,6 +35,8 @@ body {
 }
 .navbar-default{
 	background-color: #1E222B !important;
+	transition: width .4s;
+	webkit-transition: width .4s; 
 }
 #eeh-navigation-page-wrapper {
   background-color: transparent !important;
