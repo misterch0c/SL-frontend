@@ -32,16 +32,26 @@ body {
 .navbar-collapse{
 	max-height: 100% !important;
 	font-size: 12px !important;
+
 }
 .navbar-default{
 	background-color: #1E222B !important;
 	transition: width .4s;
 	webkit-transition: width .4s; 
+	  	position: fixed;
 }
 #eeh-navigation-page-wrapper {
   background-color: transparent !important;
   border: none !important;
+
+
 }
 .sidebar ul li{
 	border-bottom: 1px solid #1F242D !important;
+
+
+}
+.sidebar{
+	height: 1500px;
+
 }

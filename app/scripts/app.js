@@ -73,12 +73,12 @@ angular
             eehNavigationProvider
                 .sidebarMenuItem('boards', {
                     text: 'Boards',
-                    iconClass: 'fa-tachometer',
-                    href: '/home'
+                    iconClass: 'fa-tachometer fa-2x',
+                    state: 'home'
                 })
                 .sidebarMenuItem('challenges', {
                     text: 'Challenges',
-                    iconClass: 'fa-diamond',
+                    iconClass: 'fa-diamond fa-2x',
                     href: '/home'
                 })
                 .sidebarMenuItem('ircs', {
@@ -121,9 +121,7 @@ angular
                 .sidebarMenuItem('addlink', {
                     text: 'add link',
                     iconClass: 'fa-plus',
-                    click: function () {
-                        console.log('add a link');
-                    }
+                    state: 'addlink'
                 })
                 .sidebarMenuItem('contact', {
                     text: 'Contact/About',
