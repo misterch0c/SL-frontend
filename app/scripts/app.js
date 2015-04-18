@@ -63,7 +63,7 @@ angular
             eehNavigationProvider
                 .navbarMenuItem('user', {
                     text: 'Me',
-                    iconClass: 'fa-user'
+                    iconClass: 'i.flag.gi'
                 })
                 .navbarMenuItem('user.profile', {
                     text: 'User Profile',
@@ -75,8 +75,8 @@ angular
             eehNavigationProvider
                 .sidebarMenuItem('boards', {
                     text: 'Boards',
-                    iconClass: 'fa-tachometer fa-2x',
-                    state: 'home'
+                    state: 'home',
+                    src:'http://fc00.deviantart.net/fs71/f/2013/216/2/9/us_flag_icon_sugarislife28_by_sugarislife28-d6gnlqi.gif'
                 })
                 .sidebarMenuItem('challenges', {
                     text: 'Challenges',
@@ -88,37 +88,18 @@ angular
                     iconClass: 'fa-weixin',
                     href: '/home'
                 })
-                .sidebarMenuItem('vpns', {
+                .sidebarMenuItem('flag', {
                     text: 'VPNs',
                     iconClass: 'fa-server',
                     href: '/home'
                 })
-                // POUR IMBRIQUER DES ELEMENTS
-                .sidebarMenuItem('blogs', {
-                    text: 'Blogs',
-                    isCollapsed: true
-                })
-                // sous elements
-                    .sidebarMenuItem('blogs.news', {
-                        text: 'News',
-                        iconClass: 'fa-comments',
-                        href: '/home'
-                    })
-                    .sidebarMenuItem('blogs.sales', {
-                        text: 'Sales',
-                        iconClass: 'fa-comments',
-                        href: '/home'
-                    })
-                    .sidebarMenuItem('blogs.dummies', {
-                        text: 'Dummies',
-                        iconClass: 'fa-comments',
-                        href: '/home'
-                    })
-                .sidebarMenuItem('tools', {
-                    text: 'Tools',
-                    iconClass: 'fa-cog',
-                    href: '/home'
-                })
+            // POUR IMBRIQUER DES ELEMENTS
+
+            .sidebarMenuItem('tools', {
+                text: 'Tools',
+                iconClass: 'fa-cog',
+                href: '/home'
+            })
                 .sidebarMenuItem('addlink', {
                     text: 'add link',
                     iconClass: 'fa-plus',
@@ -127,6 +108,27 @@ angular
                 .sidebarMenuItem('contact', {
                     text: 'Contact/About',
                     iconClass: 'fa-user',
+                    href: '/home'
+                })
+                .sidebarMenuItem('lang', {
+                    text: 'Languages',
+                    isCollapsed: true,
+                    iconClass: 'fa-flag'
+                })
+            // sous elements
+            .sidebarMenuItem('lang.us', {
+                text: 'English',
+                iconClass: 'fa-comments',
+                href: '/home'
+            })
+                .sidebarMenuItem('lang.fr', {
+                    text: 'French',
+                    iconClass: 'fa-comments',
+                    href: '/home'
+                })
+                .sidebarMenuItem('lang.ru', {
+                    text: 'Russian',
+                    iconClass: 'fa-comments',
                     href: '/home'
                 });
         }
