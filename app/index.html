@@ -93,22 +93,23 @@
                     </a>
                 </li>
                 <li>
-                    <a ui-sref="home"><i class="fa fa-plus fa-lg"></i> Boards</a>
+                    <a ui-sref="home"><i class="fa fa-globe fa-2x"></i> Boards</a>
                 </li>
                 <li>
-                    <a href="#">Blogs</a>
+                    <a href="#"><i class="fa fa-book fa-2x"></i> Blogs</a>
+                </li>                
+                <li>
+                    <a href="#"><i class="fa fa-group fa-2x"></i> IRCs</a>
                 </li>
                 <li>
-                    <a href="#">Challenges</a>
+                    <a href="#"><i class="fa fa-trophy fa-2x"></i> Challenges</a>
                 </li>
+
                 <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a ui-sref="addlink"> <i class="fa fa-plus fa-lg"></i> Add Links</a>
+                    <a ui-sref="addlink"> <i class="fa fa-plus fa-2x"></i> Add Links</a>
                 </li>
                 <li data-toggle="collapse" data-target="#service" class="collapsed">
-                  <a href="#"><i class="fa fa-globe fa-lg"></i> Languages <span class="arrow"></span></a>
+                  <a href="#"><i class="fa fa-flag fa-2x"></i> Languages <span class="arrow"></span></a>
                 </li>  
                 <ul class="sub-menu collapse" id="service">
                   <li>New Service 1</li>
@@ -119,14 +120,9 @@
                 <li>
                     <a href="#">About</a>
                 </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+
             <li>
-                <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                <a href=""><i class="fa fa-chevron-left fa-lg" id="menu-toggle"></i> </a>
             </li>
             </ul>
 
@@ -145,8 +141,10 @@
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+        $('#menu-toggle').toggleClass("fa-chevron-right");
     });
-    </script>
+    </script>  
+
 
 
 
