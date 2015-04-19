@@ -28,11 +28,10 @@
             <nav>
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
-                    <li class="sidebar-brand">
-                        <a hui-sref="state">
-                        <i class="fa fa-user-secret fa-2x fa-fw"></i>
-                            Sec Links
-                        </a>
+                    <li class="sidebar-brand ">
+                        <img src='assets/ayb-blue.png' id="img"></img>
+                           <span class="hb">Hacker Base</span>
+                        
                     </li>
                     <li>
                         <a ui-sref="home"><i class="fa fa-leanpub fa-2x fa-fw"></i><span class="menutxt">Boards</span></a>
@@ -82,6 +81,7 @@
         $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+        $("#wrapper").toggleClass("img");
         $('#menu-toggle').toggleClass("fa-chevron-right");
         $('#fl').toggleClass("fleched",false); //faire un if ou
         $('#fl').toggleClass("fleche",true);
