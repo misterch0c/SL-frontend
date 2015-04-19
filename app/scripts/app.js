@@ -18,7 +18,6 @@ angular
         'ngTouch',
         'ngResource',
         'ui.router',
-        'akoenig.deckgrid'
 
     ])
     .config(function($locationProvider, $stateProvider, $urlRouterProvider) {
