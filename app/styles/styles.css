@@ -119,3 +119,17 @@ body.pml-open #wrapper {
 .paneltxt{
 	font-size: 80%;
 }
+.panel-body{
+	padding-top: 0;
+}
+.panel-footer{
+	padding-top: 0;
+	padding-bottom: 0;
+
+}
+.label{
+	padding-bottom:2px;
+}
+hr{
+	margin-bottom: 0;
+}
