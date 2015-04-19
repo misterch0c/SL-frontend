@@ -1,40 +1,19 @@
-<br/>
+<br>
 <div class="size" ui-view="filters"></div>
-<br/>
-<br/>
-<div ng-if="show" ng-repeat="n in links track by $index">
-	<div class="panel panel-defaul">
-
-			<div class="panel-heading">
-				<h3 class="panel-title pantitle ">
-				<a href="{{n.link}}"><i class=" {{n.lang}} flag"></i>
-					{{n.title}}
-					<div style="float: right; width: 50px;">
-						<a href="http://yahoo.be" >
-						<span class="glyphicon glyphicon-send ">Rank </span></a>
-					</div>
-
-				</a>
-				</h3>
-				<hr>
-			</div>
+<br>
+<br>
+hey
 
 
-		<div class="panel-body paneltxt">
-			{{n.description}}
-		</div>
-		<div class=" panel-footer">
-			<span class="tag label label-default">
-				#Default
-			</span>
-		</div>
-	</div>
-</div >
+
+ <div class="deckgrid" ng-if="show" deckgrid source="links" cardTemplate="views/panel.html">a</div>
+</div>
+
 <table class="raw" ng-if="!show">
-	<tr ng-repeat="n in links track by $index" bs-popover >
-		<td>
-			<a href="{{n.link}}" data-original-title="{{n.title}}" rel="popover" data-content="{{n.description}}"
-			target="_blank">{{n.title}}</a></td>
-		</tr>
-	</div>
+<tr ng-repeat="n in links track by $index" bs-popover >
+	<td>
+		<a href="{{n.link}}" data-original-title="{{n.title}}" rel="popover" data-content="{{n.description}}"
+		target="_blank">{{n.title}}</a></td>
+	</tr>
+</div>
 </table>

@@ -44,7 +44,7 @@ app.directive('bsPopover', function() {
 
 
 app.controller('HomeCtrl', function($scope, Links) {
-
+console.log('home ctrl');
 
 
     $('[data-toggle="popover"]').popover()
@@ -60,12 +60,12 @@ app.controller('HomeCtrl', function($scope, Links) {
         },
         {
             link:"google.com",
-            title:"Google",
+            title:"222222222222",
             description:"Search Engine"
         },
         {
             link:"google.com",
-            title:"Google",
+            title:"333333333333333333333333",
             description:"Search Engine"
         },
         {
@@ -94,6 +94,12 @@ app.controller('HomeCtrl', function($scope, Links) {
             description:"Search Engine"
         }
     ];
+
+    $scope.photos = [
+    {id: 'p1', 'title': 'A nice day!', src: "http://lorempixel.com/300/400/"},
+    {id: 'p2', 'title': 'Puh!', src: "http://lorempixel.com/300/400/sports"},
+    {id: 'p3', 'title': 'What a club!', src: "http://lorempixel.com/300/400/nightlife"}
+];
     
     //Get links by type (board)
     //$scope.links = Links.whereType({type:'board'});
