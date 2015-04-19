@@ -4,9 +4,9 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-/* Toggle Styles */
+ /* Toggle Styles */
 
-#wrapper {
+ #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -15,14 +15,16 @@
 }
 
 #wrapper.toggled {
-    padding-left: 250px;
+    /*padding-left: 250px;*/
+    padding-left:105px;
 }
 
 #sidebar-wrapper {
+    overflow-x:hidden;
     z-index: 1000;
     position: fixed;
     left: 250px;
-    width: 0;
+    width: 60px;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
@@ -34,7 +36,7 @@
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    /*width: 250px;*/
 }
 
 #page-content-wrapper {
@@ -44,8 +46,8 @@
 }
 
 #wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -250px;
+    /*position: absolute;
+    margin-right: -250px;*/
 }
 
 /* Sidebar Styles */
@@ -60,8 +62,8 @@
 }
 
 .sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
+    text-indent: 5px;
+    line-height: 55px;
 }
 
 .sidebar-nav li a {
@@ -79,6 +81,7 @@
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
     text-decoration: none;
+    color: #1ABC9C;
 }
 
 .sidebar-nav > .sidebar-brand {
@@ -98,11 +101,11 @@
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 250px;
+        padding-left: 300px;
     }
 
     #wrapper.toggled {
-        padding-left:0px;
+        padding-left:105px;
         
     }
 
@@ -111,7 +114,7 @@
     }
 
     #wrapper.toggled #sidebar-wrapper {
-        width: 55px;
+        width: 60px;
     }
 
     #page-content-wrapper {

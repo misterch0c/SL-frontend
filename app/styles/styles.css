@@ -7,7 +7,7 @@ body {
 	z-index: 1;
 }
 .panel{
-		width: 500px;
+	width: 500px;
 }
 .panel:hover {
 	box-shadow: 0px 0px 10px 4px rgba(26, 188, 156, 0.75);
@@ -16,10 +16,10 @@ body {
 
 }
 .tooltip-inner {
-    max-width: 350px;
-    /* If max-width does not work, try using width instead */
-    width: 350px; 
-    height: 650px;
+	max-width: 350px;
+	/* If max-width does not work, try using width instead */
+	width: 350px; 
+	height: 650px;
 }
 .popover{
 	max-width: 400px;
@@ -48,8 +48,8 @@ body {
 
 }
 #eeh-navigation-page-wrapper {
-  background-color: transparent !important;
-  border: none !important;
+	background-color: transparent !important;
+	border: none !important;
 
 
 
@@ -70,41 +70,41 @@ body {
 }
 
 nav.push-menu-left {
-    top: 0;
-    width: 300px;
-    height: 100%;
+	top: 0;
+	width: 300px;
+	height: 100%;
 }
 nav.push-menu-left li {
-    display: block;
-    text-align: center;
-    border-bottom: solid 1px #3184a1;
-    border-top: solid 1px #b5dbe9;
+	display: block;
+	text-align: center;
+	border-bottom: solid 1px #3184a1;
+	border-top: solid 1px #b5dbe9;
 }
 nav.push-menu-left li:first-child {
-    border-top: none
+	border-top: none
 }
 nav.push-menu-left li:last-child {
-    border-bottom: none
+	border-bottom: none
 }
 nav.push-menu-left a {
-    display: block;
-    padding: 10px;
-    font-size: 18px;
+	display: block;
+	padding: 10px;
+	font-size: 18px;
 }
 nav.push-menu-left button.close-menu {
-    margin: 10px 0;
-    padding: 10px 30px;
-    background-color: #3184a1;
-    color: #fff;
+	margin: 10px 0;
+	padding: 10px 30px;
+	background-color: #3184a1;
+	color: #fff;
 }
 nav.push-menu-left {
-    left: -300px
+	left: -300px
 }
 body.pml-open nav.push-menu-left {
-    left: 0
+	left: 0
 }
 body.pml-open #wrapper {
-    left: 300px
+	left: 300px
 }
 
 .fleche{
@@ -114,7 +114,7 @@ body.pml-open #wrapper {
 	text-align: right;
 }
 .menutxt{
-	margin-left:-25px;
+	margin-left:10px;
 }
 .paneltxt{
 	font-size: 80%;

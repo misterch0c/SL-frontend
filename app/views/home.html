@@ -7,7 +7,7 @@
 
 <div ng-if="show" ng-repeat="n in links track by $index">
 	<div class="panel panpanel-default">
-		<div class="panel-heading">
+		<span class="panel-heading">
 
 			<h3 class="panel-title pantitle txt">
 				<a href="{{n.link}}"><i class=" {{n.lang}} flag"></i>
@@ -19,7 +19,7 @@
 					</div>
 				</a>
 			</h3>
-		</div>
+		</span>
 
 		<div class="panel-body paneltxt">
 			{{n.description}}
