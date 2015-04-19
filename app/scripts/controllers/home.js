@@ -55,8 +55,8 @@ app.controller('HomeCtrl', function($scope, Links) {
     $scope.links = [
         {
             link:"google.com",
-            title:"Google",
-            description:"Search Engine"
+            title:"Zenk-Security",
+            description:"Zenk Security est une communauté de hacking et de sécurité informatique francophone basé sur le partage et l'apprentissage."
         },
         {
             link:"google.com",
