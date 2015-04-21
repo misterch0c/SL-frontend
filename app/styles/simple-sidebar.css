@@ -28,7 +28,7 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #1E222B ;
+    background: #0F1116 ;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -55,7 +55,7 @@
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 220;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -78,10 +78,16 @@
 
 }
 
+/*
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
     text-decoration: none;
     color: #1ABC9C;
+}
+*/
+
+.active {
+    color: #1ABC9C !important;
 }
 
 .sidebar-nav > .sidebar-brand {
@@ -89,6 +95,7 @@
     height: 150px;
     font-size: 18px;
     line-height: 60px;
+    text-indent: 0px;
 }
 
 .sidebar-nav > .sidebar-brand a {
@@ -99,6 +106,24 @@
     color: #fff;
     background: none;
 }
+
+#wrapper #img{
+    margin-left: -0px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #img{
+    margin-left: -40px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
 
 @media(min-width:768px) {
     #wrapper {
@@ -111,23 +136,16 @@
     }
 
     #sidebar-wrapper {
-        width: 250px;
+        width: 220px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
         width: 60px;
     }    
-    #wrapper.img #img{
-    margin-left: -30px;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    }
+
 
     #page-content-wrapper {
         padding: 20px;
-
         position: relative;
     }
 

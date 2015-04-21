@@ -22,11 +22,10 @@ angular
     ])
     .config(function($locationProvider, $stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise('');
 
         $stateProvider
             .state('home', {
-                url: '',
+                url: 'home',
                 views: {
                     '': {
                         templateUrl: 'views/home.html',
@@ -45,7 +44,9 @@ angular
             controller: 'AddlinkCtrl',
         })
 
-        .state('otherwhise', {
-            url: 'home'
-        });
     })
+    .run(['$state',
+        function($state) {
+            $state.transitionTo('home');
+        }
+    ]);
