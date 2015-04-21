@@ -6,15 +6,10 @@ var app = angular.module('yoslApp');
 app.controller('FiltersCtrl', function($rootScope) {
 
     //Switch button
-    $('[name="switch"]').bootstrapSwitch();
-    if ($rootScope.show === null){
-        // console.log($rootScope.show);
-        $rootScope.show = true;
-    }
-    $('#switch').bootstrapSwitch('state', $rootScope.show, false);
+    $('#switch').bootstrapSwitch('state', $rootScope.show);
 
-    $rootScope.changeShow = function() {
-    	$rootScope.show = !$rootScope.show;     
-    };
+    $('#switch').bootstrapSwitch('onSwitchChange', function(){
+        $rootScope.show = $('#switch').bootstrapSwitch('state');
+    });
 
 });
