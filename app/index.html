@@ -30,28 +30,29 @@
                     <ul class="sidebar-nav">
                         <li class="sidebar-brand ">
                             <img src='assets/ayb-blue-220.png' id="img"></img>
-                            <span class="hb">Hacker Base</span>
+                            <div class="hb">Hacker Base</div>
+                            <div class="hb-small">HB</div>
                         </li>
                         <li>
-                            <a ui-sref="home" ng-class="{ active: isActive('/home')}"><i class="fa fa-leanpub fa-2x fa-fw"></i><span class="menutxt">Boards</span></a>
+                            <a id="one" ui-sref="home" ng-class="{ active: isActive('/home')}"><i class="fa fa-leanpub fa-2x fa-fw"></i><span class="menutxt">Boards</span></a>
                         </li>
                         <li>
-                            <a ui-sref="blogs" ng-class="{ active: isActive('/blogs')}"><i class="fa fa-keyboard-o fa-2x fa-fw"></i><span class="menutxt">Blogs</span></a>
+                            <a id="two" ui-sref="blogs" ng-class="{ active: isActive('/blogs')}"><i class="fa fa-keyboard-o fa-2x fa-fw"></i><span class="menutxt">Blogs</span></a>
                         </li>
                         <li>
-                            <a ui-sref="websites" ng-class="{ active: isActive('/websites')}"><i class="fa fa-globe fa-2x fa-fw"></i><span class="menutxt">Websites</span></a>
+                            <a id="three" ui-sref="websites" ng-class="{ active: isActive('/websites')}"><i class="fa fa-globe fa-2x fa-fw"></i><span class="menutxt">Websites</span></a>
                         </li>
                         <li>
-                            <a ui-sref="ircs" ng-class="{ active: isActive('/ircs')}"><i class="fa fa-wechat fa-2x fa-fw"></i><span class="menutxt">IRCs</span></a>
+                            <a id="four" ui-sref="ircs" ng-class="{ active: isActive('/ircs')}"><i class="fa fa-wechat fa-2x fa-fw"></i><span class="menutxt">IRCs</span></a>
                         </li>
                         <li>
-                            <a ui-sref="challenges" ng-class="{ active: isActive('/challenges')}"><i class="fa fa-trophy fa-2x fa-fw"></i><span class="menutxt">Challenges</span></a>
+                            <a id="five" ui-sref="challenges" ng-class="{ active: isActive('/challenges')}"><i class="fa fa-trophy fa-2x fa-fw"></i><span class="menutxt">Challenges</span></a>
                         </li>
                         <li>
-                            <a ui-sref="addlink" ng-class="{active: isActive('/addlink')}"> <i class="fa fa-plus fa-2x fa-fw"></i><span class="menutxt">Add Links</span></a>
+                            <a id="six" ui-sref="addlink" ng-class="{active: isActive('/addlink')}"> <i class="fa fa-plus fa-2x fa-fw"></i><span class="menutxt">Add Links</span></a>
                         </li>
                         <li data-toggle="collapse" data-target="#service" class="collapsed">
-                            <a><i class="fa fa-flag fa-2x fa-fw"></i><span class="menutxt">Languages</span><span class="arrow"></span></a>
+                            <a id="seven" ><i class="fa fa-flag fa-2x fa-fw"></i><span class="menutxt">Languages</span><span class="arrow"></span></a>
                         </li>
                         <ul class="sub-menu collapse" id="service">
                             <li>New Service 1</li>
@@ -59,30 +60,44 @@
                             <li>New Service 3</li>
                         </ul>
                         <li>
-                            <a ui-sref="about" ng-class="{active: isActive('/about')}"> <i class="fa fa-plus fa-2x fa-fw"></i><span class="menutxt">About</span></a>
+                            <a id="eight" ui-sref="about" ng-class="{active: isActive('/about')}"> <i class="fa fa-plus fa-2x fa-fw"></i><span class="menutxt">About</span></a>
                         </li>
-                        <li>
-                            <a href="" class="fleched" id="fl"><i class="fa fa-chevron-left fa-lg fa-fw" id="menu-toggle" ></i> </a>
+                        <br>
+                        <li class="divider" id="menu-toggle">
+                            <a id="nine" href="" id="fl"><i class="fa fa-chevron-left fa-lg fa-fw fa-2x" id="fleche"  ></i><span class="menutxt">Hide menu</span></a>
                         </li>
                     </ul>
                 </div>
             </nav>
             <!-- /#sidebar-wrapper -->
             <!-- Page Content -->
-            <div class="ui-view">
+            <div class="ui-view" id="page-content-wrapper">
             </div>
             <!-- /#page-content-wrapper -->
         </div>
         <!-- /#wrapper -->
         <script>
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-            // $("#wrapper").toggleClass("img");
-            $('#menu-toggle').toggleClass("fa-chevron-right");
-            $('#fl').toggleClass("fleched",false); //faire un if ou
-            $('#fl').toggleClass("fleche",true);
-        });
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+                // $("#wrapper").toggleClass("img");
+                $('#fleche').toggleClass("fa-chevron-right");
+                $('#fleche').toggleClass("fa-chevron-left");
+                /*$('#fl').toggleClass("fleched",false); //faire un if ou
+                $('#fl').toggleClass("fleche",true);*/
+            });
+            var listener = function(){
+                console.log("aa");
+            }
+            document.getElementById("two").addEventListener("animationstart", listener, false);
+
+            /*$("#one").on({'webkitAnimationStart': function (e) {
+                console.log("aaa");
+                if (e.originalEvent.animationName !== 'sprite') {
+                    //indicator.addClass('start');
+                };
+            }});*/
+            
         </script>
         <script>
         (function(i, s, o, g, r, a, m) {

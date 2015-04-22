@@ -162,3 +162,53 @@ hr{
         width: 100%;
     }
 }
+
+.hb {
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    font-size: 20pt;
+    font-weight: 600;
+    color: #1ABC9C;  
+
+    opacity: 100;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled .hb {
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.hb-small {
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    font-size: 20pt;
+    font-weight: 600;
+    color: #1ABC9C;
+
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#wrapper.toggled .hb-small {
+    opacity: 100;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.test {
+    display: inline-block;
+    margin-right: 20px;
+}
