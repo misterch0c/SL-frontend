@@ -72,6 +72,25 @@
     color: #999999;
 }
 
+.sidebar-nav div {
+    margin-left: 10px;
+    text-indent: 6px;
+    line-height: 45px;
+}
+
+.sidebar-nav div a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+    font-size: 15px;
+}
+
+.sidebar-nav div a:hover {
+    text-decoration: none;
+    color: #1ABC9C;
+
+}
+
 #wrapper.toggled .sidebar-nav li a span {
     opacity: 0;
     -webkit-transition: all 0.5s ease;
@@ -203,18 +222,9 @@
     opacity: 0;
     animation: menu 0.3s ease-out 2.9s forwards;
 }
-/*
-header ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 
-header ul li{
-    display: inline-block;
-    margin-right: 20px
-}
-*/
+
+
 @-moz-keyframes menu {
     0% {
         -moz-transform: translateX(200px);

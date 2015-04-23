@@ -8,6 +8,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.) styles/vendor.css -->
         <!-- bower:css -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="bower_components/videojs/dist/video-js/video-js.css" />
         <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css" />
@@ -15,7 +16,6 @@
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
-        <script src="bower_components/jquery/dist/jquery.js"></script>
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/simple-sidebar.css" />
@@ -25,11 +25,10 @@
     <body class="" ng-app="yoslApp" ng-controller="menuCtrl">
         <div class="" id="wrapper" >
             <!-- Sidebar -->
-            <nav>
                 <div id="sidebar-wrapper">
                     <ul class="sidebar-nav">
                         <li class="sidebar-brand ">
-                            <img src='assets/ayb-blue-220.png' id="img"></img>
+                            <img src='assets/ayb-blue-220.png' id="img"/>
                             <div class="hb">Hacker Base</div>
                             <div class="hb-small">HB</div>
                         </li>
@@ -51,24 +50,45 @@
                         <li id="six">
                             <a ui-sref="addlink" ng-class="{active: isActive('/addlink')}"> <i class="fa fa-plus fa-2x fa-fw"></i><span class="menutxt">Add Links</span></a>
                         </li>
-                        <li id="seven" data-toggle="collapse" data-target="#service" class="collapsed">
-                            <a><i class="fa fa-flag fa-2x fa-fw"></i><span class="menutxt">Languages</span><span class="arrow"></span></a>
+                        <li id="seven">
+                            <a ui-sref="about" ng-class="{active: isActive('/about')}"> <i class="fa fa-question fa-2x fa-fw"></i><span class="menutxt">About</span></a>
                         </li>
-                        <ul class="sub-menu collapse" id="service">
-                            <li>New Service 1</li>
-                            <li>New Service 2</li>
-                            <li>New Service 3</li>
-                        </ul>
-                        <li id="eight">
-                            <a ui-sref="about" ng-class="{active: isActive('/about')}"> <i class="fa fa-plus fa-2x fa-fw"></i><span class="menutxt">About</span></a>
+
+
+                        <!-- Filters menu -->
+
+                        <li id="eight" data-target="#filters" data-toggle="collapse" class="collapsed">
+                            <a href="">
+                                <i class="fa fa-search fa-2x fa-fw"></i><span class="menutxt">Filters </span><span class="caret"></span>
+                            </a>
                         </li>
+
+
+                        <div id="filters" class="sub-menu collapse" role="menu">
+                            <div data-toggle="dropdown" data-target="#lang" class="">
+                                <a href="">
+                                    <i class="fa fa-flag fa-lg fa-fw"></i><span class="menutxt">Language : All</span>
+                                </a>
+                            </div>
+                            <ul id="lang" class="dropdown-menu">
+                                <li>aa</li>
+                            </ul>
+
+                            <div>
+                                <a href=""><i class="fa fa-sort fa-lg fa-fw"></i><span class="menutxt">Sorting order : <i class="fa fa-sort-alpha-asc fa-lg "></i></span></a>
+                            </div>
+                        </div>
+
+                        <!-- End filters menu-->
+
+
                         <br>
                         <li class="divider" id="menu-toggle">
                             <a href="" id="fl"><i class="fa fa-chevron-left fa-lg fa-fw fa-2x" id="fleche"  ></i><span class="menutxt">Hide menu</span></a>
                         </li>
                     </ul>
                 </div>
-            </nav>
+
             <!-- /#sidebar-wrapper -->
             <!-- Page Content -->
             <div class="ui-view" id="page-content-wrapper">
@@ -77,27 +97,30 @@
         </div>
         <!-- /#wrapper -->
         <script>
-            $("#menu-toggle").click(function(e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-                // $("#wrapper").toggleClass("img");
-                $('#fleche').toggleClass("fa-chevron-right");
-                $('#fleche').toggleClass("fa-chevron-left");
-                /*$('#fl').toggleClass("fleched",false); //faire un if ou
-                $('#fl').toggleClass("fleche",true);*/
-            });
-            var listener = function(){
-                console.log("aa");
+        var toggleMenu = function(){
+            $("#wrapper").toggleClass("toggled");
+            // $("#wrapper").toggleClass("img");
+            $('#fleche').toggleClass("fa-chevron-right");
+            $('#fleche').toggleClass("fa-chevron-left");
+            /*$('#fl').toggleClass("fleched",false); //faire un if ou
+            $('#fl').toggleClass("fleche",true);*/
+            if ($('#filters').hasClass("in")){
+                $('#filters').collapse("hide");
             }
-            document.getElementById("two").addEventListener("animationstart", listener, false);
+        }
 
-            /*$("#one").on({'webkitAnimationStart': function (e) {
-                console.log("aaa");
-                if (e.originalEvent.animationName !== 'sprite') {
-                    //indicator.addClass('start');
-                };
-            }});*/
-            
+        $("#eight").click(function(e) {
+            e.preventDefault();
+            if ($("#wrapper").hasClass("toggled")){
+                toggleMenu();
+            }
+        });
+
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            toggleMenu();
+        });
+
         </script>
         <script>
         (function(i, s, o, g, r, a, m) {

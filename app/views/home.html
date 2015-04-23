@@ -5,7 +5,10 @@
 <br/>
 <br/>
 
-<div ng-if="show" class="test" ng-repeat="n in links track by $index">
+<input type="text" ng-model="lang"/>
+
+<div ng-if="show" class="test" ng-repeat="n in links | filter: {lang: lang}">
+{{n.lang}}
 	<div class="panel panpanel-default">
 		<div class="panel-heading">
 

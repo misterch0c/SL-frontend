@@ -56,42 +56,26 @@ console.log('home ctrl');
         {
             link:"google.com",
             title:"Zenk-Security",
-            description:"Zenk Security est une communauté de hacking et de sécurité informatique francophone basé sur le partage et l'apprentissage."
+            description:"Zenk Security est une communauté de hacking et de sécurité informatique francophone basé sur le partage et l'apprentissage.",
+            lang: "fr"
         },
         {
             link:"google.com",
             title:"222222222222",
-            description:"Search Engine"
+            description:"Search Engine",
+            lang: "fr"
         },
         {
             link:"google.com",
             title:"333333333333333333333333",
-            description:"Search Engine"
+            description:"Search Engine",
+            lang: "fr"
         },
         {
             link:"google.com",
             title:"Google",
-            description:"Search Engine"
-        },
-        {
-            link:"google.com",
-            title:"Google",
-            description:"Search Engine"
-        },
-        {
-            link:"google.com",
-            title:"Google",
-            description:"Search Engine"
-        },
-        {
-            link:"google.com",
-            title:"Google",
-            description:"Search Engine"
-        },
-        {
-            link:"google.com",
-            title:"Google",
-            description:"Search Engine"
+            description:"Search Engine",
+            lang: "us"
         }
     ];
 
