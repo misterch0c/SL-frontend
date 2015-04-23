@@ -6,9 +6,10 @@
 <br/>
 
 <input type="text" ng-model="lang"/>
+<br>
+<br>
 
 <div ng-if="show" class="test" ng-repeat="n in links | filter: {lang: lang}">
-{{n.lang}}
 	<div class="panel panpanel-default">
 		<div class="panel-heading">
 
