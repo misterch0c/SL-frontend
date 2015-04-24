@@ -1,5 +1,6 @@
 body {
 	background-color: #2b303b;
+    font-size: 16px;
 }
 .size {
 	max-width: 1200px;
@@ -117,7 +118,7 @@ body.pml-open #wrapper {
 	text-align: right;
 }
 .menutxt{
-	margin-left:10px;
+	margin-left:15px;
 }
 .paneltxt{
 	font-size: 80%;

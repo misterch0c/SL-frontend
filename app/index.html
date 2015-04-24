@@ -7,8 +7,8 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.) styles/vendor.css -->
-        <!-- bower:css -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
+        <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="bower_components/videojs/dist/video-js/video-js.css" />
         <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css" />
@@ -33,25 +33,25 @@
                             <div class="hb-small">HB</div>
                         </li>
                         <li id="one">
-                            <a ui-sref="home" ng-class="{ active: isActive('/home')}"><i class="fa fa-leanpub fa-2x fa-fw"></i><span class="menutxt">Boards</span></a>
+                            <a ui-sref="home" ng-class="{ active: isActive('/home')}"><i class="fa fa-leanpub fa-lg fa-fw"></i><span class="menutxt">Boards</span></a>
                         </li>
                         <li id="two">
-                            <a ui-sref="blogs" ng-class="{ active: isActive('/blogs')}"><i class="fa fa-keyboard-o fa-2x fa-fw"></i><span class="menutxt">Blogs</span></a>
+                            <a ui-sref="blogs" ng-class="{ active: isActive('/blogs')}"><i class="fa fa-keyboard-o fa-lg fa-fw"></i><span class="menutxt">Blogs</span></a>
                         </li>
                         <li id="three">
-                            <a ui-sref="websites" ng-class="{ active: isActive('/websites')}"><i class="fa fa-globe fa-2x fa-fw"></i><span class="menutxt">Websites</span></a>
+                            <a ui-sref="websites" ng-class="{ active: isActive('/websites')}"><i class="fa fa-globe fa-lg fa-fw"></i><span class="menutxt">Websites</span></a>
                         </li>
                         <li id="four">
-                            <a ui-sref="ircs" ng-class="{ active: isActive('/ircs')}"><i class="fa fa-wechat fa-2x fa-fw"></i><span class="menutxt">IRCs</span></a>
+                            <a ui-sref="ircs" ng-class="{ active: isActive('/ircs')}"><i class="fa fa-wechat fa-lg fa-fw"></i><span class="menutxt">IRCs</span></a>
                         </li>
                         <li id="five">
-                            <a ui-sref="challenges" ng-class="{ active: isActive('/challenges')}"><i class="fa fa-trophy fa-2x fa-fw"></i><span class="menutxt">Challenges</span></a>
+                            <a ui-sref="challenges" ng-class="{ active: isActive('/challenges')}"><i class="fa fa-trophy fa-lg fa-fw"></i><span class="menutxt">Challenges</span></a>
                         </li>
                         <li id="six">
-                            <a ui-sref="addlink" ng-class="{active: isActive('/addlink')}"> <i class="fa fa-plus fa-2x fa-fw"></i><span class="menutxt">Add Links</span></a>
+                            <a ui-sref="addlink" ng-class="{active: isActive('/addlink')}"> <i class="fa fa-plus fa-lg fa-fw"></i><span class="menutxt">Add Links</span></a>
                         </li>
                         <li id="seven">
-                            <a ui-sref="about" ng-class="{active: isActive('/about')}"> <i class="fa fa-question fa-2x fa-fw"></i><span class="menutxt">About</span></a>
+                            <a ui-sref="about" ng-class="{active: isActive('/about')}"> <i class="fa fa-question fa-lg fa-fw"></i><span class="menutxt">About</span></a>
                         </li>
 
 
@@ -59,22 +59,19 @@
 
                         <li id="eight" data-target="#filters" data-toggle="collapse" class="collapsed">
                             <a href="">
-                                <i class="fa fa-search fa-2x fa-fw"></i><span class="menutxt">Filters </span><span class="caret"></span>
+                                <i class="fa fa-search fa-lg fa-fw"></i><span class="menutxt">Filters </span><span class="caret"></span>
                             </a>
                         </li>
 
 
                         <div id="filters" class="sub-menu collapse" role="menu">
-                            <div data-toggle="dropdown" data-target="#lang" class="">
+                            <div class="filter" ng-click="changeLang()">
                                 <a href="">
-                                    <i class="fa fa-flag fa-lg fa-fw"></i><span class="menutxt">Language : All</span>
+                                    <i class="fa fa-flag fa-lg fa-fw"></i><span class="menutxt">Language : {{lang}}</span>
                                 </a>
                             </div>
-                            <ul id="lang" class="dropdown-menu">
-                                <li>aa</li>
-                            </ul>
 
-                            <div>
+                            <div class="filter">
                                 <a href=""><i class="fa fa-sort fa-lg fa-fw"></i><span class="menutxt">Sorting order : <i class="fa fa-sort-alpha-asc fa-lg "></i></span></a>
                             </div>
                         </div>
@@ -83,8 +80,8 @@
 
 
                         <br>
-                        <li class="divider" id="menu-toggle">
-                            <a href="" id="fl"><i class="fa fa-chevron-left fa-lg fa-fw fa-2x" id="fleche"  ></i><span class="menutxt">Hide menu</span></a>
+                        <li class="" id="menu-toggle">
+                            <a href="" id="fl"><i class="fa fa-chevron-left fa-lg fa-fw fa-lg" id="fleche"  ></i><span class="menutxt">Hide menu</span></a>
                         </li>
                     </ul>
                 </div>
@@ -99,15 +96,15 @@
         <script>
         var toggleMenu = function(){
             $("#wrapper").toggleClass("toggled");
-            // $("#wrapper").toggleClass("img");
+            /* $("#wrapper").toggleClass("img");*/
             $('#fleche').toggleClass("fa-chevron-right");
             $('#fleche').toggleClass("fa-chevron-left");
             /*$('#fl').toggleClass("fleched",false); //faire un if ou
             $('#fl').toggleClass("fleche",true);*/
-            if ($('#filters').hasClass("in")){
+            if ($('#filters').hasClass("in")) {
                 $('#filters').collapse("hide");
             }
-        }
+        };
 
         $("#eight").click(function(e) {
             e.preventDefault();

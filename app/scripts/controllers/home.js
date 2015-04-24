@@ -44,11 +44,13 @@ app.directive('bsPopover', function() {
 
 
 app.controller('HomeCtrl', function($scope, Links) {
-console.log('home ctrl');
+    console.log('home ctrl');
 
 
-    $('[data-toggle="popover"]').popover()
-
+    $(document).ready(function() {
+    $('[data-toggle="popover"]').popover();
+      $('[data-toggle="tooltip"]').tooltip()
+    });
 
     //Get links by lang (us)
     // $scope.links = Links.query();
@@ -57,25 +59,33 @@ console.log('home ctrl');
             link:"google.com",
             title:"Zenk-Security",
             description:"Zenk Security est une communauté de hacking et de sécurité informatique francophone basé sur le partage et l'apprentissage.",
-            lang: "fr"
+            lang: "fr",
+            rank: 1,
+            deltaRank: 0
         },
         {
             link:"google.com",
             title:"222222222222",
             description:"Search Engine",
-            lang: "fr"
+            lang: "fr",
+            rank: 10,
+            deltaRank: +2
         },
         {
             link:"google.com",
             title:"333333333333333333333333",
             description:"Search Engine",
-            lang: "fr"
+            lang: "fr",
+            rank: 7,
+            deltaRank: -1
         },
         {
             link:"google.com",
             title:"Google",
             description:"Search Engine",
-            lang: "us"
+            lang: "us",
+            rank: 6,
+            deltaRank: +1
         }
     ];
 

@@ -5,23 +5,17 @@
 <br/>
 <br/>
 
-<input type="text" ng-model="lang"/>
-<br>
-<br>
-
-<div ng-if="show" class="test" ng-repeat="n in links | filter: {lang: lang}">
+<div ng-if="show" class="test" ng-repeat="n in links | filter: {lang: lang == 'ALL' ? '' : lang}">
 	<div class="panel panpanel-default">
 		<div class="panel-heading">
 
 			<h3 class="panel-title pantitle txt">
-				<a href="{{n.link}}"><i class=" {{n.lang}} flag"></i>
+				<a href="{{n.link}}" target="_blank"><i class=" {{n.lang}} flag"></i>
 					{{n.title}}
-					<div style="float: right; width: 50px;">
-						<a href="http://yahoo.be" ><span class="glyphicon glyphicon-send txt">Rank </span></a>
-					</div>
-					<div>
-					</div>
 				</a>
+				<div data-toggle="tooltip" data-placement="top" title="Alexa rank" style="float: right; width: 50px;">
+					<a  href="http://www.alexa.com/siteinfo/{{n.link}}" target="_blank" ><span class="">{{n.rank}} ({{n.deltaRank < 0 ? n.deltaRank : '+'+n.deltaRank}}) </span></a>
+				</div>
 			</h3>
 		</div>
 
