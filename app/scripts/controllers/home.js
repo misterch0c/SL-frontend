@@ -61,7 +61,8 @@ app.controller('HomeCtrl', function($scope, Links) {
             description:"Zenk Security est une communauté de hacking et de sécurité informatique francophone basé sur le partage et l'apprentissage.",
             lang: "fr",
             rank: 1,
-            deltaRank: 0
+            deltaRank: 0,
+            tags : ["tag1", "tag2", "tag3", "exampleTag"]
         },
         {
             link:"google.com",
@@ -69,15 +70,17 @@ app.controller('HomeCtrl', function($scope, Links) {
             description:"Search Engine",
             lang: "fr",
             rank: 10,
-            deltaRank: +2
+            deltaRank: +2,
+            tags : ["tag1", "tag2", "tag3", "exampleTag"]
         },
         {
             link:"google.com",
-            title:"333333333333333333333333",
+            title:"3333333333333",
             description:"Search Engine",
             lang: "fr",
             rank: 7,
-            deltaRank: -1
+            deltaRank: -1,
+            tags : ["tag1", "tag2", "tag3", "exampleTag"]
         },
         {
             link:"google.com",
@@ -85,9 +88,49 @@ app.controller('HomeCtrl', function($scope, Links) {
             description:"Search Engine",
             lang: "us",
             rank: 6,
-            deltaRank: +1
+            deltaRank: +1,
+            tags : ["tag1", "tag2", "tag3", "exampleTag"]
+        },
+        {
+            link:"godfogle.com",
+            title:"dfd",
+            description:"kjhk Engine",
+            lang: "us",
+            rank: 6,
+            deltaRank: +1,
+            tags : ["tag1", "tag2", "tag3", "exampleTag"]
+        },
+        {
+            link:"sdqsd.com",
+            title:"qsdqsd",
+            description:"qsd SDqsd ",
+            lang: "es",
+            rank: 6,
+            deltaRank: +1,
+            tags : ["tag1", "tag2", "tag3", "exampleTag"]
+        },
+        {
+            link:"sdfdsf.com",
+            title:"dsf f hacking",
+            description:"sdfg  kiug",
+            lang: "es",
+            rank: 6,
+            deltaRank: +1,
+            tags : ["tag1", "tag2", "tag3", "exampleTag"]
         }
     ];
+
+    $scope.languages = ['fr','us','es'];
+    $scope.fullLanguageName = function(name){
+        switch(name){
+            case('us'):
+                return 'English';
+            case('fr'):
+                return 'French';
+            case('es'):
+                return 'Spanish';
+        }
+    };
 
     //Get links by type (board)
     //$scope.links = Links.whereType({type:'board'});

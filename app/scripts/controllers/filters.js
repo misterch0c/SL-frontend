@@ -5,11 +5,17 @@ var app = angular.module('yoslApp');
 
 app.controller('FiltersCtrl', function($rootScope, $scope) {
 
+/*
     //Switch button
     $('#switch').bootstrapSwitch('state', $rootScope.show);
 
     $('#switch').bootstrapSwitch('onSwitchChange', function(){
         $rootScope.show = $('#switch').bootstrapSwitch('state');
+    });    
+*/
+
+    $('#switch').click(function(){
+      $rootScope.show = this.checked;
     });
 
     $scope.langs = {0:"ALL", 1:"FR", 2:"US", 3:"ES"};

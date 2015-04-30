@@ -1,45 +1,60 @@
 <br/>
-
 <div class="size" ui-view="filters"></div>
 
 <br/>
-<br/>
 
+<!-- Single button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    Action <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+<br/>
+<!-- Panel View -->
 <div ng-if="show" class="test" ng-repeat="n in links | filter: {lang: lang == 'ALL' ? '' : lang}">
 	<div class="panel panpanel-default">
 		<div class="panel-heading">
-
 			<h3 class="panel-title pantitle txt">
-				<a href="{{n.link}}" target="_blank"><i class=" {{n.lang}} flag"></i>
-					{{n.title}}
-				</a>
-				<div data-toggle="tooltip" data-placement="top" title="Alexa rank" style="float: right; width: 50px;">
-					<a  href="http://www.alexa.com/siteinfo/{{n.link}}" target="_blank" ><span class="">{{n.rank}} ({{n.deltaRank < 0 ? n.deltaRank : '+'+n.deltaRank}}) </span></a>
-				</div>
+			<a href="{{n.link}}" target="_blank"><i class=" {{n.lang}} flag"></i>
+				{{n.title}}
+			</a>
+			<div data-toggle="tooltip" data-placement="top" title="Alexa rank" style="float: right; width: 50px;">
+				<a  href="http://www.alexa.com/siteinfo/{{n.link}}" target="_blank" ><span class="">{{n.rank}} ({{n.deltaRank < 0 ? n.deltaRank : '+'+n.deltaRank}}) </span></a>
+			</div>
 			</h3>
 		</div>
-
 		<div class="panel-body paneltxt">
 			{{n.description}}
 		</div>
-
 		<div class="foot panel-footer">
-			<span class="tag label label-default">
-				#Default
-			</span>
+			<a href="" class="tag label label-default" ng-repeat="tag in n.tags">
+				{{tag}}
+			</a>
 		</div>
 	</div>
 </div >
 
-<table class="raw" ng-if="!show">
 
-	<tr ng-repeat="n in links track by $index" bs-popover >
-		<td>
-			<a href="{{n.link}}" data-original-title="{{n.title}}" rel="popover" data-content="{{n.description}}"
-			target="_blank">{{n.title}}</a></td>
-		</tr>
+<!-- Raw View -->
+
+<div class="raw test" ng-repeat="l in languages" ng-if="!show" >
+	<div>
+		<i class="{{l}} flag"></i>
+		<span class="raw-title">{{fullLanguageName(l)}}</span>
 	</div>
-
-</table>
-
-
+	<ul class="raw-link">
+		<li ng-repeat="n in links | filter: {lang: l}" bs-popover>
+			<a href="{{n.link}}" data-original-title="{{n.title}}" rel="popover"  data-content="{{n.description}}" target="_blank">
+				{{n.title}}
+			</a>
+		</li>
+	</ul>
+</div>

@@ -29,9 +29,7 @@ body {
 	max-width: 400px;
 	max-height: 900px;
 }
-.raw{
-	border: 5px solid black;
-}
+
 .index {
 	margin-top: 80px;
 }
@@ -132,9 +130,13 @@ body.pml-open #wrapper {
 	padding-bottom: 0;
 
 }
-.label{
+
+.tag{
 	padding-bottom:2px;
+	margin: 2px;
 }
+
+
 hr{
 	margin-bottom: 0;
 }
@@ -213,4 +215,25 @@ hr{
     display: inline-block;
     margin-right: 5px;
     margin-left: 5px;
+}
+
+
+.raw{
+	border: 4px solid black;
+	padding: 10px;
+}
+
+.raw-title {
+	font-size: 18px;
+	color: green;
+}
+
+.raw-link {
+	margin:0;
+	margin-top: 5px;
+	padding-left: 20px; 	
+}
+
+.border {
+	border: 2px solid black;
 }
