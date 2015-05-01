@@ -55,7 +55,7 @@
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 220;
+    width: 200px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -66,19 +66,13 @@
     line-height: 45px;
 }
 
-.sidebar-nav li a {
+.sidebar-nav li a,label {
     display: block;
     text-decoration: none;
     color: #999999;
 }
 
-.sidebar-nav li .filter {
-    line-height: 35px ;
-}
 
-.sidebar-nav li .filter a {
-    font-size: 13px;
-}
 
 .sidebar-nav div a:hover {
     text-decoration: none;

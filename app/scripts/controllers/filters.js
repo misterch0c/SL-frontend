@@ -18,13 +18,14 @@ app.controller('FiltersCtrl', function($rootScope, $scope) {
       $rootScope.show = this.checked;
     });
 
-    $scope.langs = {0:"ALL", 1:"FR", 2:"US", 3:"ES"};
-    $scope.ind = 0;
-
-    $rootScope.lang = "ALL";
+    $rootScope.lang = "all";
+    $scope.lang = "all";
 
     $rootScope.changeLang = function(){
+      $rootScope.lang = $scope.lang;
+    };
 
+/*
       ++$scope.ind;
       if ($scope.ind >= Object.keys($scope.langs).length){
         $scope.ind = 0;
@@ -33,5 +34,5 @@ app.controller('FiltersCtrl', function($rootScope, $scope) {
       $rootScope.lang = $scope.langs[$scope.ind];
 
     }
-
+*/
 });

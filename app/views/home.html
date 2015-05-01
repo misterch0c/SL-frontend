@@ -2,24 +2,9 @@
 <div class="size" ui-view="filters"></div>
 
 <br/>
-
-<!-- Single button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-    Action <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-
 <br/>
 <!-- Panel View -->
-<div ng-if="show" class="test" ng-repeat="n in links | filter: {lang: lang == 'ALL' ? '' : lang}">
+<div ng-if="show" class="test" ng-repeat="n in links | filter: {lang: lang == 'all' ? '' : lang}">
 	<div class="panel panpanel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title pantitle txt">
@@ -45,7 +30,7 @@
 
 <!-- Raw View -->
 
-<div class="raw test" ng-repeat="l in languages" ng-if="!show" >
+<div class="raw test" ng-repeat="l in languages | filter: 'fr'" ng-if="!show" >
 	<div>
 		<i class="{{l}} flag"></i>
 		<span class="raw-title">{{fullLanguageName(l)}}</span>

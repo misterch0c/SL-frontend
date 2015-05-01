@@ -61,20 +61,41 @@
                         </a>
                     </li>
                     <li id="filters" class="sub-menu collapse" role="menu">
-                        <ul class="">
+                        <ul class="filter-block">
                             <li class="dropdown filter">
-                                <a href="" data-toggle="dropdown" role="button">
-                                    <i class="fa fa-flag fa-lg fa-fw"></i><span class="menutxt">Language : {{lang}}</span>
+                                <a>
+                                    <i class="fa fa-flag fa fa-fw"></i>
+                                    <select id="lang" ng-model="lang" ng-change="changeLang()" data-toggle="select" class="form-control select select-default filter-select">
+                                        <option value="all">
+                                            All languages
+                                        </option>
+                                        <option value="us">
+                                            English
+                                        </option>
+                                        <option value="fr">
+                                            French
+                                        </option>
+                                        <option value="es">
+                                            Spanish
+                                        </option>
+                                    </select>
                                 </a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
                             </li>
                             <li class="dropdown filter">
-                                <a href=""><i class="fa fa-sort fa-lg fa-fw"></i><span class="menutxt">Sorting order : <i class="fa fa-sort-alpha-asc fa-lg "></i></span></a>
+                                <a>
+                                    <i class="fa fa-sort fa fa-fw"></i>
+                                    <select id="lang" data-toggle="select" class="form-control select select-default filter-select">
+                                        <option>
+                                            By name
+                                        </option>
+                                        <option>
+                                            By rank
+                                        </option>
+                                        <option>
+                                            By popularity
+                                        </option>
+                                    </select>
+                                </a>
                             </li>
                         </ul>
                     </li>
