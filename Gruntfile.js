@@ -63,8 +63,8 @@ module.exports = function(grunt) {
                 tasks: ['recess:dist']
             },
             styles: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.css', '<%= yeoman.app %>/styles/{,*/}*.less'],
-                tasks: ['newer:copy:styles', 'autoprefixer', 'less']
+                files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+                tasks: ['newer:copy:styles', 'autoprefixer']
             },
             gruntfile: {
                 files: ['Gruntfile.js']
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
             options: {
                 port: 9000,
                 // Change this to '0.0.0.0' to access the server from outside.
-                hostname: '0.0.0.0',
+                hostname: 'localhost',
                 livereload: 35729
             },
             livereload: {

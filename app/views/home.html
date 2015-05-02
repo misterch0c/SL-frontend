@@ -5,13 +5,13 @@
 <br/>
 <!-- Panel View -->
 <div ng-if="show" class="test" ng-repeat="n in links | filter: {lang: lang == 'all' ? '' : lang}">
-	<div class="panel panpanel-default">
+	<div class="panel panelpanel panpanel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title pantitle txt">
 			<a href="{{n.link}}" target="_blank"><i class=" {{n.lang}} flag"></i>
 				{{n.title}}
 			</a>
-			<div data-toggle="tooltip" data-placement="top" title="Alexa rank" style="float: right; width: 70px;">
+			<div data-toggle="tooltip" data-placement="top" title="Alexa rank" style="float: right; width: 70px;text-align:right;">
 
 				<a  href="http://www.alexa.com/siteinfo/{{n.link}}" target="_blank" ><span class="">{{n.rank}}({{n.deltaRank < 0 ? n.deltaRank:'+'+n.deltaRank}})</span></a>
 
@@ -34,10 +34,10 @@
 
 <!-- Raw View -->
 
-<div class="raw test" ng-repeat="l in languages | filter: 'fr'" ng-if="!show" >
-	<div>
+<div class="panel panelraw panpanel-default " ng-repeat="l in languages " ng-if="!show" >
+	<div class="panel-heading" style="text-align:center;">
 		<i class="{{l}} flag"></i>
-		<span class="raw-title">{{fullLanguageName(l)}}</span>
+		<span class="raw-title" >{{fullLanguageName(l)}}</span>
 	</div>
 	<ul class="raw-link">
 		<li ng-repeat="n in links | filter: {lang: l}" bs-popover>
@@ -47,7 +47,7 @@
 			
 			
 
-			" target="_blank">
+			" target="_blank" >
 				{{n.title}}
 
 			</a>

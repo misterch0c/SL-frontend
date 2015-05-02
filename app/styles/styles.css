@@ -7,12 +7,18 @@ body {
 	margin: auto;	
 	z-index: 1;
 }
-.panel{
+.panelpanel{
 	width: 500px;
-
-
-
 }
+.panelraw{
+	width: 180px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	background-color: #0F1116;
+}
+
+
+
 .panel:hover {
 	box-shadow: 0px 0px 10px 4px rgba(26, 188, 156, 0.75);
 	-moz-box-shadow: 0px 0px 10px 4px rgba(26, 188, 156, 0.75);
@@ -224,8 +230,10 @@ hr{
 }
 
 .raw-title {
+	
 	font-size: 18px;
-	color: green;
+	color: #19BB9B;
+
 }
 
 .raw-link {
