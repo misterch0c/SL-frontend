@@ -26,18 +26,21 @@ module.exports = function(grunt) {
 
         // Project settings
         yeoman: appConfig,
-        less: {
-            development: {
-                options: {
-                    compress: true,
-                    yuicompress: true,
-                    optimization: 2
-                },
-                files: {
-                    "app/styles/test.css": "app/styles/test.less"
-                }
+        recess: {
+            options: {
+                compile: true
+            },
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/styles',
+                    src: '{,*/}*.less',
+                    dest: '.tmp/styles/',
+                    ext: '.css'
+                }]
             }
         },
+
         // Watches files for changes and runs tasks based on the changed files
         watch: {
             bower: {
@@ -54,6 +57,10 @@ module.exports = function(grunt) {
             jsTest: {
                 files: ['test/spec/{,*/}*.js'],
                 tasks: ['newer:jshint:test', 'karma']
+            },
+            recess: {
+                files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
+                tasks: ['recess:dist']
             },
             styles: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.css', '<%= yeoman.app %>/styles/{,*/}*.less'],
@@ -348,12 +355,14 @@ module.exports = function(grunt) {
         // Run some tasks in parallel to speed up the build process
         concurrent: {
             server: [
+                'recess',
                 'copy:styles'
             ],
             test: [
                 'copy:styles'
             ],
             dist: [
+                'recess',
                 'copy:styles',
                 'imagemin',
                 'svgmin'
@@ -369,8 +378,6 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('serve', 'Compile then start a connect web server', function(target) {
         if (target === 'dist') {
