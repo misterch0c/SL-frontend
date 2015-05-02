@@ -274,4 +274,8 @@ hr{
 .filter-select option:hover {
 	background: #1ABC9C !important;
 }
+.thumbnail img{
+	width: 10%;
+	height: 400px;
+}
 

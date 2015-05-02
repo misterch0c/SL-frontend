@@ -37,8 +37,15 @@
 	</div>
 	<ul class="raw-link">
 		<li ng-repeat="n in links | filter: {lang: l}" bs-popover>
-			<a href="{{n.link}}" data-original-title="{{n.title}}" rel="popover"  data-content="{{n.description}}" target="_blank">
+			<a href="{{n.link}}" data-original-title="{{n.title}}" rel="popover"  data-content="
+			{{n.description}}
+				<img style='width:270px' src='../images/small.png'></img>
+			
+			
+
+			" target="_blank">
 				{{n.title}}
+
 			</a>
 		</li>
 	</ul>
