@@ -62,6 +62,7 @@ app.controller('HomeCtrl', function($scope, Links) {
             lang: "fr",
             rank: 1,
             deltaRank: 0,
+            isup:true,
             tags : ["tag1", "tag2", "tag3", "exampleTag"]
         },
         {
@@ -71,6 +72,7 @@ app.controller('HomeCtrl', function($scope, Links) {
             lang: "fr",
             rank: 10,
             deltaRank: +2,
+                        isup:false,
             tags : ["tag1", "tag2", "tag3", "exampleTag"]
         },
         {
@@ -80,6 +82,7 @@ app.controller('HomeCtrl', function($scope, Links) {
             lang: "fr",
             rank: 7,
             deltaRank: -1,
+                        isup:true,
             tags : ["tag1", "tag2", "tag3", "exampleTag"]
         },
         {
@@ -89,6 +92,7 @@ app.controller('HomeCtrl', function($scope, Links) {
             lang: "us",
             rank: 6,
             deltaRank: +1,
+                        isup:true,
             tags : ["tag1", "tag2", "tag3", "exampleTag"]
         },
         {
@@ -98,6 +102,7 @@ app.controller('HomeCtrl', function($scope, Links) {
             lang: "us",
             rank: 6,
             deltaRank: +1,
+                        isup:false,
             tags : ["tag1", "tag2", "tag3", "exampleTag"]
         },
         {
@@ -107,6 +112,7 @@ app.controller('HomeCtrl', function($scope, Links) {
             lang: "es",
             rank: 6,
             deltaRank: +1,
+                        isup:false,
             tags : ["tag1", "tag2", "tag3", "exampleTag"]
         },
         {
@@ -116,6 +122,7 @@ app.controller('HomeCtrl', function($scope, Links) {
             lang: "es",
             rank: 6,
             deltaRank: +1,
+                        isup:true,
             tags : ["tag1", "tag2", "tag3", "exampleTag"]
         }
     ];

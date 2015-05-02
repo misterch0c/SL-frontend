@@ -278,4 +278,6 @@ hr{
 	width: 10%;
 	height: 400px;
 }
-
+.online{
+	background-color: green;
+}
