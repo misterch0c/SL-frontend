@@ -1,10 +1,11 @@
 <br/>
 <div class="size" ui-view="filters"></div>
 
+
 <br/>
 <br/>
 <!-- Panel View -->
-<div ng-if="show" class="test" ng-repeat="n in links | filter: {lang: lang == 'all' ? '' : lang}">
+<div ng-if="show" class="test" ng-repeat="n in links | filter: {lang: lang}">
 	<div class="panel panelpanel panpanel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title pantitle txt">
@@ -34,22 +35,18 @@
 
 <!-- Raw View -->
 
-<div class="panel panelraw panpanel-default " ng-repeat="l in languages " ng-if="!show" >
-	<div class="panel-heading" style="text-align:center;">
+<div class="panel panelraw panpanel-default " ng-repeat="l in languages | filter: lang" ng-if="!show" >
+	<div class="panel-heading" style="text-align:left;">
 		<i class="{{l}} flag"></i>
 		<span class="raw-title" >{{fullLanguageName(l)}}</span>
 	</div>
 	<ul class="raw-link">
-		<li ng-repeat="n in links | filter: {lang: l}" bs-popover>
-			<a href="{{n.link}}" data-original-title="{{n.title}}" rel="popover"  data-content="
+		<li ng-repeat="n in links | filter: {lang: l}" title="{{n.title}}" data-trigger="hover" bs-popover data-html="true" data-animation="am-fade-and-scale" data-content="
 			{{n.description}}
 				<img style='width:270px' src='../images/small.png'></img>
-			
-			
-
-			" target="_blank" >
+			" >
+			<a href="{{n.link}}" target="_parent">
 				{{n.title}}
-
 			</a>
 		</li>
 	</ul>

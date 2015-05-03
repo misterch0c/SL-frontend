@@ -18,6 +18,7 @@ angular
         'ngTouch',
         'ngResource',
         'ui.router',
+        'mgcrea.ngStrap'
 
     ])
     .config(function($locationProvider, $stateProvider, $urlRouterProvider) {

@@ -31,25 +31,13 @@ app.factory('Links', function($resource) {
 
 
 
-app.directive('bsPopover', function() {
-    return function(scope, element, attrs) {
-        element.find("a[rel=popover]").popover({
-            placement: 'auto',
-            html: 'true',
-            trigger: 'focus hover'
-        });
-    };
-});
-
-
 
 app.controller('HomeCtrl', function($scope, Links) {
     console.log('home ctrl');
 
 
     $(document).ready(function() {
-    $('[data-toggle="popover"]').popover();
-      $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="tooltip"]').tooltip();
     });
 
     //Get links by lang (us)

@@ -11,6 +11,8 @@
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="bower_components/semantic-ui-flag/flag.css" />
+        <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.css" />
+        <link rel="stylesheet" href="bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
@@ -66,7 +68,7 @@
                                 <a>
                                     <i class="fa fa-flag fa fa-fw"></i>
                                     <select id="lang" ng-model="lang" ng-change="changeLang()" data-toggle="select" class="form-control select select-default filter-select">
-                                        <option value="all">
+                                        <option value="">
                                             All languages
                                         </option>
                                         <option value="us">
@@ -170,6 +172,9 @@
         <script src="bower_components/angular-animate/angular-animate.js"></script>
         <script src="bower_components/angular-touch/angular-touch.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+        <script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+        <script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:js({.tmp,app}) scripts/scripts.js -->

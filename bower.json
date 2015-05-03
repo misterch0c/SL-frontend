@@ -12,7 +12,10 @@
     "angular-animate": "1.2.16",
     "angular-touch": "1.2.16",
     "semantic-ui-flag": "1.11.6",
-    "angular-ui-router": "0.2.13"
+    "angular-ui-router": "0.2.13",
+    "angular-motion": "~0.3.4",
+    "angular-strap": "~2.2.1",
+    "bootstrap-switch": "*"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",
@@ -20,6 +23,6 @@
   },
   "appPath": "app",
   "resolutions": {
-    "angular": "1.2.16"
+    "angular": "^1.2.21"
   }
 }

@@ -12,12 +12,22 @@ body {
 }
 .panelraw{
 	width: 180px;
-	margin-bottom: 10px;
+	margin: 5px;
 	padding-bottom: 10px;
-	background-color: #0F1116;
+	background-color: #525863;
+	border: solid 2px #0F1116;
+	display: inline-block;	
+	vertical-align: top;
 }
 
+.panelraw a {	
+	color: #999999;
+}
 
+.panelraw a:hover {	
+	color: #1ABC9C;
+	text-decoration: none;
+}
 
 .panel:hover {
 	box-shadow: 0px 0px 10px 4px rgba(26, 188, 156, 0.75);
@@ -223,11 +233,6 @@ hr{
     margin-left: 5px;
 }
 
-
-.raw{
-	border: 4px solid black;
-	padding: 10px;
-}
 
 .raw-title {
 	

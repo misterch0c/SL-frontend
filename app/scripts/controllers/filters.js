@@ -6,33 +6,39 @@ var app = angular.module('yoslApp');
 app.controller('FiltersCtrl', function($rootScope, $scope) {
 
 /*
-    //Switch button
-    $('#switch').bootstrapSwitch('state', $rootScope.show);
-
-    $('#switch').bootstrapSwitch('onSwitchChange', function(){
-        $rootScope.show = $('#switch').bootstrapSwitch('state');
-    });    
+		//Switch button
+		$('#switch').bootstrapSwitch('state', $rootScope.show);
 */
+		$('#switch').on('switchChange.bootstrapSwitch', function(event, state) {
+				$rootScope.show = state;				
+				$rootScope.$apply();
 
-    $('#switch').click(function(){
-      $rootScope.show = this.checked;
-    });
+		});    
 
-    $rootScope.lang = "all";
-    $scope.lang = "all";
-
-    $rootScope.changeLang = function(){
-      $rootScope.lang = $scope.lang;
-    };
+		$(document).ready(function() {
+			$('[name="switch"]').bootstrapSwitch();
+		});
 
 /*
-      ++$scope.ind;
-      if ($scope.ind >= Object.keys($scope.langs).length){
-        $scope.ind = 0;
-      }
+		$('#switch').click(function(){
+			$rootScope.show = this.checked;
+		});
+*/
+		$rootScope.lang = "";
+		$scope.lang = "";
 
-      $rootScope.lang = $scope.langs[$scope.ind];
+		$rootScope.changeLang = function(){
+			$rootScope.lang = $scope.lang;
+		};
 
-    }
+/*
+			++$scope.ind;
+			if ($scope.ind >= Object.keys($scope.langs).length){
+				$scope.ind = 0;
+			}
+
+			$rootScope.lang = $scope.langs[$scope.ind];
+
+		}
 */
 });

@@ -176,6 +176,8 @@ a:active,a:focus {
 .sidebar-nav #one{
     opacity: 0;
     animation: menu 0.3s ease-out 0.3s forwards;
+    -moz-animation: menu 0.3s ease-out 0.3s forwards;
+    -webkit-animation: menu 0.3s ease-out 0.3s forwards;
 }
 .sidebar-nav #two{
     opacity: 0;
