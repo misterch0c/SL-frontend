@@ -5,8 +5,7 @@
 <br/>
 <br/>
 <!-- Panel View -->
-<div ng-if="show" class="test" ng-repeat="n in links | filter: {lang: lang}">
-	<div class="panel panelpanel panpanel-default">
+<div ng-if="show" class="panel panelpanel panpanel-default" ng-repeat="n in links | filter: {lang: lang, isup: hideDownLinks ? true : '' } | orderBy : sortBy">
 		<div class="panel-heading">
 			<h3 class="panel-title pantitle txt">
 			<a href="{{n.link}}" target="_blank"><i class=" {{n.lang}} flag"></i>
@@ -26,10 +25,9 @@
 		</div>
 		<div class="foot panel-footer">
 			<a href="" class="tag label label-default" ng-repeat="tag in n.tags">
-				{{tag}}
+				#{{tag}}
 			</a>
 		</div>
-	</div>
 </div >
 
 

@@ -66,7 +66,7 @@
                         <ul class="filter-block">
                             <li class="dropdown filter">
                                 <a>
-                                    <i class="fa fa-flag fa fa-fw"></i>
+                                    <i class="fa fa-flag fa fa-fw"<></i>
                                     <select id="lang" ng-model="lang" ng-change="changeLang()" data-toggle="select" class="form-control select select-default filter-select">
                                         <option value="">
                                             All languages
@@ -86,17 +86,26 @@
                             <li class="dropdown filter">
                                 <a>
                                     <i class="fa fa-sort fa fa-fw"></i>
-                                    <select id="lang" data-toggle="select" class="form-control select select-default filter-select">
-                                        <option>
-                                            By name
+                                    <select id="sortBy" data-toggle="select" ng-model="sortBy" ng-change="changeSortBy()" class="form-control select select-default filter-select">
+                                        <option value="title">
+                                            By title
                                         </option>
-                                        <option>
-                                            By rank
+                                        <option value="lang">
+                                            By language
+                                        </option>
+                                        <option value="rank">
+                                            By Alexa rank
                                         </option>
                                         <option>
                                             By popularity
                                         </option>
                                     </select>
+                                </a>
+                            </li>
+                            <li class="dropdown filter">
+                                <a href="" ng-click="toggleHideDown()">
+                                    <i class="fa {{ hideDownLinks ? 'fa-check-square-o' : 'fa-square-o'}}  fa "></i>
+                                    <span class="checkbox-hide-link">Hide down links</span>
                                 </a>
                             </li>
                         </ul>
