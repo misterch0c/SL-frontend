@@ -127,6 +127,15 @@ app.controller('HomeCtrl', function($scope, Links) {
         }
     };
 
+    $scope.addTag = function(tag){
+        if ($('[data-role="tagsinput"]').tagsinput('items').indexOf(tag) == -1) {
+            $('[data-role="tagsinput"]').tagsinput('add', tag);
+        }
+        else {
+            $('[data-role="tagsinput"]').tagsinput('remove', tag);
+        }
+    };
+
     //Get links by type (board)
     //$scope.links = Links.whereType({type:'board'});
 

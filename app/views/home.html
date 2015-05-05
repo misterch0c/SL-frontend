@@ -22,7 +22,7 @@
 			{{n.description}}
 		</div>
 		<div class="foot panel-footer">
-			<a href="" class="tag label label-default tag-custom" ng-repeat="tag in n.tags">
+			<a href="" class="tag label label-default tag-custom {{tags.indexOf(tag) > -1 ? 'tag-custom-selected' : ''}}" ng-repeat="tag in n.tags" ng-click="addTag(tag)">
 				#{{tag}}
 			</a>
 		</div>

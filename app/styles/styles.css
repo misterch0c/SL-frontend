@@ -157,6 +157,17 @@ body.pml-open #wrapper {
 	margin: 2px;
 }
 
+.tag-custom:hover,
+.tag-custom:focus{
+	background-color: #1ABC9C !important;
+}
+
+.tag-custom-selected{
+	background-color: #1ABC9C;
+}
+
+
+
 /* Style pour les tags dans les filtres*/
 .label-info {
 	background-color: #1ABC9C;
