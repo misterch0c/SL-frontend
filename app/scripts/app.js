@@ -21,7 +21,7 @@ angular
         'mgcrea.ngStrap'
 
     ])
-    .config(function($locationProvider, $stateProvider, $urlRouterProvider) {
+    .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider) {
 
 
         $stateProvider
@@ -43,7 +43,11 @@ angular
             url: 'addlink',
             templateUrl: 'views/addlink.html',
             controller: 'AddlinkCtrl',
-        })
+        });
+
+        angular.extend($popoverProvider.defaults, {
+            placement: "bottom",
+        });
 
     })
     .run(['$state',

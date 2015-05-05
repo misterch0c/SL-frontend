@@ -1,20 +1,18 @@
 <br/>
 <div class="size" ui-view="filters"></div>
-
-
 <br/>
 <br/>
 <!-- Panel View -->
-<div ng-if="show" class="panel panelpanel panpanel-default" ng-repeat="n in links | filter: {lang: lang, isup: hideDownLinks ? true : '' } | orderBy : sortBy">
+<!-- {lang: lang, tags: ['tag5','tag2'], isup: hideDownLinks ? true : '' } -->
+<div ng-if="show">
+	<div class="panel panelpanel panpanel-default" ng-repeat="n in links | filterLinks:lang:hideDownLinks:tags | orderBy : sortBy">
 		<div class="panel-heading">
 			<h3 class="panel-title pantitle txt">
 			<a href="{{n.link}}" target="_blank"><i class=" {{n.lang}} flag"></i>
 				{{n.title}}
 			</a>
 			<div data-toggle="tooltip" data-placement="top" title="Alexa rank" style="float: right; width: 70px;text-align:right;">
-
 				<a  href="http://www.alexa.com/siteinfo/{{n.link}}" target="_blank" ><span class="">{{n.rank}}({{n.deltaRank < 0 ? n.deltaRank:'+'+n.deltaRank}})</span></a>
-
 				<span  class="glyphicon glyphicon-ok"  style="color:green" ng-show="{{n.isup}}" data-toggle="tooltip" data-placement="top" title="Online"></span>
 				<span  class="glyphicon glyphicon-remove"  style="color:red" ng-hide="{{n.isup}}" data-toggle="tooltip" data-placement="top" title="Offline"></span>
 			</div>
@@ -28,24 +26,24 @@
 				#{{tag}}
 			</a>
 		</div>
-</div >
-
-
+	</div >
+</div>
 <!-- Raw View -->
-
-<div class="panel panelraw panpanel-default " ng-repeat="l in languages | filter: lang" ng-if="!show" >
-	<div class="panel-heading" style="text-align:left;">
-		<i class="{{l}} flag"></i>
-		<span class="raw-title" >{{fullLanguageName(l)}}</span>
+<div ng-if="!show">
+	<div class="panel panelraw panpanel-default " ng-repeat="l in languages " >
+		<div class="panel-heading" style="text-align:left;">
+			<i class="{{l}} flag"></i>
+			<span class="raw-title" >{{fullLanguageName(l)}}</span>
+		</div>
+		<ul class="raw-link">
+			<li ng-repeat="n in links | filter: {lang: l} | filterLinks:'':hideDownLinks:tags | orderBy : sortBy" title="{{n.title}}" data-trigger="hover" bs-popover data-html="true" data-animation="am-fade-and-scale" data-content="
+				{{n.description}}
+				<img src='../images/small.png' class='img-thumbnail panel-thumb'></img>
+				" >
+				<a href="{{n.link}}" target="_parent">
+					{{n.title}}
+				</a>
+			</li>
+		</ul>
 	</div>
-	<ul class="raw-link">
-		<li ng-repeat="n in links | filter: {lang: l}" title="{{n.title}}" data-trigger="hover" bs-popover data-html="true" data-animation="am-fade-and-scale" data-content="
-			{{n.description}}
-				<img style='width:270px' src='../images/small.png'></img>
-			" >
-			<a href="{{n.link}}" target="_parent">
-				{{n.title}}
-			</a>
-		</li>
-	</ul>
 </div>

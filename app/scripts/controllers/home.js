@@ -51,7 +51,7 @@ app.controller('HomeCtrl', function($scope, Links) {
             rank: 1,
             deltaRank: 0,
             isup:true,
-            tags : ["tag1", "tag2", "tag3", "exampleTag"]
+            tags : ["tag5", "tag2", "tag3", "exampleTag"]
         },
         {
             link:"google.com",

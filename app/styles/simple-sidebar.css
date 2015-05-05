@@ -91,7 +91,6 @@
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #1ABC9C;
-
 }
 
 
@@ -101,6 +100,7 @@ a:active,a:focus {
 
 
 .active {
+    border-left: solid 2px #1ABC9C;
     color: #1ABC9C !important;
     /*background-color: #2b303b;*/
 }

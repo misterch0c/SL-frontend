@@ -304,3 +304,7 @@ hr{
 	margin-left: 5px;
 	font-size: 10pt;
 }
+
+.panel-thumb {
+	width: 375px;
+}
