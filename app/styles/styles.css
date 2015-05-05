@@ -151,10 +151,15 @@ body.pml-open #wrapper {
 
 }
 
-.tag{
+.tag-custom{
 	padding-bottom: 2px;
 	padding-top: 3px;
 	margin: 2px;
+}
+
+/* Style pour les tags dans les filtres*/
+.label-info {
+	background-color: #1ABC9C;
 }
 
 
@@ -307,4 +312,8 @@ hr{
 
 .panel-thumb {
 	width: 375px;
+}
+
+.bootstrap-tagsinput {
+	width: 95%;
 }

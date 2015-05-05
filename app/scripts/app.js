@@ -50,6 +50,7 @@ angular
         });
 
     })
+    
     .run(['$state',
         function($state) {
             $state.transitionTo('home');
