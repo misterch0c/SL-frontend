@@ -112,7 +112,8 @@ app.controller('HomeCtrl', function($scope, Links) {
             deltaRank: +1,
                         isup:true,
             tags : ["tag1", "tag2", "tag3", "exampleTag"]
-        }
+        },
+
     ];
 
     $scope.languages = ['fr','us','es'];

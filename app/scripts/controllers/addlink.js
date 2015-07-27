@@ -4,7 +4,7 @@
 angular.module('yoslApp')
     .controller('AddlinkCtrl', function($scope, $resource, $http) {
         console.log("addlink controler");
-        console.log($scope.title);
+        //console.log($scope.title);
 
         $scope.test = function() {
             $resource('http://localhost:1337/link', {}, {}).query(function(data) {
@@ -22,7 +22,7 @@ angular.module('yoslApp')
                 type: $scope.type,
                 lang: $scope.lang
             }, {
-                'create': {
+                'create': { 
                     method: 'POST',
                     isArray: false
                 }
@@ -34,12 +34,21 @@ angular.module('yoslApp')
                 });
         };
 		 
-		$scope.getDescription = function(link) {
+        $scope.getDescription = function(link) {
+            console.log(link);
+         $http.post('http://localhost:1337/link/getDesc/', {link:link})
+            .success(function(data){
+                console.log(data);
+                $scope.description = data;
+            });
+            
+        };		
+        $scope.getTitle = function(link) {
 			console.log(link);
-		 $http.post('http://localhost:1337/link/getDesc/', {link:link})
+		 $http.post('http://localhost:1337/link/getTitle/', {link:link})
 			.success(function(data){
 				console.log(data);
-				$scope.description = data;
+				$scope.title = data;
 			});
 			
 		};

@@ -152,7 +152,7 @@ a:active,a:focus {
     }
 
     #sidebar-wrapper {
-        width: 200px;
+        width: 200px;/*largeur menu*/
     }
 
     #wrapper.toggled #sidebar-wrapper {

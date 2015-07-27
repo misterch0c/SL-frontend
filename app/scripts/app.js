@@ -11,12 +11,11 @@
 
 angular
     .module('yoslApp', [
-        'ngAnimate',
+
         'ngCookies',
         'ngResource',
         'ngSanitize',
         'ngTouch',
-        'ngResource',
         'ui.router',
         'mgcrea.ngStrap'
 
@@ -43,6 +42,11 @@ angular
             url: 'addlink',
             templateUrl: 'views/addlink.html',
             controller: 'AddlinkCtrl',
+        })
+        .state('irc',{
+            url:'irc',
+            templateUrl:'views/irc.html',
+
         });
 
         angular.extend($popoverProvider.defaults, {
@@ -50,9 +54,9 @@ angular
         });
 
     })
-    
-    .run(['$state',
-        function($state) {
-            $state.transitionTo('home');
-        }
-    ]);
+
+.run(['$state',
+    function($state) {
+        $state.transitionTo('home');
+    }
+]);
