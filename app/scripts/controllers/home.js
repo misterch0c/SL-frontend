@@ -117,7 +117,7 @@ app.controller('HomeCtrl', function($scope, Links) {
 
     // ];
 
-    $scope.languages = ['fr','us','es'];
+    $scope.languages = ['es','fr','de','us','ru','ro','ba','ir','pl','az'];
     $scope.fullLanguageName = function(name){
         switch(name){
             case('us'):
@@ -126,6 +126,42 @@ app.controller('HomeCtrl', function($scope, Links) {
                 return 'French';
             case('es'):
                 return 'Spanish';
+            case('ca'):
+                return 'Chinese';
+            case('ru'):
+                return 'Russian';
+            case('de'):
+                return 'German';
+            case('ba'):
+                return 'Bosnian';
+            case('az'):
+                return 'Azerbaijan';
+            case('pl'):
+                return 'Polish';
+            case('ir'):
+                return 'Persian';
+            case('vn'):
+                return 'Vietnamese';
+            case('tr'):
+                return 'Turkish';
+            case('th'):
+                return 'Thai';
+            case('id'):
+                return 'Indonesia';
+            case('it'):
+                return 'Italian';
+            case('pr'):
+                return 'Portuguese';
+            case('ro'):
+                return 'Romanian';
+            case('ir'):
+                return 'Persian';
+            case('az'):
+                return 'Azerbaijan';
+            case('ae'):
+                return 'Arabic';
+
+
         }
     };
 
