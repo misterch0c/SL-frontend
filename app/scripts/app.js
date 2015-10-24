@@ -48,6 +48,11 @@ angular
             url:'irc',
             templateUrl:'views/irc.html',
 
+        })
+        .state('challenges',{
+          url:'challenges',
+          templateUrl:'views/challenges.html',
+          controller:"ChallCtrl"
         });
 
         angular.extend($popoverProvider.defaults, {

@@ -37,7 +37,7 @@
                 </li>
                 <li id="one">
 
-                    <a ui-sref="home" sng-class="{ active: isActive('/home')}"><i class="fa fa-leanpub fa-lg fa-fw"></i><span class="menutxt">Boards </span></a>
+                    <a ui-sref="home" ng-class="{active: isActive('/home')}"><i class="fa fa-leanpub fa-lg fa-fw"></i><span class="menutxt">Boards </span></a>
 
 
                 </li>
@@ -48,10 +48,10 @@
                     <a ui-sref="websites" ng-class="{ active: isActive('/websites')}"><i class="fa fa-globe fa-lg fa-fw"></i><span class="menutxt">Websites</span></a>
                 </li>
                 <li id="four">
-                    <a ui-sref="irc" ng-class="{ active: isActive('/ircs')}"><i class="fa fa-wechat fa-lg fa-fw"></i><span class="menutxt">IRCs</span></a>
+                    <a ui-sref="irc" ng-class="{active: isActive('/irc')}"><i class="fa fa-wechat fa-lg fa-fw"></i><span class="menutxt">IRCs</span></a>
                 </li>
                 <li id="five">
-                    <a ui-sref="challenges" ng-class="{ active: isActive('/challenges')}"><i class="fa fa-trophy fa-lg fa-fw"></i><span class="menutxt">Challenges</span></a>
+                    <a ui-sref="challenges" ng-class="{active: isActive('/challenges')}"><i class="fa fa-trophy fa-lg fa-fw"></i><span class="menutxt">Challenges</span></a>
                 </li>
                 <li id="six">
                     <a ui-sref="addlink" ng-class="{active: isActive('/addlink')}"> <i class="fa fa-plus fa-lg fa-fw"></i><span class="menutxt">Add Base</span></a>
@@ -62,7 +62,7 @@
                 <li id="eight">
                     <a ui-sref="about" ng-class="{active: isActive('/about')}"> <i class="fa fa-thumbs-o-down fa-lg fa-fw"></i><span class="menutxt">Graveyard</span></a>
                 </li>
-                <li class="dropdown" id="menuLogin">
+                <!-- <li class="dropdown" id="menuLogin">
                     <li>
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Login</a>
                         <div class="dropdown-menu" style="padding:17px;">
@@ -73,7 +73,7 @@
                                 <button type="button" id="btnLogin" class="btn">Login</button>
                             </form>
                         </div>
-                    </li>
+                    </li> -->
                     <!-- Filters menu -->
                     <li id="eight" data-target="#filters" data-toggle="collapse" class="collapsed">
                         <a href="">
@@ -228,6 +228,7 @@
     <script src="scripts/controllers/menu.js"></script>
     <script src="scripts/controllers/about.js"></script>
     <script src="scripts/controllers/addlink.js"></script>
+    <script src="scripts/controllers/challenges.js"></script>
     <script src="scripts/controllers/home.js"></script>
     <script src="scripts/controllers/filters.js"></script>
     <!-- endbuild -->

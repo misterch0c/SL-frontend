@@ -117,7 +117,7 @@ app.controller('HomeCtrl', function($scope, Links) {
 
     // ];
 
-    $scope.languages = ['es','fr','de','us','ru','ro','ba','ir','pl','az'];
+    $scope.languages = ['es','fr','de','us','ru','ro','tr','ir','pl','az','cn','vn','ae'];
     $scope.fullLanguageName = function(name){
         switch(name){
             case('us'):

@@ -2,8 +2,11 @@ body {
 	background-color: #2b303b;
     font-size: 16px;
 }
+.ircs{
+	max-width: 900px;
+}
 .size {
-	max-width: 1200px;
+	max-width: 	auto;
 	margin: auto;
 	z-index: 1;
 }
@@ -11,20 +14,22 @@ body {
 	width: 325px;
 
 	display: inline-block;
-    margin-right: 5px;
-    margin-left: 5px;
-	position:                   relative;
+    margin-right: 10px;
+    margin-left: 10px;
+
     font-family:                sans-serif;
     overflow:                   hidden;
 }
 .panelflex{
 	display: flex;
-	height: 100vh;
+
+	height: 200vh;
 	flex-flow: column wrap;
 }
 
 .panelraw{
-	width: 180px;
+
+	width: 250px;
 	margin: 5px;
 	padding-bottom: 10px;
 	background-color: #525863;
@@ -156,7 +161,7 @@ body.pml-open #wrapper {
     text-align:     			justify;
 }
 
-
+/*
 .paneltxt:after {
         content:                    ' ';
         position:                   absolute;
@@ -166,7 +171,7 @@ body.pml-open #wrapper {
         bottom:                     0px;
         left:                       0px;
         background:                 #E0E0E0;
-    }
+    }*/
 
 .paneltxt:before {
     content:                    '...';
@@ -178,8 +183,8 @@ body.pml-open #wrapper {
     right:                      20px;
 }
 .panel-body{
-	padding-top: 0;
-	height: 85px;
+
+	height: 100px;
 }
 .panel-footer{
 	padding-top: 2px;
@@ -378,6 +383,7 @@ hr{
 }
 
 
+
 /*TABLE IRC*/
 div.centre
 {
@@ -387,23 +393,30 @@ div.centre
 }
 
 body {
-  color: #666;
+  color: #fff;
   font: 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
 }
 table {
+	margin-left: auto;
+  margin-right: auto;
   border-collapse: separate;
   border-spacing: 0;
-  width: 100%;
+  width: 90%;
   margin-bottom: 20px;
 }
+
+
 th,
 td {
   padding: 6px 15px;
+
 }
 th {
   background: #42444e;
   color: #fff;
   text-align: left;
+	border-to: 1px solid #c6c9cc;
+	border-bottom: 1px solid #c6c9cc;
 }
 tr:first-child th:first-child {
   border-top-left-radius: 6px;
@@ -419,7 +432,7 @@ td:first-child {
   border-left: 1px solid #c6c9cc;
 }
 tr:nth-child(even) td {
-  background: #eaeaed;
+  background: #3F485D;
 }
 tr:last-child td:first-child {
   border-bottom-left-radius: 6px;

@@ -15,6 +15,7 @@ angular.module('yoslApp')
 
         //Get returns an object, query returns an array
         $scope.addLink = function() {
+          console.log($scope);
             $resource('http://localhost:1337/link/create', {
                 link: $scope.link,
                 title: $scope.title,
@@ -22,7 +23,7 @@ angular.module('yoslApp')
                 type: $scope.type,
                 lang: $scope.lang
             }, {
-                'create': { 
+                'create': {
                     method: 'POST',
                     isArray: false
                 }
@@ -33,7 +34,7 @@ angular.module('yoslApp')
 
                 });
         };
-		 
+
         $scope.getDescription = function(link) {
             console.log(link);
          $http.post('http://localhost:1337/link/getDesc/', {link:link})
@@ -41,8 +42,8 @@ angular.module('yoslApp')
                 console.log(data);
                 $scope.description = data;
             });
-            
-        };		
+
+        };
         $scope.getTitle = function(link) {
 			console.log(link);
 		 $http.post('http://localhost:1337/link/getTitle/', {link:link})
@@ -50,11 +51,11 @@ angular.module('yoslApp')
 				console.log(data);
 				$scope.title = data;
 			});
-			
-		};
-		
 
- 
+		};
+
+
+
 
 
 
