@@ -17,7 +17,8 @@ angular
         'ngSanitize',
         'ngTouch',
         'ui.router',
-        'mgcrea.ngStrap'
+        'mgcrea.ngStrap',
+        'wu.masonry'
 
     ])
     .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider) {

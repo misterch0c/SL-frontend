@@ -4,7 +4,7 @@ body {
 }
 .size {
 	max-width: 1200px;
-	margin: auto;	
+	margin: auto;
 	z-index: 1;
 }
 .panelpanel{
@@ -17,6 +17,11 @@ body {
     font-family:                sans-serif;
     overflow:                   hidden;
 }
+.panelflex{
+	display: flex;
+	height: 100vh;
+	flex-flow: column wrap;
+}
 
 .panelraw{
 	width: 180px;
@@ -24,15 +29,15 @@ body {
 	padding-bottom: 10px;
 	background-color: #525863;
 	border: solid 2px #0F1116;
-	display: inline-block;	
+	display: inline-block;
 	vertical-align: top;
 }
 
-.panelraw a {	
+.panelraw a {
 	color: #999999;
 }
 
-.panelraw a:hover {	
+.panelraw a:hover {
 	color: #1ABC9C;
 	text-decoration: none;
 }
@@ -46,7 +51,7 @@ body {
 .tooltip-inner {
 	max-width: 350px;
 	/* If max-width does not work, try using width instead */
-	width: 350px; 
+	width: 350px;
 	height: 650px;
 }
 .popover{
@@ -68,7 +73,7 @@ body {
 .navbar-default{
 	background-color: #1E222B !important;
 	transition: width .4s;
-	webkit-transition: width .4s; 
+	webkit-transition: width .4s;
 	position: fixed;
 
 
@@ -242,7 +247,7 @@ hr{
     left: 10px;
     font-size: 20pt;
     font-weight: 600;
-    color: #1ABC9C;  
+    color: #1ABC9C;
 
     opacity: 100;
     -webkit-transition: all 0.5s ease;
@@ -289,7 +294,7 @@ hr{
 
 
 .raw-title {
-	
+
 	font-size: 18px;
 	color: #19BB9B;
 
@@ -298,7 +303,7 @@ hr{
 .raw-link {
 	margin:0;
 	margin-top: 5px;
-	padding-left: 20px; 	
+	padding-left: 20px;
 }
 
 .border {
@@ -324,7 +329,7 @@ hr{
 	padding-top: 2px;
 	padding-bottom: 2px;
 	display: inline-block;
-	margin-left: 5px;   
+	margin-left: 5px;
 	background: #0F1116;
     color: #999999;
 }

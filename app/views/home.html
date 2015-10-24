@@ -29,8 +29,10 @@
 	</div >
 </div>
 <!-- Raw View -->
-<div ng-if="!show">
-	<div class="panel panelraw panpanel-default " ng-repeat="l in languages " >
+<div  ng-if="!show" class="panelflex">
+
+	<div class="panel panelraw panpanel-default " ng-repeat="l in languages | orderBy : lang " >
+
 		<div class="panel-heading" style="text-align:left;">
 			<i class="{{l}} flag"></i>
 			<span class="raw-title" >{{fullLanguageName(l)}}</span>
@@ -38,12 +40,13 @@
 		<ul class="raw-link">
 			<li ng-repeat="n in links | filter: {lang: l} | filterLinks:'':hideDownLinks:tags | orderBy : sortBy" title="{{n.title}}" data-trigger="hover" bs-popover data-html="true" data-animation="am-fade-and-scale" data-content="
 				{{n.description}}
-				<img src='http://localhost:1337/tt/{{n.title}}.png' class='img-thumbnail panel-thumb'></img>
+				<img src='http://localhost:1337/screenshots/{{n.title}}.png' class='img-thumbnail panel-thumb'></img>
 				" >
 				<a href="{{n.link}}" target="_parent">
 					{{n.title}}
 				</a>
 			</li>
 		</ul>
+
 	</div>
 </div>
