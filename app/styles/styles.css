@@ -23,7 +23,7 @@ body {
 .panelflex{
 	display: flex;
 
-	height: 200vh;
+	height: 250vh;
 	flex-flow: column wrap;
 }
 
@@ -393,8 +393,7 @@ div.centre
 }
 
 body {
-  color: #fff;
-  font: 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+
 }
 table {
 	margin-left: auto;
@@ -403,6 +402,8 @@ table {
   border-spacing: 0;
   width: 90%;
   margin-bottom: 20px;
+	color: #fff;
+	font: 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
 }
 
 

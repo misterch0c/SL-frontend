@@ -18,7 +18,6 @@ angular
         'ngTouch',
         'ui.router',
         'mgcrea.ngStrap',
-        'wu.masonry'
 
     ])
     .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider) {

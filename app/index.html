@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/semantic-ui-flag/flag.css" />
@@ -84,7 +83,7 @@
                         <ul class="filter-block">
                             <li class="dropdown filter">
                                 <a>
-                                    <i class="fa fa-flag fa fa-fw" <></i>
+                                    <i class="fa fa-flag fa fa-fw"></i>
                                     <select id="lang" ng-model="lang" ng-change="changeLang()" data-toggle="select" class="form-control select select-default filter-select">
                                         <option value="">
                                             All languages
@@ -194,6 +193,8 @@
         <script src="bower_components/json3/lib/json3.min.js"></script>
         <![endif]-->
     <!-- build:js(.) scripts/vendor.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>

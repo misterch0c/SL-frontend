@@ -12,16 +12,8 @@ angular.module('yoslApp')
         });
 
       };
-
-
         console.log("challenges controler");
         $scope.getchall();
-        //console.log($scope.title);
-
-
-
-
-
 
 
     });
