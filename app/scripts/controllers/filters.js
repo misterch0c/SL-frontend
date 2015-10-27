@@ -5,7 +5,7 @@ var app = angular.module('yoslApp');
 
 app.controller('FiltersCtrl', function($rootScope, $scope) {
 
-    //Bootsrap Switch 
+    //Bootsrap Switch
     $(document).ready(function() {
         $('[name="switch"]').bootstrapSwitch('state', $rootScope.show);
     });

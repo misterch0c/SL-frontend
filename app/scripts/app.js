@@ -18,11 +18,37 @@ angular
         'ngTouch',
         'ui.router',
         'mgcrea.ngStrap',
+        'environment'
+
 
     ])
-    .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider) {
+    .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider,envServiceProvider) {
 
+      envServiceProvider.config({
+                  domains: {
+                      development: ['localhost:1337', 'dev.local'],
+                      production: ['acme.com', 'acme.net', 'acme.org']
 
+                  },
+                  vars: {
+                      development: {
+                          apiUrl: 'http://localhost:1337/',
+                          staticUrl: '//localhost:1337'
+                          // antoherCustomVar: 'lorem',
+                          // antoherCustomVar: 'ipsum'
+                      },
+                      production: {
+                          apiUrl: '//api.acme.com/v2',
+                          staticUrl: '//static.acme.com'
+                          // antoherCustomVar: 'lorem',
+                          // antoherCustomVar: 'ipsum'
+                      }
+                      // anotherStage: {
+                      //  customVar: 'lorem',
+                      //  customVar: 'ipsum'
+                      // }
+                  }
+              });
         $stateProvider
             .state('home', {
                 url: 'home',

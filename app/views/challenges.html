@@ -21,7 +21,7 @@
 
     </thead>
     <tbody>
-        <tr ng-repeat="chall in challenges  | orderBy : sortBy "title"">
+        <tr ng-repeat="chall in challenges  | orderBy:title">
             <td>{{chall.title}}</td>
             <td>{{chall.link}}</td>
             <td>{{chall.description}}</td>
