@@ -28,27 +28,17 @@ angular
                   domains: {
                       development: ['localhost:1337', 'dev.local'],
                       production: ['acme.com', 'acme.net', 'acme.org']
-
                   },
                   vars: {
                       development: {
                           apiUrl: 'http://localhost:1337/',
-                          staticUrl: '//localhost:1337'
-                          // antoherCustomVar: 'lorem',
-                          // antoherCustomVar: 'ipsum'
                       },
                       production: {
-                          apiUrl: '//api.acme.com/v2',
-                          staticUrl: '//static.acme.com'
-                          // antoherCustomVar: 'lorem',
-                          // antoherCustomVar: 'ipsum'
+                          apiUrl: 'http://46.101.184.217:1337/',
                       }
-                      // anotherStage: {
-                      //  customVar: 'lorem',
-                      //  customVar: 'ipsum'
-                      // }
                   }
               });
+        envServiceProvider.set('production');
         $stateProvider
             .state('home', {
                 url: 'home',

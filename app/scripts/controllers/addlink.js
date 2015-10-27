@@ -2,12 +2,12 @@
 
 
 angular.module('yoslApp')
-    .controller('AddlinkCtrl', function($scope, $resource, $http) {
+    .controller('AddlinkCtrl', function($scope, $resource, $http,envService) {
         console.log("addlink controler");
         //console.log($scope.title);
-
+        var environment = envService.read('apiUrl');
         $scope.test = function() {
-            $resource('http://localhost:1337/link', {}, {}).query(function(data) {
+            $resource(environment+'link', {}, {}).query(function(data) {
                 console.log(data);
 
             });
@@ -16,7 +16,7 @@ angular.module('yoslApp')
         //Get returns an object, query returns an array
         $scope.addLink = function() {
           console.log($scope);
-            $resource('http://localhost:1337/link/create', {
+            $resource(environment+'link/create', {
                 link: $scope.link,
                 title: $scope.title,
                 description: $scope.description,
@@ -37,7 +37,7 @@ angular.module('yoslApp')
 
         $scope.getDescription = function(link) {
             console.log(link);
-         $http.post('http://localhost:1337/link/getDesc/', {link:link})
+         $http.post(environment+'link/getDesc/', {link:link})
             .success(function(data){
                 console.log(data);
                 $scope.description = data;
@@ -46,7 +46,7 @@ angular.module('yoslApp')
         };
         $scope.getTitle = function(link) {
 			console.log(link);
-		 $http.post('http://localhost:1337/link/getTitle/', {link:link})
+		 $http.post(environment+'link/getTitle/', {link:link})
 			.success(function(data){
 				console.log(data);
 				$scope.title = data;
