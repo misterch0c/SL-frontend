@@ -33,7 +33,7 @@ body {
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 1920px;
   }
 }
 .container-narrow > hr {
@@ -42,7 +42,7 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
+  text-align: ;
   border-bottom: 1px solid #e5e5e5;
 }
 .jumbotron .btn {

@@ -14,8 +14,13 @@ angular.module('yoslApp')
         };
 
         //Get returns an object, query returns an array
-        $scope.addLink = function() {
-          console.log($scope);
+        $scope.addLink = function(t,desc) {
+          console.log("addlinks");
+          console.log(desc);
+          console.log($scope.description);
+          
+            $scope.description = desc;
+
             $resource(environment+'link/create', {
                 link: $scope.link,
                 title: $scope.title,
@@ -36,10 +41,10 @@ angular.module('yoslApp')
         };
 
         $scope.getDescription = function(link) {
-            console.log(link);
+
          $http.post(environment+'link/getDesc/', {link:link})
             .success(function(data){
-                console.log(data);
+                console.log("get descr "+data);
                 $scope.description = data;
             });
 
@@ -48,7 +53,7 @@ angular.module('yoslApp')
 			console.log(link);
 		 $http.post(environment+'link/getTitle/', {link:link})
 			.success(function(data){
-				console.log(data);
+				console.log("get title"+data);
 				$scope.title = data;
 			});
 

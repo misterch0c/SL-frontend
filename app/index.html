@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
 
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -58,7 +59,7 @@
                     <a ui-sref="addlink" ng-class="{active: isActive('/addlink')}"> <i class="fa fa-plus fa-lg fa-fw"></i><span class="menutxt">Add Base</span></a>
                 </li>
                 <li id="seven">
-                    <a ui-sref="about" ng-class="{active: isActive('/about')}"> <i class="fa fa-question fa-lg fa-fw"></i><span class="menutxt">About</span></a>
+                    <a ui-sref="masonry" ng-class="{active: isActive('/about')}"> <i class="fa fa-question fa-lg fa-fw"></i><span class="menutxt">About</span></a>
                 </li>
                 <li id="eight">
                     <a ui-sref="about" ng-class="{active: isActive('/about')}"> <i class="fa fa-thumbs-o-down fa-lg fa-fw"></i><span class="menutxt">Graveyard</span></a>
@@ -195,22 +196,10 @@
         <script src="bower_components/json3/lib/json3.min.js"></script>
         <![endif]-->
     <!-- build:js(.) scripts/vendor.js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
-    <script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
-    <script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
-    <script src="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
+    <script src="bower_components/angular-environment/dist/angular-environment.js"></script>
+
     <script src="bower_components/get-style-property/get-style-property.js"></script>
     <script src="bower_components/get-size/get-size.js"></script>
     <script src="bower_components/eventie/eventie.js"></script>
@@ -218,12 +207,36 @@
     <script src="bower_components/eventEmitter/EventEmitter.js"></script>
     <script src="bower_components/matches-selector/matches-selector.js"></script>
     <script src="bower_components/fizzy-ui-utils/utils.js"></script>
+
+
+
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+
+    <!--https://github.com/passy/angular-masonry/issues/131 -->
+    <script src="bower_components/outlayer/item.js"></script>
     <script src="bower_components/outlayer/outlayer.js"></script>
     <script src="bower_components/masonry/masonry.js"></script>
     <script src="bower_components/imagesloaded/imagesloaded.js"></script>
-    <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
     <script src="bower_components/angular-masonry/angular-masonry.js"></script>
-    <script src="bower_components/angular-environment/src/angular-environment.js"></script>
+
+    <script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+    <script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
+    <script src="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
+    <script src="bower_components/isotope/js/item.js"></script>
+    <script src="bower_components/isotope/js/layout-mode.js"></script>
+    <script src="bower_components/isotope/js/isotope.js"></script>
+    <script src="bower_components/isotope/js/layout-modes/vertical.js"></script>
+    <script src="bower_components/isotope/js/layout-modes/fit-rows.js"></script>
+    <script src="bower_components/isotope/js/layout-modes/masonry.js"></script>
+    <script src="bower_components/angular-isotope/dist/angular-isotope.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -235,6 +248,7 @@
     <script src="scripts/controllers/challenges.js"></script>
     <script src="scripts/controllers/home.js"></script>
     <script src="scripts/controllers/filters.js"></script>
+    <script src="scripts/controllers/mason.js"></script>
     <!-- endbuild -->
 </body>
 

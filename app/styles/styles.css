@@ -13,7 +13,6 @@ body {
 .panelpanel{
 	width: 325px;
 
-	display: inline-block;
     margin-right: 10px;
     margin-left: 10px;
 
@@ -112,7 +111,7 @@ nav.push-menu-left {
 }
 nav.push-menu-left li {
 	display: block;
-	text-align: center;
+													text-align: center;
 	border-bottom: solid 1px #3184a1;
 	border-top: solid 1px #b5dbe9;
 }

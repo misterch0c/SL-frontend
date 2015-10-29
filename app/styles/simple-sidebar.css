@@ -148,7 +148,7 @@ a:active,a:focus {
 
     #wrapper.toggled {
         padding-left:100px;
-        
+
     }
 
     #sidebar-wrapper {
@@ -157,7 +157,7 @@ a:active,a:focus {
 
     #wrapper.toggled #sidebar-wrapper {
         width: 60px;
-    }    
+    }
 
 
     #page-content-wrapper {

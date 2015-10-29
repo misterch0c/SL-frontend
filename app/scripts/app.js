@@ -18,7 +18,9 @@ angular
         'ngTouch',
         'ui.router',
         'mgcrea.ngStrap',
-        'environment'
+        'environment',
+        'wu.masonry'
+
 
 
     ])
@@ -38,7 +40,7 @@ angular
                       }
                   }
               });
-        envServiceProvider.set('production');
+        envServiceProvider.set('development');
         $stateProvider
             .state('home', {
                 url: 'home',
@@ -58,6 +60,12 @@ angular
             url: 'addlink',
             templateUrl: 'views/addlink.html',
             controller: 'AddlinkCtrl',
+        })
+        .state('masonry', {
+            url: 'masonry',
+            templateUrl: 'views/masonry.html',
+            controller: 'MasonCtrl'
+
         })
         .state('irc',{
             url:'irc',

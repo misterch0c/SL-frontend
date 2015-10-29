@@ -5,9 +5,7 @@ var app = angular.module('yoslApp');
 app.factory('Links', function($resource,envService) {
 
   var environment = envService.read('apiUrl');
-  console.log(environment);
-  var tt="http://localhost:1337/";
-    return $resource(environment+'link?limit=0', null, {
+    return $resource(environment+'link?limit=0?', null, {
         'whereLang': {
             method: 'GET',
             params: {
