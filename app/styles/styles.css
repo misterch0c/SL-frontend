@@ -2,6 +2,14 @@ body {
 	background-color: #2b303b;
     font-size: 16px;
 }
+#page-wrap {
+	text-align: left;
+     width: auto;
+		 min-width: 500px;
+		 max-width: 600px;
+     margin: 0 auto;
+
+}
 .ircs{
 	max-width: 900px;
 }

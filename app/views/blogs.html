@@ -5,14 +5,14 @@
 <!-- Panel View -->
 <!-- {lang: lang, tags: ['tag5','tag2'], isup: hideDownLinks ? true : '' } -->
 <div ng-if="show" class="centre" masonry>
-	<div class="masonry-brick panel panelpanel panpanel-default" ng-repeat="n in links | filterLinks:lang:hideDownLinks:tags | orderBy : sortBy">
+	<div class="masonry-brick panel panelpanel panpanel-default" ng-repeat="n in blogs | filterLinks:lang:hideDownLinks:tags | orderBy : sortBy">
 		<div class="panel-heading">
 			<h3 class="panel-title pantitle txt">
 			<a href="{{n.link}}" target="_blank"><i class=" {{n.lang}} flag"></i>
 				{{n.title}}
 			</a>
-			<div data-toggle="tooltip" data-placement="top" title="Alexa rank: {{n.rank}}" style="float: right; width: 70px;text-align:right;">
-				<a  href="http://www.alexa.com/siteinfo/{{n.link}}" target="_blank" ><span class="">A</span></a>
+			<div data-toggle="tooltip" data-placement="top" title="Alexa rank" style="float: right; width: 70px;text-align:right;">
+				<a  href="http://www.alexa.com/siteinfo/{{n.link}}" target="_blank" ><span class="">{{n.rank}}</span></a>
 				<span  class="glyphicon glyphicon-ok"  style="color:green" ng-show="{{n.isup}}" data-toggle="tooltip" data-placement="top" title="Online"></span>
 				<span  class="glyphicon glyphicon-remove"  style="color:red" ng-hide="{{n.isup}}" data-toggle="tooltip" data-placement="top" title="Offline"></span>
 			</div>
@@ -30,7 +30,7 @@
 </div>
 
 <!-- Raw View -->
-<div masonry ng-if="!show" class="centre" isotope-container="isotope-container">
+<div  ng-if="!show" class="centre" isotope-container="isotope-container" masonry>
 
 	<div class="masonry-brick panel  panelraw panpanel-default " ng-repeat="l in languages" >
 
@@ -39,7 +39,7 @@
 			<span class="raw-title" >{{fullLanguageName(l)}}</span>
 		</div>
 		<ul class="raw-link">
-			<li ng-repeat="n in links | filter: {lang: l} | filterLinks:'':hideDownLinks:tags | orderBy : sortBy" title="{{n.title}}" data-trigger="hover" bs-popover data-html="true" data-animation="am-fade-and-scale" data-content="
+			<li ng-repeat="n in blogs | filter: {lang: l} | filterLinks:'':hideDownLinks:tags | orderBy : sortBy" title="{{n.title}}" data-trigger="hover" bs-popover data-html="true" data-animation="am-fade-and-scale" data-content="
 				{{n.description}}
 				<img src='http://localhost:1337/screenshots/{{n.title}}.png' class='img-thumbnail panel-thumb'></img>
 				" >
@@ -53,18 +53,3 @@
 
 
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>

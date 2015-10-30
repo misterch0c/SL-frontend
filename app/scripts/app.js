@@ -19,12 +19,13 @@ angular
         'ui.router',
         'mgcrea.ngStrap',
         'environment',
-        'wu.masonry'
+        'wu.masonry',
+        'ngDialog'
 
 
 
     ])
-    .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider,envServiceProvider) {
+    .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider,envServiceProvider,ngDialogProvider) {
 
       envServiceProvider.config({
                   domains: {
@@ -61,11 +62,24 @@ angular
             templateUrl: 'views/addlink.html',
             controller: 'AddlinkCtrl',
         })
-        .state('masonry', {
-            url: 'masonry',
-            templateUrl: 'views/masonry.html',
-            controller: 'MasonCtrl'
+        .state('about', {
+            url: 'about',
+            templateUrl: 'views/about.html',
+            controller: 'AboutCtrl',
+        })
+        .state('blogs', {
+            url: 'blogs',
+            views: {
+                '': {
+                    templateUrl: 'views/blogs.html',
+                    controller: 'BlogsCtrl'
 
+                },
+                'filters@blogs': {
+                    templateUrl: 'views/filters.html',
+                    controller: 'FiltersCtrl'
+                },
+            }
         })
         .state('irc',{
             url:'irc',

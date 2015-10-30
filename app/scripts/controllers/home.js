@@ -43,7 +43,7 @@ app.controller('HomeCtrl', function($scope, Links) {
     });
 
     //Get links by lang (us)
-     $scope.links = Links.query();
+     $scope.links = Links.query({type:"Board"});
      console.log($scope.links);
     // $scope.links = [
     //     {
