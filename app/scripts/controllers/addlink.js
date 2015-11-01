@@ -13,7 +13,7 @@ angular.module('yoslApp')
     //Get returns an object, query returns an array
     $scope.addLink = function(t, desc) {
       ngDialog.open({
-        template: '<p>thank you</p>',
+        template: '<p>Thank you, your submission will be reviewed.</p>',
         plain: true
       });
       // console.log("addlinks");

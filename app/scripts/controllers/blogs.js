@@ -11,7 +11,7 @@ angular.module('yoslApp')
     $scope.languages = ['es', 'fr', 'de', 'us', 'ru', 'ro', 'tr', 'ir', 'pl', 'az', 'cn', 'vn', 'ae'];
 
 
-    $http.get(environment + 'link?type=Blog')
+    $http.get(environment + 'link?limit=0&type=Blog')
       .success(function(data) {
         console.log("get blogs " + data);
         $scope.blogs = data;

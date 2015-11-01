@@ -22,8 +22,6 @@ angular
         'wu.masonry',
         'ngDialog'
 
-
-
     ])
     .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider,envServiceProvider,ngDialogProvider) {
 
