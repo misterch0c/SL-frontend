@@ -12,9 +12,11 @@
 				{{n.title}}
 			</a>
 				<div data-toggle="tooltip" data-placement="top" title="Alexa rank: {{n.rank}}" style="float: right; width: 70px;text-align:right;">
+				<span data-toggle="tooltip" data-placement="top" title="Private" ng-if="n.private" class="fa fa-lock fa-md fa-fw"></span>
 					<a href="http://www.alexa.com/siteinfo/{{n.link}}" target="_blank">
 						<span class="">A</span>
 					</a>
+
 					<span class="glyphicon glyphicon-ok" style="color:green" ng-show="{{n.isup}}" data-toggle="tooltip" data-placement="top" title="Online"></span>
 					<span class="glyphicon glyphicon-remove" style="color:red" ng-hide="{{n.isup}}" data-toggle="tooltip" data-placement="top" title="Offline"></span>
 				</div>

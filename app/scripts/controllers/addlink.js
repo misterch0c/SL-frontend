@@ -12,13 +12,13 @@ angular.module('yoslApp')
 
     //Get returns an object, query returns an array
     $scope.addLink = function(t, desc) {
+
+      //https://github.com/likeastore/ngDialog
       ngDialog.open({
         template: '<p>Thank you, your submission will be reviewed.</p>',
         plain: true
+        
       });
-      // console.log("addlinks");
-      // console.log(desc);
-      // console.log($scope.description);
 
       $scope.description = desc;
 
@@ -30,6 +30,7 @@ angular.module('yoslApp')
           lang: $scope.lang
         }, {
           'create': {
+            
             method: 'POST',
             isArray: false
           }
