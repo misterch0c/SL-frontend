@@ -2,10 +2,10 @@
 
 var app = angular.module('yoslApp');
 
-app.factory('Links', function($resource,envService) {
+app.factory('Links', function($resource, envService) {
 
-  var environment = envService.read('apiUrl');
-    return $resource(environment+'link?limit=0?', null, {
+    var environment = envService.read('apiUrl');
+    return $resource(environment + 'link?limit=0?', null, {
         'whereLang': {
             method: 'GET',
             params: {
@@ -34,7 +34,8 @@ app.factory('Links', function($resource,envService) {
 
 
 
-app.controller('HomeCtrl', function($scope, Links) {
+app.controller('HomeCtrl', function($scope, Links, $http, envService) {
+    var environment = envService.read('apiUrl');
     console.log('home ctrl');
 
 
@@ -43,8 +44,19 @@ app.controller('HomeCtrl', function($scope, Links) {
     });
 
     //Get links by lang (us)
-     $scope.links = Links.query({type:"Board"});
-     console.log($scope.links);
+    $scope.links = Links.query({
+        type: "Board"
+    });
+
+
+        $http.get(environment + 'link?limit=0&type=Blog')
+            .success(function(data) {
+                console.log("get blogs " + data);
+                $scope.blogs = data;
+            });
+    
+
+    console.log($scope.links);
     // $scope.links = [
     //     {
     //         link:"google.com",
@@ -119,7 +131,8 @@ app.controller('HomeCtrl', function($scope, Links) {
 
     // ];
 
-    $scope.languages = ['es','fr','de','us','ru','ro','tr','ir','pl','az','cn','vn','ae'];
+    //That's ugly but urhdurh
+   $scope.languages = ['es','fr','de','us','ru','ro','tr','ir','pl','az','cn','vn','ae'];
     $scope.fullLanguageName = function(name){
         switch(name){
             case('us'):
@@ -165,13 +178,13 @@ app.controller('HomeCtrl', function($scope, Links) {
 
 
         }
-    };
+    }
+    //lost fulllangfunc, get from got ... -_-
 
-    $scope.addTag = function(tag){
+    $scope.addTag = function(tag) {
         if ($('[data-role="tagsinput"]').tagsinput('items').indexOf(tag) == -1) {
             $('[data-role="tagsinput"]').tagsinput('add', tag);
-        }
-        else {
+        } else {
             $('[data-role="tagsinput"]').tagsinput('remove', tag);
         }
     };

@@ -23,22 +23,22 @@ angular
         'ngDialog'
 
     ])
-    .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider,envServiceProvider,ngDialogProvider) {
+    .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider, envServiceProvider, ngDialogProvider) {
 
-      envServiceProvider.config({
-                  domains: {
-                      development: ['localhost:1337', 'dev.local'],
-                      production: ['acme.com', 'acme.net', 'acme.org']
-                  },
-                  vars: {
-                      development: {
-                          apiUrl: 'http://localhost:1337/',
-                      },
-                      production: {
-                          apiUrl: 'http://46.101.184.217:1337/',
-                      }
-                  }
-              });
+        envServiceProvider.config({
+            domains: {
+                development: ['localhost:1337', 'dev.local'],
+                production: ['acme.com', 'acme.net', 'acme.org']
+            },
+            vars: {
+                development: {
+                    apiUrl: 'http://localhost:1337/',
+                },
+                production: {
+                    apiUrl: 'http://46.101.184.217:1337/',
+                }
+            }
+        });
         envServiceProvider.set('development');
         $stateProvider
             .state('home', {
@@ -60,35 +60,40 @@ angular
             templateUrl: 'views/addlink.html',
             controller: 'AddlinkCtrl',
         })
-        .state('about', {
-            url: 'about',
-            templateUrl: 'views/about.html',
-            controller: 'AboutCtrl',
-        })
-        .state('blogs', {
-            url: 'blogs',
-            views: {
-                '': {
-                    templateUrl: 'views/blogs.html',
-                    controller: 'BlogsCtrl'
+            .state('about', {
+                url: 'about',
+                templateUrl: 'views/about.html',
+                controller: 'AboutCtrl',
+            })
+            .state('graveyard', {
+                url: 'graveyard',
+                templateUrl: 'views/graveyard.html',
+                //controller: 'Gr',
+            })
+            .state('blogs', {
+                url: 'blogs',
+                views: {
+                    '': {
+                        templateUrl: 'views/blogs.html',
+                        controller: 'HomeCtrl'
 
-                },
-                'filters@blogs': {
-                    templateUrl: 'views/filters.html',
-                    controller: 'FiltersCtrl'
-                },
-            }
-        })
-        .state('irc',{
-            url:'irc',
-            templateUrl:'views/irc.html',
+                    },
+                    'filters@blogs': {
+                        templateUrl: 'views/filters.html',
+                        controller: 'FiltersCtrl'
+                    },
+                }
+            })
+            .state('irc', {
+                url: 'irc',
+                templateUrl: 'views/irc.html',
 
-        })
-        .state('challenges',{
-          url:'challenges',
-          templateUrl:'views/challenges.html',
-          controller:"ChallCtrl"
-        });
+            })
+            .state('challenges', {
+                url: 'challenges',
+                templateUrl: 'views/challenges.html',
+                controller: "ChallCtrl"
+            });
 
         angular.extend($popoverProvider.defaults, {
             placement: "bottom",
@@ -101,3 +106,4 @@ angular
         $state.transitionTo('home');
     }
 ]);
+
