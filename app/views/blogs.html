@@ -4,7 +4,7 @@
 <br/>
 <!-- Panel View -->
 <!-- {lang: lang, tags: ['tag5','tag2'], isup: hideDownLinks ? true : '' } -->
-<div ng-if="show" class="centre" masonry>
+<div ng-if="!show" class="centre" masonry>
 	<div class="masonry-brick panel panelpanel panpanel-default" ng-repeat="n in blogs | filterLinks:lang:hideDownLinks:tags | orderBy : sortBy">
 		<div class="panel-heading">
 			<h3 class="panel-title pantitle txt">
@@ -20,7 +20,7 @@
 				</div>
 			</h3>
 		</div>
-		<div class="panel-body paneltxt">
+		<div class="panel-bod paneltxt">
 			{{n.description}}
 		</div>
 		<div class="foot panel-footer">
@@ -32,16 +32,16 @@
 </div>
 
 <!-- Raw View -->
-<div ng-if="!show" class="centre" isotope-container="isotope-container" masonry>
+<div ng-if="show" class="centre" isotope-container="isotope-container" masonry>
 
-	<div class="masonry-brick panel  panelraw panpanel-default " ng-repeat="l in languages">
+	<div class="masonry-brick panel  panelraw panpanel-default " ng-repeat="l in languagesBlogs">
 
 		<div class="panel-heading" style="text-align:left;">
 			<i class="{{l}} flag"></i>
 			<span class="raw-title">{{fullLanguageName(l)}}</span>
 		</div>
-		<ul class="raw-link">
-			<li ng-repeat="n in blogs | filter: {lang: l} | filterLinks:'':hideDownLinks:tags | orderBy : sortBy" title="{{n.title}}" data-trigger="hover" bs-popover data-html="true" data-animation="am-fade-and-scale" data-content="
+		<ul class="raw-link" >
+			<li ng-repeat="n in blogs | filter: {lang: l} | filterLinks:'':hideDownLinks:tags | orderBy : sortBy" id="bind-html-with-sanitize" title="{{n.title}}" data-trigger="hover" bs-popover data-html="true" data-animation="am-fade-and-scale" data-content="
 				{{n.description}}
 				<img src='http://localhost:1337/screenshots/{{n.title}}.png' class='img-thumbnail panel-thumb'></img>
 				">

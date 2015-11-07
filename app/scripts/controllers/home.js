@@ -5,7 +5,7 @@ var app = angular.module('yoslApp');
 app.factory('Links', function($resource, envService) {
 
     var environment = envService.read('apiUrl');
-    return $resource(environment + 'link?limit=0?', null, {
+    return $resource(environment + 'link/get', null, {
         'whereLang': {
             method: 'GET',
             params: {
@@ -34,9 +34,9 @@ app.factory('Links', function($resource, envService) {
 
 
 
-app.controller('HomeCtrl', function($scope, Links, $http, envService) {
+app.controller('HomeCtrl', function($scope, Links, $http, envService, $sanitize) {
     var environment = envService.read('apiUrl');
-    console.log('home ctrl');
+    //console.log('home ctrl');
 
 
     $(document).ready(function() {
@@ -49,14 +49,14 @@ app.controller('HomeCtrl', function($scope, Links, $http, envService) {
     });
 
 
-        $http.get(environment + 'link?limit=0&type=Blog')
+        $http.get(environment + 'link/get?type=Blog')
             .success(function(data) {
-                console.log("get blogs " + data);
+                //console.log("get blogs " + data);
                 $scope.blogs = data;
             });
     
 
-    console.log($scope.links);
+   // console.log($scope.links);
     // $scope.links = [
     //     {
     //         link:"google.com",
@@ -133,6 +133,7 @@ app.controller('HomeCtrl', function($scope, Links, $http, envService) {
 
     //That's ugly but urhdurh
    $scope.languages = ['es','fr','de','us','ru','ro','tr','ir','pl','az','cn','vn','ae'];
+   $scope.languagesBlogs = ['us','fr'];
     $scope.fullLanguageName = function(name){
         switch(name){
             case('us'):

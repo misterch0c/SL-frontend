@@ -1,19 +1,23 @@
 <br/>
+<br/>
+<br/>
 <div class="size" ui-view="filters"></div>
-<br/>
-<br/>
+
 <!-- Panel View -->
 <!-- {lang: lang, tags: ['tag5','tag2'], isup: hideDownLinks ? true : '' } -->
-<div ng-if="show" class="centre" masonry>
+<div ng-if="!show" class="centre" masonry>
 	<div class="masonry-brick panel panelpanel panpanel-default" ng-repeat="n in links | filterLinks:lang:hideDownLinks:tags | orderBy : sortBy">
 		<div class="panel-heading">
 			<h3 class="panel-title pantitle txt">
 				<a href="{{n.link}}" target="_blank"><i class=" {{n.lang}} flag"></i>
 				{{n.title}}
 			</a>
-				<div data-toggle="tooltip" data-placement="top" title="Alexa rank: {{n.rank}}" style="float: right; width: 70px;text-align:right;">
+				<div style="float: right; width: 90px;text-align:right;">
+				<a data-toggle="tooltip" data-placement="top" title="Tor" href="{{n.tor}}">
+				<img  ng-if='n.tor' class="tor" src="assets/torlogo.png">
+				</a>
 				<span data-toggle="tooltip" data-placement="top" title="Private" ng-if="n.private" class="fa fa-lock fa-md fa-fw"></span>
-					<a href="http://www.alexa.com/siteinfo/{{n.link}}" target="_blank">
+					<a data-toggle="tooltip" data-placement="top" title="Alexa rank: {{n.rank}}" href="http://www.alexa.com/siteinfo/{{n.link}}" target="_blank">
 						<span class="">A</span>
 					</a>
 
@@ -22,7 +26,7 @@
 				</div>
 			</h3>
 		</div>
-		<div class="panel-body paneltxt">
+		<div class="panel-bod paneltxt">
 			{{n.description}}
 		</div>
 		<div class="foot panel-footer">
@@ -34,7 +38,7 @@
 </div>
 
 <!-- Raw View -->
-<div masonry ng-if="!show" class="centre" isotope-container="isotope-container">
+<div masonry ng-if="show" class="centre" isotope-container="isotope-container">
 
 	<div class="masonry-brick panel  panelraw panpanel-default " ng-repeat="l in languages">
 

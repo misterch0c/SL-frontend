@@ -70,6 +70,11 @@ angular
                 templateUrl: 'views/graveyard.html',
                 //controller: 'Gr',
             })
+             .state('tools', {
+                url: 'tools',
+                templateUrl: 'views/graveyard.html',
+                //controller: 'Gr',
+            })
             .state('blogs', {
                 url: 'blogs',
                 views: {

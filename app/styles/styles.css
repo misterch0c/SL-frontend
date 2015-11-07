@@ -10,6 +10,13 @@ body {
      margin: 0 auto;
 
 }
+.tor{
+	 width: 16%;
+	 padding-top: -5px;
+	 margin-bottom: 5px;
+
+	}
+
 .ircs{
 	max-width: 900px;
 }
@@ -181,7 +188,7 @@ body.pml-open #wrapper {
     }*/
 
 .paneltxt:before {
-    content:                    '...';
+   # content:                    '...';
     text-align:                 right;
     position:                   absolute;
     width:                      2em;
@@ -189,8 +196,10 @@ body.pml-open #wrapper {
     bottom:                     1em;
     right:                      20px;
 }
-.panel-body{
-
+.panel-bod{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
 	height: 100px;
 }
 .panel-footer{
@@ -394,6 +403,7 @@ hr{
 /*TABLE IRC*/
 div.centre
 {
+margin-top: 30px;
   display: block;
   margin-left: auto;
   margin-right: auto;

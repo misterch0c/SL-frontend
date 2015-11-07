@@ -3,7 +3,7 @@
 
 angular.module('yoslApp')
     .controller('AddlinkCtrl', function($scope, $resource, $http, envService, ngDialog) {
-        console.log("addlink controler");
+        //console.log("addlink controler");
         //console.log($scope.title);
         var environment = envService.read('apiUrl');
         $scope.test = function() {
@@ -54,7 +54,7 @@ angular.module('yoslApp')
 
         };
         $scope.getTitle = function(link) {
-            console.log(link);
+            //console.log(link);
             $http.post(environment + 'link/getTitle/', {
                 link: link
             })

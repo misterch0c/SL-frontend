@@ -14,11 +14,11 @@ angular.module('yoslApp')
             'AngularJS',
             'Karma'
         ];
-        console.log("about ctrl");
+        //console.log("about ctrl");
 
-        $http.get(environment + 'link?limit=0')
+        $http.get(environment + 'link/count')
             .success(function(data) {
-                console.log("NB bases: " + data.length);
-                $scope.nbBases = data.length;
+                console.log("NB bases: " + data);
+                $scope.nbBases = data;
             });
     });
