@@ -15,7 +15,7 @@
 </script>
 <!-- Panel View -->
 <!-- {lang: lang, tags: ['tag5','tag2'], isup: hideDownLinks ? true : '' } -->
-<div masonry  ng-if="show" infinite-scroll='limited("Board")' infinite-scroll-disabled='base.busy' infinite-scroll-distance='0' class="centre" >
+<div masonry  ng-if="!show" infinite-scroll='limited("Board")' infinite-scroll-disabled='base.busy' infinite-scroll-distance='0' class="centre" >
 	<div class="masonry-brick panel panelpanel panpanel-default" ng-repeat="n in links | filterLinks:lang:hideDownLinks:tags | orderBy : sortBy" >
 	<!--| orderBy : sortBy -->
 		<div class="panel-heading">
@@ -49,7 +49,7 @@
 </div>
 
 <!-- Raw View -->
-<div masonry ng-if="!show" class="centre" isotope-container="isotope-container">
+<div masonry ng-if="show" class="centre" isotope-container="isotope-container">
 
 	<div class="masonry-brick panel  panelraw panpanel-default " ng-repeat="l in languages">
 

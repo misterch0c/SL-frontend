@@ -40,7 +40,7 @@ angular
                 }
             }
         });
-        envServiceProvider.set('development');
+        envServiceProvider.set('production');
         $stateProvider
             .state('home', {
                 url: 'home',

@@ -4,7 +4,7 @@
 <br/>
 <!-- Panel View -->
 <!-- {lang: lang, tags: ['tag5','tag2'], isup: hideDownLinks ? true : '' } -->
-<div ng-if="show" class="centre" masonry>
+<div ng-if="!show" class="centre" masonry>
 	<div class="masonry-brick panel panelpanel panpanel-default" ng-repeat="n in blogs | filterLinks:lang:hideDownLinks:tags | orderBy : sortBy">
 		<div class="panel-heading">
 			<h3 class="panel-title pantitle txt">
@@ -32,7 +32,7 @@
 </div>
 
 <!-- Raw View -->
-<div ng-if="!show" class="centre" isotope-container="isotope-container" masonry>
+<div ng-if="show" class="centre" isotope-container="isotope-container" masonry>
 
 	<div class="masonry-brick panel  panelraw panpanel-default " ng-repeat="l in languagesBlogs">
 
