@@ -75,11 +75,17 @@ app.controller('HomeCtrl', function($scope, Links, $http, envService, $sanitize)
         $('[data-toggle="tooltip"]').tooltip();
     });
 
+    $http.get(environment + 'link?type=Board&limit=0').success(function(data) {
+        console.log("gorow");
+        $scope.rawLinks = data;
+    });
+
+
 
     $http.get(environment + 'link?limit=10')
         .success(function(data) {
             //console.log("get blogs " + data);
-           // $scope.links = data;
+            // $scope.links = data;
         });
     //Get links by lang (us)
     // $scope.links = Links.query({
@@ -87,121 +93,46 @@ app.controller('HomeCtrl', function($scope, Links, $http, envService, $sanitize)
     // });
 
 
-    $http.get(environment + 'link/get?type=Blog')
+    $http.get(environment + 'link?type=Blog&limit=0')
         .success(function(data) {
-            //console.log("get blogs " + data);
             $scope.blogs = data;
         });
 
-    $scope.limited = function() {
-        if($scope.isBusy === true) return;
-         $scope.isBusy = true;
+
+    $scope.limited = function(type) {
+        if ($scope.isBusy === true) return;
+        $scope.isBusy = true;
         console.log('triggered');
-
-
         console.log($scope.ski);
-
-        $http.get(environment + 'link?type=Board&limit=' + $scope.lim + '&skip=' + $scope.ski+"&sort=title")
+        $http.get(environment + 'link?type='+type+'&limit=' + $scope.lim + '&skip=' + $scope.ski + "&sort=title")
             .success(function(data) {
                 console.log(data);
                 //console.log("get blogs " + data);
-               
-                console.log('skip= '+$scope.ski);
-                console.log(data.length);
-                console.log(data[0]);
+                // console.log('skip= ' + $scope.ski);
+                // console.log(data.length);
+                // console.log(data[0]);
 
-                if ($scope.ski != 0){
-                //$scope.links.push.apply(data);
-                for (var i = 0; i < data.length; i++) {
-                    console.log('hee');
-                    $scope.links.push(data[i]);
+                if ($scope.ski != 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        if (type=="Board"){
+                             $scope.links.push(data[i]);
+                         }else{
+                            $scope.blogs.push(data[i]);
+                         }
+                       
 
+                    }
+                    $scope.isBusy = false;
+                } else {
+                    $scope.links = data;
+                    $scope.isBusy = false;
                 }
-                 $scope.isBusy = false; 
-            }else{
-                $scope.links=data;
-                 $scope.isBusy = false; 
-            }
-             $scope.ski = $scope.ski + 20;
-                console.log('link lee ' + $scope.links.length);
-                console.log($scope.links);
-            });
+                $scope.ski = $scope.ski + 20;
+            });       
+
+
+
     }
-    // console.log($scope.links);
-    // $scope.links = [
-    //     {
-    //         link:"google.com",
-    //         title:"Zenk-Security",
-    //         description:"Zenk Security est une communauté de hacking et de sécurité informatique francophone basé sur le partage et l'apprentissage.",
-    //         lang: "fr",
-    //         rank: 1,
-    //         deltaRank: 0,
-    //         isup:true,
-    //         tags : ["tag5", "tag2", "tag3", "exampleTag"]
-    //     },
-    //     {
-    //         link:"google.com",
-    //         title:"222222222222",
-    //         description:"Search Engine",
-    //         lang: "fr",
-    //         rank: 10,
-    //         deltaRank: +2,
-    //                     isup:false,
-    //         tags : ["tag1", "tag2", "tag3", "exampleTag"]
-    //     },
-    //     {
-    //         link:"google.com",
-    //         title:"3333333333333",
-    //         description:"Search Engine",
-    //         lang: "fr",
-    //         rank: 7,
-    //         deltaRank: -1,
-    //                     isup:true,
-    //         tags : ["tag1", "tag2", "tag3", "exampleTag"]
-    //     },
-    //     {
-    //         link:"google.com",
-    //         title:"Google",
-    //         description:"Search Engine",
-    //         lang: "us",
-    //         rank: 6,
-    //         deltaRank: +1,
-    //                     isup:true,
-    //         tags : ["tag1", "tag2", "tag3", "exampleTag"]
-    //     },
-    //     {
-    //         link:"godfogle.com",
-    //         title:"dfd",
-    //         description:"kjhk Engine",
-    //         lang: "us",
-    //         rank: 6,
-    //         deltaRank: +1,
-    //                     isup:false,
-    //         tags : ["tag1", "tag2", "tag3", "exampleTag"]
-    //     },
-    //     {
-    //         link:"sdqsd.com",
-    //         title:"qsdqsd",
-    //         description:"qsd SDqsd ",
-    //         lang: "es",
-    //         rank: 6,
-    //         deltaRank: +1,
-    //                     isup:false,
-    //         tags : ["tag1", "tag2", "tag3", "exampleTag"]
-    //     },
-    //     {
-    //         link:"sdfdsf.com",
-    //         title:"dsf f hacking",
-    //         description:"sdfg  kiug",
-    //         lang: "es",
-    //         rank: 6,
-    //         deltaRank: +1,
-    //                     isup:true,
-    //         tags : ["tag1", "tag2", "tag3", "exampleTag"]
-    //     },
-
-    // ];
-
 
 
     //That's ugly but urhdurh

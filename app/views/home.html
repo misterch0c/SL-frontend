@@ -15,7 +15,7 @@
 </script>
 <!-- Panel View -->
 <!-- {lang: lang, tags: ['tag5','tag2'], isup: hideDownLinks ? true : '' } -->
-<div masonry  ng-if="show" infinite-scroll='limited()' infinite-scroll-disabled='base.busy' infinite-scroll-distance='0' class="centre" >
+<div masonry  ng-if="show" infinite-scroll='limited("Board")' infinite-scroll-disabled='base.busy' infinite-scroll-distance='0' class="centre" >
 	<div class="masonry-brick panel panelpanel panpanel-default" ng-repeat="n in links | filterLinks:lang:hideDownLinks:tags | orderBy : sortBy" >
 	<!--| orderBy : sortBy -->
 		<div class="panel-heading">
@@ -58,7 +58,7 @@
 			<span class="raw-title">{{fullLanguageName(l)}}</span>
 		</div>
 		<ul class="raw-link">
-			<li ng-repeat="n in links | filter: {lang: l} | filterLinks:'':hideDownLinks:tags | orderBy : sortBy" title="{{n.title}}" data-trigger="hover" bs-popover data-html="true" data-animation="am-fade-and-scale" data-content="
+			<li ng-repeat="n in rawLinks | filter: {lang: l} | filterLinks:'':hideDownLinks:tags | orderBy : sortBy" title="{{n.title}}" data-trigger="hover" bs-popover data-html="true" data-animation="am-fade-and-scale" data-content="
 				{{n.description}}
 				<img src='http://security-base.com/assets/screenshots/{{n.title}}.png' class='img-thumbnail panel-thumb'></img>
 				">
@@ -66,7 +66,7 @@
 					{{n.title}}
 				</a>
 			</li>
-		</ul>P
+		</ul>
 
 	</div>
 

@@ -1,12 +1,15 @@
 'use strict';
 
 
+//THIS CONTROLLER IS NOT USED CYKA
 angular.module('yoslApp')
     .controller('BlogsCtrl', function($scope, $resource, $http, envService) {
 
+    $http.get(environment + 'link?type=Blog&limit=0').success(function(data) {
+        $scope.rawBlogs = data;
+    });
+
         var environment = envService.read('apiUrl');
-        //console.log(environment);
-        $scope.bricks = ['aaaaaaaaa', 'bbbbbbbbbb'];
         //console.log("blogs controler");
         $scope.languages = ['es', 'fr', 'de', 'us', 'ru', 'ro', 'tr', 'ir', 'pl', 'az', 'cn', 'vn', 'ae'];
 
