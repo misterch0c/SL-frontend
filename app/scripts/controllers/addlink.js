@@ -36,7 +36,7 @@ angular.module('yoslApp')
                 }
             })
                 .get(function(data) {
-                    // console.log($scope.title);
+                    console.log($scope.data);
 
 
                 });

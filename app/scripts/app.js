@@ -20,7 +20,8 @@ angular
         'mgcrea.ngStrap',
         'environment',
         'wu.masonry',
-        'ngDialog'
+        'ngDialog',
+        'infinite-scroll'
 
     ])
     .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider, envServiceProvider, ngDialogProvider) {
@@ -32,7 +33,7 @@ angular
             },
             vars: {
                 development: {
-                    apiUrl: 'http://localhost:1337/',
+                    apiUrl: 'http://10.0.10.81:1337/',
                 },
                 production: {
                     apiUrl: 'http://46.101.184.217:1337/',
