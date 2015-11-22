@@ -32,7 +32,8 @@
     "angular-environment": "~1.0.3",
     "ng-dialog": "~0.5.5",
     "font-awesome": "~4.4.0",
-    "ngInfiniteScroll": "~1.2.1"
+    "ngInfiniteScroll": "~1.2.1",
+    "validator-js": "~4.3.0"
   },
   "overrides": {
     "outlayer": {

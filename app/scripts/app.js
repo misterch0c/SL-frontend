@@ -24,11 +24,13 @@ angular
         'infinite-scroll',
 
 
+
+
     ])
     .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider, envServiceProvider, ngDialogProvider) {
 
         $locationProvider.hashPrefix('!');
-        
+
         envServiceProvider.config({
             domains: {
                 development: ['localhost:1337', 'dev.local'],
@@ -43,7 +45,7 @@ angular
                 }
             }
         });
-        envServiceProvider.set('development');
+        envServiceProvider.set('production');
         $stateProvider
             .state('home', {
                 url: 'home',
@@ -96,6 +98,7 @@ angular
             .state('irc', {
                 url: 'irc',
                 templateUrl: 'views/irc.html',
+                controller: "IrcCtrl",
 
             })
             .state('challenges', {
@@ -115,4 +118,3 @@ angular
         $state.transitionTo('home');
     }
 ]);
-

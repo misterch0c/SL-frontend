@@ -51,9 +51,9 @@
                 <li id="two">
                     <a ui-sref="blogs" ng-class="{ active: isActive('/blogs')}"><i class="fa fa-keyboard-o fa-lg fa-fw"></i><span class="menutxt">Blogs</span></a>
                 </li>
-                <li id="three">
+                <!-- <li id="three">
                     <a ui-sref="tools" ng-class="{ active: isActive('/tools')}"><i class="fa fa-globe fa-lg fa-fw"></i><span class="menutxt">Tools</span></a>
-                </li>
+                </li> -->
                 <li id="four">
                     <a ui-sref="irc" ng-class="{active: isActive('/irc')}"><i class="fa fa-wechat fa-lg fa-fw"></i><span class="menutxt">IRCs</span></a>
                 </li>
@@ -66,9 +66,9 @@
                 <li id="seven">
                     <a ui-sref="about" ng-class="{active: isActive('/about')}"> <i class="fa fa-question fa-lg fa-fw"></i><span class="menutxt">About</span></a>
                 </li>
-                <li id="eight">
+                <!-- <li id="eight">
                     <a ui-sref="graveyard" ng-class="{active: isActive('/graveyard')}"> <i class="fa fa-thumbs-o-down fa-lg fa-fw"></i><span class="menutxt">Graveyard</span></a>
-                </li>
+                </li> -->
                 <!-- <li class="dropdown" id="menuLogin">
                     <li>
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Login</a>
@@ -87,9 +87,9 @@
                             <i id="search" class="fa fa-search fa-lg fa-fw"></i><span class="menutxt">Filters </span><span class="caret"></span>
                         </a>
                     </li>
-                    <li id="filters" class="sub-menu collapse" role="menu">
+                    <li id="filters" class="sub-menu collapse" role="menu" >
                         <ul class="filter-block">
-                            <li class="dropdown filter">
+                            <li class="dropdown filter"style="width:60%">
                                 <a>
                                     <i class="fa fa-flag fa fa-fw"></i>
                                     <select id="lang" ng-model="lang" ng-change="changeLang()" data-toggle="select" class="form-control select select-default filter-select">
@@ -99,7 +99,7 @@
                                         <option value="us">
                                             English
                                         </option>
-                                        <option value="fr">
+                                        <option value="fr">Filter
                                             French
                                         </option>
                                         <option value="es">
@@ -108,7 +108,7 @@
                                     </select>
                                 </a>
                             </li>
-                            <li class="dropdown filter">
+                            <li class="dropdown filter" style="width:60%">
                                 <a>
                                     <i class="fa fa-sort fa fa-fw"></i>
                                     <select id="sortBy" data-toggle="select" ng-model="sortBy" ng-change="changeSortBy()" class="form-control select select-default filter-select">
@@ -234,6 +234,7 @@
     <script src="bower_components/angular-environment/dist/angular-environment.js"></script>
     <script src="bower_components/ng-dialog/js/ngDialog.js"></script>
     <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+    <script src="bower_components/validator-js/validator.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -245,6 +246,7 @@
     <script src="scripts/controllers/challenges.js"></script>
     <script src="scripts/controllers/home.js"></script>
     <script src="scripts/controllers/filters.js"></script>
+    <script src="scripts/controllers/irc.js"></script>
     <!-- endbuild -->
 </body>
 
