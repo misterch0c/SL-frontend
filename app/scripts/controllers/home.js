@@ -137,7 +137,7 @@ app.controller('HomeCtrl', function($scope, Links, $http, envService, $sanitize)
 
     //That's ugly but urhdurh
     $scope.languages = ['es', 'fr', 'de', 'us', 'ru', 'ro', 'tr', 'ir', 'pl', 'az', 'cn', 'vn', 'ae'];
-    $scope.languagesBlogs = ['us', 'fr'];
+    $scope.languagesBlogs = ['us', 'fr','jp'];
     $scope.fullLanguageName = function(name) {
         switch (name) {
             case ('us'):
@@ -180,6 +180,8 @@ app.controller('HomeCtrl', function($scope, Links, $http, envService, $sanitize)
                 return 'Azerbaijan';
             case ('ae'):
                 return 'Arabic';
+            case ('jp'):
+                return 'Japanse';
 
 
         }

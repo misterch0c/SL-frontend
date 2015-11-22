@@ -21,11 +21,14 @@ angular
         'environment',
         'wu.masonry',
         'ngDialog',
-        'infinite-scroll'
+        'infinite-scroll',
+
 
     ])
     .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider, envServiceProvider, ngDialogProvider) {
 
+        $locationProvider.hashPrefix('!');
+        
         envServiceProvider.config({
             domains: {
                 development: ['localhost:1337', 'dev.local'],
@@ -33,14 +36,14 @@ angular
             },
             vars: {
                 development: {
-                    apiUrl: 'http://10.0.10.81:1337/',
+                    apiUrl: 'http://localhost:1337/',
                 },
                 production: {
                     apiUrl: 'http://46.101.184.217:1337/',
                 }
             }
         });
-        envServiceProvider.set('production');
+        envServiceProvider.set('development');
         $stateProvider
             .state('home', {
                 url: 'home',

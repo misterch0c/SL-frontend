@@ -16,14 +16,21 @@
 <!-- Panel View -->
 <!-- {lang: lang, tags: ['tag5','tag2'], isup: hideDownLinks ? true : '' } -->
 <div masonry  ng-if="!show" infinite-scroll='limited("Board")' infinite-scroll-disabled='base.busy' infinite-scroll-distance='0' class="centre" >
+
 	<div class="masonry-brick panel panelpanel panpanel-default" ng-repeat="n in links | filterLinks:lang:hideDownLinks:tags | orderBy : sortBy" >
+
+
 	<!--| orderBy : sortBy -->
+
 		<div class="panel-heading">
+
 			<h3 class="panel-title pantitle txt">
+
 				<a href="{{n.link}}" target="_blank"><i class=" {{n.lang}} flag"></i>
 				{{n.title}}
 			</a>
-				<div style="float: right; width: 90px;text-align:right;">
+
+				<div style="float: right; width: 90px;text-align:right;" href="{{n.link}}">
 				<a data-toggle="tooltip" data-placement="top" title="Tor" href="{{n.tor}}">
 				<img  ng-if='n.tor' class="tor" src="assets/torlogo.png">
 				</a>
@@ -35,10 +42,15 @@
 					<span class="glyphicon glyphicon-ok" style="color:green" ng-show="{{n.isup}}" data-toggle="tooltip" data-placement="top" title="Online"></span>
 					<span class="glyphicon glyphicon-remove" style="color:red" ng-hide="{{n.isup}}" data-toggle="tooltip" data-placement="top" title="Offline"></span>
 				</div>
+				
 			</h3>
 		</div>
+
 		<div class="panel-bod paneltxt">
+			 <a href="{{n.link}}" target="_blank" class="fill-div" style="color:inherit">
+
 			{{n.description}}
+			</a>
 		</div>
 		<div class="foot panel-footer">
 			<a href="" class="tag label label-default tag-custom {{tags.indexOf(tag) > -1 ? 'tag-custom-selected' : ''}}" ng-repeat="tag in n.tags" ng-click="addTag(tag)">
@@ -62,7 +74,7 @@
 				{{n.description}}
 				<img src='http://security-base.com/assets/screenshots/{{n.title}}.png' class='img-thumbnail panel-thumb'></img>
 				">
-				<a href="{{n.link}}" target="_parent">
+				<a href="{{n.link}}" target="_blank">
 					{{n.title}}
 				</a>
 			</li>
