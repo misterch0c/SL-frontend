@@ -23,15 +23,12 @@ angular
         'ngDialog',
         'infinite-scroll',
 
-
-
-
     ])
     .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider, envServiceProvider, ngDialogProvider) {
+      $urlRouterProvider.otherwise("/home");
 
-        $locationProvider.hashPrefix('!');
-
-        envServiceProvider.config({
+      $locationProvider.hashPrefix('!');
+    envServiceProvider.config({
             domains: {
                 development: ['localhost:1337', 'dev.local'],
                 production: ['acme.com', 'acme.net', 'acme.org']
@@ -42,13 +39,14 @@ angular
                 },
                 production: {
                     apiUrl: 'http://46.101.184.217:1337/',
-                }
+                    raw:'http://46.101.184.217/',
+                },
             }
         });
         envServiceProvider.set('production');
         $stateProvider
             .state('home', {
-                url: 'home',
+                url: '/home',
                 views: {
                     '': {
                         templateUrl: 'views/home.html',
@@ -62,27 +60,27 @@ angular
             })
 
         .state('addlink', {
-            url: 'addlink',
+            url: '/addlink',
             templateUrl: 'views/addlink.html',
             controller: 'AddlinkCtrl',
         })
             .state('about', {
-                url: 'about',
+                url: '/about',
                 templateUrl: 'views/about.html',
                 controller: 'AboutCtrl',
             })
             .state('graveyard', {
-                url: 'graveyard',
+                url: '/graveyard',
                 templateUrl: 'views/graveyard.html',
                 //controller: 'Gr',
             })
              .state('tools', {
-                url: 'tools',
+                url: '/tools',
                 templateUrl: 'views/graveyard.html',
                 //controller: 'Gr',
             })
             .state('blogs', {
-                url: 'blogs',
+                url: '/blogs',
                 views: {
                     '': {
                         templateUrl: 'views/blogs.html',
@@ -96,13 +94,13 @@ angular
                 }
             })
             .state('irc', {
-                url: 'irc',
+                url: '/irc',
                 templateUrl: 'views/irc.html',
                 controller: "IrcCtrl",
 
             })
             .state('challenges', {
-                url: 'challenges',
+                url: '/challenges',
                 templateUrl: 'views/challenges.html',
                 controller: "ChallCtrl"
             });
@@ -117,4 +115,7 @@ angular
     function($state) {
         $state.transitionTo('home');
     }
-]);
+]
+
+
+);

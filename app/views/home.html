@@ -12,7 +12,6 @@
   ██████╔╝╚██████╔╝██║  ██║██║  ██║██████╔╝███████║
   ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝
                                                     </pre></div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- infosec -->
 
 <!-- Panel View -->
@@ -20,21 +19,16 @@
 <div masonry  ng-if="!show" infinite-scroll='limited("Board")' infinite-scroll-disabled='base.busy' infinite-scroll-distance='0' class="centre" >
 
 	<div class="masonry-brick panel panelpanel panpanel-default" ng-repeat="n in links | filterLinks:lang:hideDownLinks:tags | orderBy : sortBy" >
-
-
-	<!--| orderBy : sortBy -->
-
 		<div class="panel-heading">
-
 			<h3 class="panel-title pantitle txt">
-
 				<a href="{{n.link}}" target="_blank"><i class=" {{n.lang}} flag"></i>
 				{{n.title}}
 			</a>
 
 				<div style="float: right; width: 90px;text-align:right;" href="{{n.link}}">
 				<a data-toggle="tooltip" data-placement="top" title="Tor" href="{{n.tor}}">
-				<img  ng-if='n.tor' class="tor" src="assets/torlogo.png">
+
+				<img  ng-if='n.tor' class="tor" src="{{env}}assets/torlogo.png">
 				</a>
 				<span data-toggle="tooltip" data-placement="top" title="Private" ng-if="n.private" class="fa fa-lock fa-md fa-fw"></span>
 					<a data-toggle="tooltip" data-placement="top" title="Alexa rank: {{n.rank}}" href="http://www.alexa.com/siteinfo/{{n.link}}" target="_blank">

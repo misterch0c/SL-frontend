@@ -1,68 +1,65 @@
-<!doctype html>
-<html ng-app="yoslApp">
-
-<head>
+<!DOCTYPE html><html ng-app="yoslApp" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
     <meta charset="utf-8">
-    <title>Security-Base</title>
+    <title></title>
     <meta name="description" content="Security-Base is a repository of forums, irc channels, blogs etc related to hacking, infosec.">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://fenixrepo.fao.org/cdn/js/jquery.bridget/1.1.0/jquery.bridget.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/semantic-ui-flag/flag.css" />
-    <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.css" />
-    <link rel="stylesheet" href="bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
-    <link rel="stylesheet" href="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" />
-    <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.css" />
-    <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/semantic-ui-flag/flag.css">
+    <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.css">
+    <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.css">
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/simple-sidebar.css" />
+    <link rel="stylesheet" href="styles/simple-sidebar.css">
 
     <!-- endbuild -->
 </head>
 
-<body class="" data-status="{{ status }}" ng-controller="menuCtrl">
+<body class="ng-scope" data-status="" ng-controller="menuCtrl">
     <div class="" id="wrapper">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand ">
-                    <img src='assets/ayb-blue-220.png' id="img" />
+                    <img src="assets/ayb-blue-220.png" id="img">
                     <div class="hb">Security Base</div>
                     <div class="hb-small">SB</div>
                 </li>
                 <li id="one">
 
-                    <a ui-sref="home" ng-class="{active: isActive('/home')}"><i class="fa fa-leanpub fa-lg fa-fw"></i><span class="menutxt">Boards </span></a>
+                    <a ui-sref="home" ng-class="{active: isActive('/home')}" href="#!home" class="active"><i class="fa fa-leanpub fa-lg fa-fw"></i><span class="menutxt">Boards </span></a>
 
 
                 </li>
                 <li id="two">
-                    <a ui-sref="blogs" ng-class="{ active: isActive('/blogs')}"><i class="fa fa-keyboard-o fa-lg fa-fw"></i><span class="menutxt">Blogs</span></a>
+                    <a ui-sref="blogs" ng-class="{ active: isActive('/blogs')}" href="#!blogs"><i class="fa fa-keyboard-o fa-lg fa-fw"></i><span class="menutxt">Blogs</span></a>
                 </li>
                 <!-- <li id="three">
                     <a ui-sref="tools" ng-class="{ active: isActive('/tools')}"><i class="fa fa-globe fa-lg fa-fw"></i><span class="menutxt">Tools</span></a>
                 </li> -->
                 <li id="four">
-                    <a ui-sref="irc" ng-class="{active: isActive('/irc')}"><i class="fa fa-wechat fa-lg fa-fw"></i><span class="menutxt">IRCs</span></a>
+                    <a ui-sref="irc" ng-class="{active: isActive('/irc')}" href="#!irc"><i class="fa fa-wechat fa-lg fa-fw"></i><span class="menutxt">IRCs</span></a>
                 </li>
                 <li id="five">
-                    <a ui-sref="challenges" ng-class="{active: isActive('/challenges')}"><i class="fa fa-trophy fa-lg fa-fw"></i><span class="menutxt">Challenges</span></a>
+                    <a ui-sref="challenges" ng-class="{active: isActive('/challenges')}" href="#!challenges"><i class="fa fa-trophy fa-lg fa-fw"></i><span class="menutxt">Challenges</span></a>
                 </li>
                 <li id="six">
-                    <a ui-sref="addlink" ng-class="{active: isActive('/addlink')}"> <i class="fa fa-plus fa-lg fa-fw"></i><span class="menutxt">Add Base</span></a>
+                    <a ui-sref="addlink" ng-class="{active: isActive('/addlink')}" href="#!addlink"> <i class="fa fa-plus fa-lg fa-fw"></i><span class="menutxt">Add Base</span></a>
                 </li>
                 <li id="seven">
-                    <a ui-sref="about" ng-class="{active: isActive('/about')}"> <i class="fa fa-question fa-lg fa-fw"></i><span class="menutxt">About</span></a>
+                    <a ui-sref="about" ng-class="{active: isActive('/about')}" href="#!about"> <i class="fa fa-question fa-lg fa-fw"></i><span class="menutxt">About</span></a>
                 </li>
                 <!-- <li id="eight">
                     <a ui-sref="graveyard" ng-class="{active: isActive('/graveyard')}"> <i class="fa fa-thumbs-o-down fa-lg fa-fw"></i><span class="menutxt">Graveyard</span></a>
@@ -85,12 +82,12 @@
                             <i id="search" class="fa fa-search fa-lg fa-fw"></i><span class="menutxt">Filters </span><span class="caret"></span>
                         </a>
                     </li>
-                    <li id="filters" class="sub-menu collapse" role="menu" >
+                    <li id="filters" class="sub-menu collapse" role="menu">
                         <ul class="filter-block">
-                            <li class="dropdown filter"style="width:60%">
+                            <li class="dropdown filter" style="width:60%">
                                 <a>
                                     <i class="fa fa-flag fa fa-fw"></i>
-                                    <select id="lang" ng-model="lang" ng-change="changeLang()" data-toggle="select" class="form-control select select-default filter-select">
+                                    <select id="lang" ng-model="lang" ng-change="changeLang()" data-toggle="select" class="form-control select select-default filter-select ng-pristine ng-untouched ng-valid">
                                         <option value="">
                                             All languages
                                         </option>
@@ -109,7 +106,7 @@
                             <li class="dropdown filter" style="width:60%">
                                 <a>
                                     <i class="fa fa-sort fa fa-fw"></i>
-                                    <select id="sortBy" data-toggle="select" ng-model="sortBy" ng-change="changeSortBy()" class="form-control select select-default filter-select">
+                                    <select id="sortBy" data-toggle="select" ng-model="sortBy" ng-change="changeSortBy()" class="form-control select select-default filter-select ng-pristine ng-untouched ng-valid">
                                         <option value="title">
                                             By title
                                         </option>
@@ -119,7 +116,9 @@
                                         <option value="rank">
                                             By Alexa rank
                                         </option>
-                                        <option>
+                                        <option value="
+                                            By popularity
+                                        ">
                                             By popularity
                                         </option>
                                     </select>
@@ -127,26 +126,52 @@
                             </li>
                             <li class="dropdown filter">
                                 <a href="" ng-click="toggleHideDown()">
-                                    <i class="fa {{ hideDownLinks ? 'fa-check-square-o' : 'fa-square-o'}}  fa-fw "></i>
+                                    <i class="fa fa-square-o  fa-fw"></i>
                                     <span class="checkbox-hide-link">Hide inactive links</span>
                                 </a>
                             </li>
                             <li class="dropdown filter" style="width:60%">
-                                <input type="text" value="" data-role="tagsinput" placeholder="Search by tag" class="filter-tags tag-search-input" >
+                                <input type="text" value="" data-role="tagsinput" placeholder="Search by tag" class="filter-tags tag-search-input" style="display: none;"><div class="bootstrap-tagsinput"><input type="text" placeholder="Search by tag" style="width: 13em !important;"></div>
                             </li>
                         </ul>
                     </li>
                     <!-- End filters menu-->
                     <br>
                     <li class="" id="menu-toggle">
-                        <a href="" id="fl"><i class="fa fa-chevron-left fa-lg fa-fw fa-lg" id="fleche"  ></i> </a>
+                        <a href="" id="fl"><i class="fa fa-chevron-left fa-lg fa-fw fa-lg" id="fleche"></i> </a>
                     </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
         <!-- Page Content -->
-        <div class="ui-view" id="page-content-wrapper">
-        </div>
+        <!-- uiView: undefined --><div class="ui-view ng-scope" id="page-content-wrapper"><br class="ng-scope">
+<br class="ng-scope">
+<br class="ng-scope">
+<!-- uiView: filters --><div class="size ng-scope" ui-view="filters"><span class="bootstrap-switch-square ng-scope">
+	<div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-off bootstrap-switch-mini bootstrap-switch-id-switch ng-valid bootstrap-switch-animate" style="width: 86px;"><div class="bootstrap-switch-container" style="width: 126px; margin-left: -42px;"><span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 42px;">Panel</span><span class="bootstrap-switch-label" style="width: 42px;">&nbsp;</span><span class="bootstrap-switch-handle-off bootstrap-switch-primary" style="width: 42px;">Raw</span><input type="checkbox" name="switch" ng-model="show" data-size="mini" data-on-text="Panel" data-off-text="Raw" data-off-color="primary" id="switch" class="ng-pristine ng-untouched ng-valid"></div></div>
+</span>
+</div>
+
+
+<div class="centre ng-scope" style="width:400px;"><pre class="art">  ██████╗  ██████╗  █████╗ ██████╗ ██████╗ ███████╗
+  ██╔══██╗██╔═══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝
+  ██████╔╝██║   ██║███████║██████╔╝██║  ██║███████╗
+  ██╔══██╗██║   ██║██╔══██║██╔══██╗██║  ██║╚════██║
+  ██████╔╝╚██████╔╝██║  ██║██║  ██║██████╔╝███████║
+  ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝
+                                                    </pre></div>
+<!-- infosec -->
+
+<!-- Panel View -->
+<!-- {lang: lang, tags: ['tag5','tag2'], isup: hideDownLinks ? true : '' } -->
+<!-- ngIf: !show --><div masonry="" ng-if="!show" infinite-scroll="limited(&quot;Board&quot;)" infinite-scroll-disabled="base.busy" infinite-scroll-distance="0" class="centre ng-scope ng-isolate-scope" style="position: relative; height: 0px;">
+
+	<!-- ngRepeat: n in links | filterLinks:lang:hideDownLinks:tags | orderBy : sortBy -->
+</div><!-- end ngIf: !show -->
+
+<!-- Raw View -->
+<!-- ngIf: show -->
+</div>
         <!-- /#page-content-wrapper -->
     </div>
     <!-- /#wrapper -->
@@ -246,6 +271,9 @@
     <script src="scripts/controllers/filters.js"></script>
     <script src="scripts/controllers/irc.js"></script>
     <!-- endbuild -->
-</body>
 
-</html>
+<script type="text/javascript">document.write('<script src="' + (location.protocol || 'http:') + '//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')</script><script src="http://localhost:35729/livereload.js?snipver=1" type="text/javascript"></script>
+
+
+
+</body></html>

@@ -40,7 +40,7 @@
 }
 
 #page-content-wrapper {
-    width: 100%;
+    width: auto;
     position: absolute;
     padding: 15px;
 }
@@ -163,6 +163,8 @@ a:active,a:focus {
     #page-content-wrapper {
         padding: 20px;
         position: relative;
+        width: auto;
+        height: auto;
     }
 
     #wrapper.toggled #page-content-wrapper {

@@ -1,6 +1,4 @@
 <div class="topspace">
-
-
     <div class="centre" style="width:800px;"><pre class="art">
       ██▓ ██▀███   ▄████▄      ▄████▄   ██░ ██  ▄▄▄       ███▄    █  ███▄    █ ▓█████  ██▓      ██████
      ▓██▒▓██ ▒ ██▒▒██▀ ▀█     ▒██▀ ▀█  ▓██░ ██▒▒████▄     ██ ▀█   █  ██ ▀█   █ ▓█   ▀ ▓██▒    ▒██    ▒
@@ -18,14 +16,15 @@
 
   <div masonry class="centre" isotope-container="isotope-container">
 
-    <div class="masonry-brick panel  panelraw panpanel-default " ng-repeat="serv in servs">
+    <div ng-repeat="serv in servs" class="masonry-brick  panelraw panpanel-default " >
 
-      <div class="panel-heading" style="text-align:left;">
+      <div class="panel-heading">
 
         <span class="raw-title">{{serv.name}}</span><br>
         <span class="raw-title">{{serv.adr}}/{{serv.port}}</span>
       </div>
       <ul  class="raw-link">
+        {{links}}
         <li ng-repeat="n in ircs | filter: {server: serv.name}"
         data-trigger="hover"
          bs-popover data-html="true" data-animation="am-fade-and-scale"
