@@ -1,12 +1,6 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name yoslApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the yoslApp
- */
+
 angular.module('yoslApp')
 
   .controller('MainCtrl', function ($scope) {
@@ -15,7 +9,4 @@ angular.module('yoslApp')
       'AngularJS',
       'Karma'
     ];
-   // console.log('main');
-
-
   });

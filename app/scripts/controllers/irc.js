@@ -14,30 +14,30 @@ angular.module('yoslApp')
     };
     $scope.getChan();
     $scope.servs = {
-      "Freenode": {
-        adr: "irc.freenode.net",
-        port: "6697",
-        name: "Freenode"
+      'Freenode': {
+        adr: 'irc.freenode.net',
+        port: '6697',
+        name: 'Freenode'
       },
-      "Rizon": {
-        adr: "irc.rizon.net",
-        port: "6697",
-        name: "Rizon"
+      'Rizon': {
+        adr: 'irc.rizon.net',
+        port: '6697',
+        name: 'Rizon'
       },
-      "Hackerzvoice":{
-        adr:"irc.hackerzvoice.net",
-        port:"6697",
-        name: "Hackerzvoice"
+      'Hackerzvoice':{
+        adr:'irc.hackerzvoice.net',
+        port:'6697',
+        name: 'Hackerzvoice'
       },
-      "MalwareTech":{
-        adr:"",
-        port: "6697",
-        name: "MalwareTech"
+      'MalwareTech':{
+        adr:'irc.malwaretech.com',
+        port: '6697',
+        name: 'MalwareTech'
       },
-      "I2P":{
-        adr:"127.0.0.1",
-        port:"6668",
-        name: "I2P"
+      'I2P':{
+        adr:'127.0.0.1',
+        port:'6668',
+        name: 'I2P'
       }
     };
 

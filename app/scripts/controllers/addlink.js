@@ -3,8 +3,7 @@
 
 angular.module('yoslApp')
     .controller('AddlinkCtrl', function($scope, $resource, $http, envService, ngDialog) {
-        //console.log("addlink controler");
-        //console.log($scope.title);
+
         var environment = envService.read('apiUrl');
         $scope.test = function() {
             $resource(environment + 'link', {}, {}).query(function(data) {});
@@ -48,18 +47,15 @@ angular.module('yoslApp')
                 link: link
             })
                 .success(function(data) {
-                    // console.log("get descr " + data);
                     $scope.description = data;
                 });
 
         };
         $scope.getTitle = function(link) {
-            //console.log(link);
             $http.post(environment + 'link/getTitle/', {
                 link: link
             })
                 .success(function(data) {
-                    // console.log("get title" + data);
                     $scope.title = data;
                 });
 

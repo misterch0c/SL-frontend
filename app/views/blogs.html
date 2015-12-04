@@ -2,18 +2,20 @@
 <br/>
 <br/>
 <div class="size" ui-view="filters"></div>
-<div class="centre" style="width:400px;"><pre class="art">
+<div class="centre" style="width:450px;"><pre class="art">
 	██████╗ ██╗      ██████╗  ██████╗ ███████╗
 	██╔══██╗██║     ██╔═══██╗██╔════╝ ██╔════╝
 	██████╔╝██║     ██║   ██║██║  ███╗███████╗
 	██╔══██╗██║     ██║   ██║██║   ██║╚════██║
 	██████╔╝███████╗╚██████╔╝╚██████╔╝███████║
-	╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝
+	╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝ ╚══════╝
                                                     </pre></div>
 <!-- Panel View -->
 <!-- {lang: lang, tags: ['tag5','tag2'], isup: hideDownLinks ? true : '' } -->
-<div ng-if="!show" class="centre" masonry>
+<div masonry  ng-if="!show" infinite-scroll='limited("Blog")' infinite-scroll-disabled='base.busy' infinite-scroll-distance='0' class="centre" >
+
 	<div class="masonry-brick panel panelpanel panpanel-default" ng-repeat="n in blogs | filterLinks:lang:hideDownLinks:tags | orderBy : sortBy">
+
 		<div class="panel-heading">
 			<h3 class="panel-title pantitle txt">
 				<a href="{{n.link}}" target="_blank"><i class=" {{n.lang}} flag"></i>
@@ -38,7 +40,6 @@
 		</div>
 	</div>
 </div>
-
 <!-- Raw View -->
 <div ng-if="show" class="centre" isotope-container="isotope-container" masonry>
 
