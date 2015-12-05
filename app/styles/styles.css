@@ -426,6 +426,7 @@ hr{
 /*TABLE IRC*/
 div.centre
 {
+	width: 83%;
 margin-top: 30px;
   display: block;
   margin-left: auto;
