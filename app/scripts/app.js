@@ -1,14 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name yoslApp
- * @description
- * # yoslApp
- *
- * Main module of the application.
- */
-
 angular
     .module('yoslApp', [
 
@@ -36,10 +27,10 @@ angular
             vars: {
                 development: {
                     apiUrl: 'http://localhost:1337/',
-                },
+                },  
                 production: {
-                    apiUrl: 'http://46.101.184.217:1337/',
-                    raw:'http://46.101.184.217/',
+                    apiUrl: 'https://www.security-base.com:1337/',
+                    raw:'https://www.security-base.com/',
                 },
             }
         });
@@ -72,12 +63,10 @@ angular
             .state('graveyard', {
                 url: '/graveyard',
                 templateUrl: 'views/graveyard.html',
-                //controller: 'Gr',
             })
              .state('tools', {
                 url: '/tools',
                 templateUrl: 'views/graveyard.html',
-                //controller: 'Gr',
             })
             .state('blogs', {
                 url: '/blogs',
@@ -108,7 +97,6 @@ angular
         angular.extend($popoverProvider.defaults, {
             placement: "bottom",
         });
-
     })
 
 .run(['$state',

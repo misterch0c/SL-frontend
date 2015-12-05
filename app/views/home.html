@@ -2,8 +2,6 @@
 <br/>
 <br/>
 <div class="size" ui-view="filters"></div>
-
-
 <div class="centre" style="width:400px;"><pre class="art">
   ██████╗  ██████╗  █████╗ ██████╗ ██████╗ ███████╗
   ██╔══██╗██╔═══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝
@@ -28,7 +26,7 @@
 				<div style="float: right; width: 90px;text-align:right;" href="{{n.link}}">
 				<a data-toggle="tooltip" data-placement="top" title="Tor" href="{{n.tor}}">
 
-				<img  ng-if='n.tor' class="tor" src="{{env}}assets/torlogo.png">
+				<img  ng-if='n.tor' class="tor" src="assets/torlogo.png">
 				</a>
 				<span data-toggle="tooltip" data-placement="top" title="Private" ng-if="n.private" class="fa fa-lock fa-md fa-fw"></span>
 					<a data-toggle="tooltip" data-placement="top" title="Alexa rank: {{n.rank}}" href="http://www.alexa.com/siteinfo/{{n.link}}" target="_blank">
@@ -66,9 +64,10 @@
 			<span class="raw-title">{{fullLanguageName(l)}}</span>
 		</div>
 		<ul class="raw-link">
+
 			<li ng-repeat="n in rawLinks | filter: {lang: l} | filterLinks:'':hideDownLinks:tags | orderBy : sortBy" title="{{n.title}}" data-trigger="hover" bs-popover data-html="true" data-animation="am-fade-and-scale" data-content="
 				{{n.description}}
-				<img src='http://security-base.com/assets/screenshots/{{n.title}}.png' class='img-thumbnail panel-thumb'></img>
+				<img src='https://security-base.com/assets/screenshots/{{n.title}}.png' class='img-thumbnail panel-thumb'></img>
 				">
 				<a href="{{n.link}}" target="_blank">
 					{{n.title}}

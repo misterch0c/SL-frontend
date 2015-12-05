@@ -31,32 +31,31 @@ app.factory('Links', function($resource, envService) {
     });
 });
 
-// Reddit constructor function to encapsulate HTTP and pagination logic
-app.factory('Base', function($http) {
-    var base = function() {
-        this.items = [];
-        this.busy = false;
-        this.after = '';
-    };
+//  constructor function to encapsulate HTTP and pagination logic
+// app.factory('Base', function($http) {
+//     var base = function() {
+//         this.items = [];
+//         this.busy = false;
+//         this.after = '';
+//     };
 
-    Base.prototype.nextPage = function() {
-        console.log('lll');
-        if (this.busy) return;
-        this.busy = true;
-        console.log('factooor');
-        console.log(this.after);
-        var url = 'http://localhost:1337/link?limit=' + this.after;
-        $http.jsonp(url).success(function(data) {
-            var items = data.data.children;
-            for (var i = 0; i < items.length; i++) {
-                this.items.push(items[i].data);
-            }
-            this.busy = false;
-        }.bind(this));
-    };
+//     Base.prototype.nextPage = function() {
+//         if (this.busy) return;
+//         this.busy = true;
+//         // console.log("factooor");
+//         // console.log(this.after);
+//         var url = "http://localhost:1337/link?limit=" + this.after;
+//         $http.jsonp(url).success(function(data) {
+//             var items = data.data.children;
+//             for (var i = 0; i < items.length; i++) {
+//                 this.items.push(items[i].data);
+//             }
+//             this.busy = false;
+//         }.bind(this));
+//     };
 
-    return Base;
-});
+//     return Base;
+// });
 
 
 
@@ -67,36 +66,36 @@ app.controller('HomeCtrl', function($scope, $rootScope, Links, $http, envService
     $scope.lim = 20;
     $scope.ski = 0;
     $rootScope.servs = {
-        'Freenode': {
-            adr: 'irc.freenode.net',
-            port: '6697',
-            name: 'Freenode'
+        "Freenode": {
+            adr: "irc.freenode.net",
+            port: "6697",
+            name: "Freenode"
         },
-        'Rizon': {
-            adr: 'irc.rizon.net',
-            port: '6697',
-            name: 'Rizon'
+        "Rizon": {
+            adr: "irc.rizon.net",
+            port: "6697",
+            name: "Rizon"
         },
-        'Hackerzvoice': {
-            adr: 'irc.hackerzvoice.net',
-            port: '6697',
-            name: 'Hackerzvoice'
+        "Hackerzvoice": {
+            adr: "irc.hackerzvoice.net",
+            port: "6697",
+            name: "Hackerzvoice"
         },
-        'MalwareTech': {
-            adr: '',
-            port: '6697',
-            name: 'MalwareTech'
+        "MalwareTech": {
+            adr: "",
+            port: "6697",
+            name: "MalwareTech"
         },
-        'I2P': {
-            adr: '127.0.0.1',
-            port: '6668',
-            name: 'I2P'
+        "I2P": {
+            adr: "127.0.0.1",
+            port: "6668",
+            name: "I2P"
         }
     };
 
     $http.get(environment + 'link/get?type=irc&sort=channel').success(function(data) {
         $rootScope.ircs = data;
-        console.log(data);
+        //console.log(data);
     });
 
     $scope.offset = 0;
@@ -107,37 +106,56 @@ app.controller('HomeCtrl', function($scope, $rootScope, Links, $http, envService
         $('[data-toggle="tooltip"]').tooltip();
     });
 
+    $http.get(environment + 'link?type=Board&limit=0').success(function(data) {
+      //console.log("gorow");
+      $rootScope.rawLinks = data;
+
+    });
+
+
+
+    $http.get(environment + 'link?type=Blog&limit=0')
+      .success(function(data) {
+        $rootScope.rawBlogs = data;
+
+
+      });
+
 
     $scope.limited = function(type) {
-        console.log('limited');
         if ($scope.isBusy === true) return;
         $scope.isBusy = true;
-        console.log('triggered');
-        console.log($scope.ski);
+         console.log('triggered');
+        // console.log($scope.ski);
         $http.get(environment + 'link?type=' + type + '&limit=' + $scope.lim + '&skip=' + $scope.ski + "&sort=title")
             .success(function(data) {
+
                 if ($scope.ski != 0) {
-                    console.log("inif");
                     for (var i = 0; i < data.length; i++) {
                         if (type == "Board") {
                             $scope.links.push(data[i]);
                         } else {
                             $scope.blogs.push(data[i]);
                         }
+
+
                     }
                     $scope.isBusy = false;
                 } else if (type == "Board") {
                     $scope.links = data;
                     $scope.isBusy = false;
                 } else {
+
                     $scope.blogs = data;
-                    console.log($scope.blogs);
                     $scope.isBusy = false;
                 }
                 $scope.ski = $scope.ski + 20;
             });
 
+
+
     }
+
 
     //That's ugly but urhdurh
     $scope.languages = ['es', 'fr', 'de', 'us', 'ru', 'ro', 'tr', 'ir', 'pl', 'az', 'cn', 'vn', 'ae'];
@@ -198,6 +216,13 @@ app.controller('HomeCtrl', function($scope, $rootScope, Links, $http, envService
             $('[data-role="tagsinput"]').tagsinput('remove', tag);
         }
     };
+
+    //Get links by type (board)
+    //$scope.links = Links.whereType({type:'board'});
+
+    //Get links by lang and by type
+    //$scope.links = Links.where({lang:'us', type:'board'});
+
 
 
 });
