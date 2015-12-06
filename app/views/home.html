@@ -4,7 +4,7 @@
 <div class="size" ui-view="filters"></div>
 
 
-<div class="centre" style="width:400px;"><pre class="art">
+<div class="centre" style="width:425px;"><pre class="art">
   ██████╗  ██████╗  █████╗ ██████╗ ██████╗ ███████╗
   ██╔══██╗██╔═══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝
   ██████╔╝██║   ██║███████║██████╔╝██║  ██║███████╗
@@ -19,7 +19,7 @@
 <div masonry  ng-if="!show" infinite-scroll='limited("Board")' infinite-scroll-disabled='base.busy' infinite-scroll-distance='0' class="centre" >
 
 	<div class="masonry-brick panel panelpanel panpanel-default" ng-repeat="n in links | filterLinks:lang:hideDownLinks:tags | orderBy : sortBy" >
-	
+
 		<div class="panel-heading">
 			<h3 class="panel-title pantitle txt">
 				<a href="{{n.link}}" target="_blank"><i class=" {{n.lang}} flag"></i>
