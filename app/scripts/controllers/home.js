@@ -125,8 +125,7 @@ app.controller('HomeCtrl', function($scope, $rootScope, Links, $http, envService
     $scope.limited = function(type) {
         if ($scope.isBusy === true) return;
         $scope.isBusy = true;
-         console.log('triggered');
-        // console.log($scope.ski);
+
         $http.get(environment + 'link?type=' + type + '&limit=' + $scope.lim + '&skip=' + $scope.ski + "&sort=title")
             .success(function(data) {
 

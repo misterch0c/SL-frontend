@@ -5,9 +5,9 @@ angular.module('yoslApp')
     var environment = envService.read('apiUrl');
 
     $scope.getChan = function() {
-      $http.get(environment + 'link/get?type=irc&sort=channel').success(function(data) {
+      $http.get(environment + 'link/?type=irc&sort=channel&limit=0').success(function(data) {
         $scope.ircs = data;
-        console.log(data);
+        //console.log(data);
 
       });
 
