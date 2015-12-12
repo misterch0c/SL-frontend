@@ -24,7 +24,7 @@
         <span class="raw-title">{{serv.adr}}/{{serv.port}}</span>
       </div>
       <ul  class="raw-link">
-        {{links}}
+
         <li ng-repeat="n in ircs | filter: {server: serv.name}"
         data-trigger="hover"
          bs-popover data-html="true" data-animation="am-fade-and-scale"

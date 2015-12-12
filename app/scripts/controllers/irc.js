@@ -1,50 +1,16 @@
 'use strict';
 
 angular.module('yoslApp')
-  .controller('IrcCtrl', function($scope, $resource, $http, envService) {
-    var environment = envService.read('apiUrl');
+  .controller('IrcCtrl', function($scope, $rootScope, $resource, $http, envService) {
+    
 
-    $scope.getChan = function() {
-      $http.get(environment + 'link/?type=irc&sort=channel&limit=0').success(function(data) {
-        $scope.ircs = data;
-        //console.log(data);
+    //$scope.getChan();
+    $rootScope.resetFilters();
 
-      });
-
-    };
-    $scope.getChan();
-    $scope.servs = {
-      'Freenode': {
-        adr: 'irc.freenode.net',
-        port: '6697',
-        name: 'Freenode'
-      },
-      'Rizon': {
-        adr: 'irc.rizon.net',
-        port: '6697',
-        name: 'Rizon'
-      },
-      'Hackerzvoice':{
-        adr:'irc.hackerzvoice.net',
-        port:'6697',
-        name: 'Hackerzvoice'
-      },
-      'MalwareTech':{
-        adr:'irc.malwaretech.com',
-        port: '6697',
-        name: 'MalwareTech'
-      },
-      'I2P':{
-        adr:'127.0.0.1',
-        port:'6668',
-        name: 'I2P'
-      }
-    };
 
 
     $scope.isLink = function(str) {
         return validator.isURL(str);
-
     }
 
   });

@@ -2,11 +2,11 @@
 
 
 angular.module('yoslApp')
-    .controller('ChallCtrl', function($scope, $resource, $http, envService) {
+    .controller('ChallCtrl', function($scope, $rootScope, $resource, $http, envService) {
+	    $rootScope.resetFilters();
 
-        var environment = envService.read('apiUrl');
         $scope.getchall = function() {
-            $http.get(environment + 'link/get?type=Challenge').success(function(data) {
+            $http.get($rootScope.environment + 'link/get?type=Challenge').success(function(data) {
                 $scope.challenges = data;
 
             });

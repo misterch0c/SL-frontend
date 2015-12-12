@@ -487,3 +487,7 @@ tr:last-child td:first-child {
 tr:last-child td:last-child {
   border-bottom-right-radius: 6px;
 }
+
+.hidden {
+	display: none;
+}

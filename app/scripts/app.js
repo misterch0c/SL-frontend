@@ -15,6 +15,94 @@ angular
         'infinite-scroll',
 
     ])
+
+    .factory('linksGrabber', function($rootScope, $http){
+       
+        /*
+        var linksAreDownloaded = function(){
+            return $rootScope.ircs && $rootScope.rawLinks && $rootScope.rawBlogs;
+        };
+        */
+        return function(){
+            if (!$rootScope.ircs) {
+                //$rootScope.ircs = [];
+                $http.get($rootScope.environment + 'link/get?type=irc&sort=channel').then(function(res) {
+                    $rootScope.ircs = res.data;
+                    //console.log($rootScope.ircs);
+                });
+            }
+
+            if (!$rootScope.rawLinks) {
+                $rootScope.links = [];
+                $http.get($rootScope.environment + 'link?type=Board&limit=0&sort=title').then(function(res) {
+                  $rootScope.rawLinks = res.data;
+                  //$rootScope.links = $rootScope.rawLinks.slice(0, 10);
+                });
+            }
+
+            if (!$rootScope.rawBlogs) {
+                $rootScope.rawBlogs = [];
+                $http.get($rootScope.environment + 'link?type=Blog&limit=0&sort=title').then(function(res) {
+                    $rootScope.rawBlogs = res.data;
+                    //$rootScope.blogs = $rootScope.rawBlogs.slice(0, 10);
+                });
+            }                
+        }
+
+
+    })
+
+    .factory('getNextLinks', function($rootScope, $http){
+        $rootScope.isBusy = false;
+
+        return function(links, type){
+            //console.log(links);
+
+            if ($rootScope.isBusy || !links) return;
+            $rootScope.isBusy = true;
+
+            var where = {};
+            where.type = type;
+
+            if ($rootScope.hideDownLinks){
+                where.isup = true;
+            }
+            if ($rootScope.showPrivate){
+                where.private = true;
+            }
+            if ($rootScope.lang != ""){
+                where.lang = $rootScope.lang;
+            }
+
+            var query = $rootScope.environment + 
+                'link' +
+                '?skip=' + $rootScope.skip + 
+                '&limit=' + $rootScope.limit + 
+                '&sort=' + $rootScope.sortBy;
+            if (where)
+                query += '&where=' + JSON.stringify(where);
+            
+            //console.log(query);
+
+            $http.get(query).then(function(res) {
+
+                for (var i = 0; i < res.data.length; i++){
+                    links.push(res.data[i]);
+                }
+                //console.log(links);
+                //20 more links at each scrolling
+                $rootScope.skip += 20;
+                $rootScope.isBusy = false;
+
+
+            }, function(err){
+                $rootScope.isBusy = false;
+            });
+
+        }
+
+    })
+
     .config(function($locationProvider, $stateProvider, $urlRouterProvider, $popoverProvider, envServiceProvider, ngDialogProvider) {
       $urlRouterProvider.otherwise("/home");
 
@@ -73,7 +161,7 @@ angular
                 views: {
                     '': {
                         templateUrl: 'views/blogs.html',
-                        controller: 'HomeCtrl'
+                        controller: 'BlogsCtrl'
 
                     },
                     'filters@blogs': {
